@@ -1,77 +1,42 @@
-# Mark Krizsan — Perception V3
+# Mark Krizsan — Perception V5
 
-A conversion-focused one-page portfolio/sales site built around one design thesis:
+This version is the subtraction pass.
 
-> **Perception is part of the product.**
+## Design system
+- Ferrari-adjacent signal red
+- black
+- white
+- Marcellus + Inter Tight
+- narrow 1180px editorial content frame
+- one signature interaction: the BEFORE / AFTER perception lens
+- one persistent conversion control: 15 MIN / BOOK
 
-## Signature interaction
+## Page architecture
+1. Red hero
+2. Before / after
+3. Three design principles
+4. Mark portrait
+5. $1,500 sprint + process
+6. Red CTA
 
-The "Perception Lens" is the main interactive proof. It compares the same hypothetical
-business in a generic presentation and a designed presentation using a draggable reveal.
+No standalone FAQ. No capability marquee. No redundant process section.
 
-The interaction is deliberately tied to the offer rather than added as decoration.
-
-## Customer funnel
-
+## Funnel
 Website
-→ 15-minute Calendly fit call
-→ confirm scope/platform
-→ invoice + payment
+→ 15-minute fit call
+→ confirm scope
+→ invoice
 → intake
 → 3–5 day sprint
-→ launch
+→ live
 
-Calendly is already wired to:
-
+Calendly:
 https://calendly.com/markkrizsan/sprint
 
-## Offer
-
-**Custom Website Sprint — $1,500 flat**
-- 1–5 page marketing site
-- 3–5 day build
-- strategy
-- copy refinement
-- design
-- HTML/CSS/JS
-- launch setup
-- one revision
-
 ## Deploy
+Static HTML / CSS / JS.
 
-This is static HTML/CSS/JS.
-
-1. Push the folder contents to the root of a GitHub repository.
-2. Cloudflare Pages → Create project → Connect to Git.
-3. Framework preset: None.
-4. Build command: blank.
-5. Output directory: `/`
-6. Deploy.
-7. Point `markkrizsan.com` at the Pages project.
-
-## Files
-
-- `index.html`
-- `style.css`
-- `script.js`
-- favicon files
-- `assets/mark-portrait-*.webp`
-- `assets/mark-portrait.jpg`
-- `assets/og-mark.jpg`
-- `robots.txt`
-- `sitemap.xml`
-- `site.webmanifest`
-
-## First upgrade after client #1
-
-Replace the concept study with a real before/after and one concise testimonial.
-Do not add a giant portfolio grid. Curate proof.
-
-
-## V4 changes
-- Red / black / white visual system
-- Narrower editorial content frame
-- BEFORE locked to left, AFTER to right in the slider
-- Persistent red 15-minute BOOK control
-- Reduced copy and fewer principles
-- Mobile-first spacing and stack corrections
+Cloudflare Pages:
+- Framework preset: None
+- Build command: blank
+- Output directory: /
