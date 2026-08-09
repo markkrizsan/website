@@ -1,56 +1,68 @@
-# Mark Krizsan — Custom Website Sprint V2
+# Mark Krizsan — Perception V3
 
-Conversion-focused one-page site for `markkrizsan.com`.
+A conversion-focused one-page portfolio/sales site built around one design thesis:
 
-## Funnel
+> **Perception is part of the product.**
 
-Every primary CTA goes to:
+## Signature interaction
 
-`https://calendly.com/markkrizsan/sprint`
+The "Perception Lens" is the main interactive proof. It compares the same hypothetical
+business in a generic presentation and a designed presentation using a draggable reveal.
 
-Recommended customer flow:
+The interaction is deliberately tied to the offer rather than added as decoration.
 
-1. Visitor books a 15-minute fit call.
-2. Confirm scope, platform and fit on the call.
-3. Send confirmed scope + invoice/payment link the same day.
-4. Payment reserves the sprint date.
-5. Send short intake form.
-6. Build and ship.
+## Customer funnel
 
-Do **not** send cold visitors directly to a payment page at this stage. The 15-minute call protects the narrow sprint scope and prevents accidental complex-platform projects.
+Website
+→ 15-minute Calendly fit call
+→ confirm scope/platform
+→ invoice + payment
+→ intake
+→ 3–5 day sprint
+→ launch
+
+Calendly is already wired to:
+
+https://calendly.com/markkrizsan/sprint
 
 ## Offer
 
 **Custom Website Sprint — $1,500 flat**
-
 - 1–5 page marketing site
 - 3–5 day build
-- strategy + copy refinement
-- custom responsive design
-- HTML/CSS/JS development
-- GitHub + Cloudflare deployment when appropriate
-- contact flow
-- basic technical SEO
-- domain connection
-- one revision round
+- strategy
+- copy refinement
+- design
+- HTML/CSS/JS
+- launch setup
+- one revision
 
-Excluded from sprint:
-- ecommerce
-- memberships / portals
-- large content migrations
-- custom applications
-- complex integrations
+## Deploy
 
-## Deploy to Cloudflare Pages
+This is static HTML/CSS/JS.
 
-1. Create/push this folder to a GitHub repository.
+1. Push the folder contents to the root of a GitHub repository.
 2. Cloudflare Pages → Create project → Connect to Git.
 3. Framework preset: None.
-4. No build command.
+4. Build command: blank.
 5. Output directory: `/`
 6. Deploy.
-7. Add `markkrizsan.com` when ready.
+7. Point `markkrizsan.com` at the Pages project.
 
-## Next proof upgrade
+## Files
 
-The concept before/after is explicitly labeled as a concept study. Replace it with the first real client before/after + testimonial as soon as you have one. That will be the single largest credibility upgrade.
+- `index.html`
+- `style.css`
+- `script.js`
+- favicon files
+- `assets/mark-portrait-*.webp`
+- `assets/mark-portrait.jpg`
+- `assets/og-mark.jpg`
+- `robots.txt`
+- `sitemap.xml`
+- `site.webmanifest`
+
+## First upgrade after client #1
+
+Replace the concept study with a real before/after and one concise testimonial.
+Do not add a giant portfolio grid. Curate proof.

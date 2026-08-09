@@ -1,535 +1,458 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1eee5">
 
-  <title>Mark Krizsan — Custom Website Sprints</title>
-  <meta name="description" content="Custom website sprints for established service businesses whose online presence no longer reflects the quality of their work. Strategy, copy, design and development in 3–5 days." />
-  <link rel="canonical" href="https://markkrizsan.com/" />
+  <title>Mark Krizsan — Independent Designer + Creative Developer</title>
+  <meta name="description" content="Mark Krizsan designs and builds custom websites for established businesses whose online presence undersells the quality of their work.">
+  <link rel="canonical" href="https://markkrizsan.com/">
 
-  <meta name="theme-color" content="#F3F0E8" />
-  <meta property="og:title" content="Mark Krizsan — Custom Website Sprints" />
-  <meta property="og:description" content="A custom 1–5 page marketing site. Strategy, copy, design and development. $1,500 flat. Built in 3–5 days." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://markkrizsan.com/" />
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://markkrizsan.com/">
+  <meta property="og:title" content="Mark Krizsan — Independent Designer + Creative Developer">
+  <meta property="og:description" content="Perception is part of the product. Custom website sprints for businesses whose online presence undersells the work.">
+  <meta property="og:image" content="https://markkrizsan.com/assets/og-mark.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Marcellus&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Mark Krizsan",
-    "url": "https://markkrizsan.com/",
-    "jobTitle": "Web Designer and Developer"
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Mark Krizsan",
+    "url":"https://markkrizsan.com/",
+    "jobTitle":"Independent Designer and Creative Developer"
   }
   </script>
 </head>
 
 <body>
-  <div class="cursor-light" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="site-shell">
-    <header class="nav-wrap">
-      <a class="wordmark" href="#top" aria-label="Mark Krizsan home">
-        <span>MARK</span>
-        <span>KRIZSAN</span>
+  <header class="site-header">
+    <a class="mk" href="#hero" aria-label="Mark Krizsan home">
+      <span>M</span><span>K</span>
+    </a>
+
+    <div class="header-role">
+      Independent Designer<br>
+      + Creative Developer
+    </div>
+
+    <div class="header-meta">
+      <span>Orange County / Worldwide</span>
+      <span class="status"><i></i> Limited monthly capacity</span>
+    </div>
+
+    <a class="header-cta" href="https://calendly.com/markkrizsan/sprint" target="_blank" rel="noopener" data-track="header">
+      15-min fit call <span>↗</span>
+    </a>
+  </header>
+
+  <main id="main">
+    <!-- ACT I -->
+    <section class="hero" id="hero">
+      <div class="hero-rule hero-rule--a" aria-hidden="true"></div>
+      <div class="hero-rule hero-rule--b" aria-hidden="true"></div>
+
+      <div class="hero-index reveal">01 / PERCEPTION</div>
+
+      <h1 class="hero-title" aria-label="Perception is part of the product">
+        <span class="hero-line reveal">PERCEPTION</span>
+        <span class="hero-line hero-line--indent reveal">IS PART OF</span>
+        <span class="hero-line hero-line--accent reveal">THE PRODUCT.</span>
+      </h1>
+
+      <div class="hero-foot reveal">
+        <p class="hero-thesis">
+          Your business should not look cheaper online than it does in real life.
+          I design and build custom sites for established businesses whose digital
+          presence no longer reflects the quality of their work.
+        </p>
+
+        <div class="hero-offer">
+          <div>
+            <span>Custom website sprint</span>
+            <strong>$1,500 flat</strong>
+          </div>
+          <div>
+            <span>Scope</span>
+            <strong>1–5 pages</strong>
+          </div>
+          <div>
+            <span>Build</span>
+            <strong>3–5 days</strong>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero-next" href="#lens" aria-label="See the perception demonstration">
+        <span>See what I mean</span>
+        <i>↓</i>
+      </a>
+    </section>
+
+    <!-- ACT II -->
+    <section class="lens-section" id="lens">
+      <div class="lens-intro">
+        <p class="section-kicker reveal">02 / A DEMONSTRATION</p>
+        <h2 class="lens-statement reveal">
+          Nothing about the business changed.
+          <em>Only what the visitor believes about it did.</em>
+        </h2>
+      </div>
+
+      <div class="lens-wrap reveal">
+        <div class="lens-label lens-label--left">REALITY</div>
+        <div class="lens-label lens-label--right">PERCEPTION</div>
+
+        <div class="perception-lens" id="perceptionLens" style="--split:50%">
+          <!-- generic / under-designed layer -->
+          <div class="site-demo site-demo--raw" aria-hidden="true">
+            <div class="demo-browser">
+              <span></span><span></span><span></span>
+              <small>north27construction.com</small>
+            </div>
+            <div class="raw-nav">
+              <b>NORTH 27 CONSTRUCTION</b>
+              <span>HOME&nbsp;&nbsp; ABOUT&nbsp;&nbsp; SERVICES&nbsp;&nbsp; CONTACT</span>
+            </div>
+            <div class="raw-hero">
+              <p>ORANGE COUNTY GENERAL CONTRACTOR</p>
+              <h3>Quality Service<br>You Can Trust</h3>
+              <span>Family owned and operated. Serving Orange County for more than 20 years.</span>
+              <button>LEARN MORE</button>
+            </div>
+            <div class="raw-cards"><i></i><i></i><i></i></div>
+          </div>
+
+          <!-- designed layer -->
+          <div class="site-demo site-demo--designed" aria-hidden="true">
+            <div class="demo-browser demo-browser--dark">
+              <span></span><span></span><span></span>
+              <small>north27construction.com</small>
+            </div>
+            <div class="designed-canvas">
+              <div class="designed-nav">
+                <b>NORTH / 27</b>
+                <span>SELECTED WORK&nbsp;&nbsp;&nbsp; STUDIO&nbsp;&nbsp;&nbsp; INQUIRE</span>
+              </div>
+              <div class="designed-number">01 — 06</div>
+              <div class="designed-geometry">
+                <div class="geo-wall"></div>
+                <div class="geo-window"></div>
+                <div class="geo-sun"></div>
+              </div>
+              <div class="designed-copy">
+                <span>Custom residential construction / Orange County</span>
+                <h3>Homes with<br>nothing accidental.</h3>
+                <a href="#offer">View selected work ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lens-divider" aria-hidden="true">
+            <span>DRAG</span>
+          </div>
+
+          <input
+            id="lensRange"
+            class="lens-range"
+            type="range"
+            min="8"
+            max="92"
+            value="50"
+            aria-label="Compare generic and designed website versions"
+          >
+        </div>
+      </div>
+
+      <div class="lens-notes reveal">
+        <p>
+          Same hypothetical company. Same category. Same underlying service.
+          The designed version changes hierarchy, language, rhythm and perceived value.
+        </p>
+        <p class="concept-note">Concept study — not presented as a client result.</p>
+      </div>
+    </section>
+
+    <!-- ACT III -->
+    <section class="principles" id="principles">
+      <div class="principles-sticky">
+        <p class="section-kicker">03 / HOW I THINK</p>
+        <h2>Design is not decoration.<br><em>It is controlled perception.</em></h2>
+      </div>
+
+      <div class="principles-list">
+        <article class="principle reveal">
+          <span>01</span>
+          <div>
+            <h3>Hierarchy before ornament.</h3>
+            <p>If the eye does not know where to go, decoration only makes the confusion prettier.</p>
+          </div>
+        </article>
+
+        <article class="principle reveal">
+          <span>02</span>
+          <div>
+            <h3>Specificity over convention.</h3>
+            <p>The business determines the visual language. Not whatever happened to trend on design Twitter last week.</p>
+          </div>
+        </article>
+
+        <article class="principle reveal">
+          <span>03</span>
+          <div>
+            <h3>Motion must carry meaning.</h3>
+            <p>Animation should guide attention, reveal relationships or create rhythm. Otherwise it is expensive confetti.</p>
+          </div>
+        </article>
+
+        <article class="principle reveal">
+          <span>04</span>
+          <div>
+            <h3>The idea survives the build.</h3>
+            <p>I handle strategy, design and development, so the original intent does not disappear between departments.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ACT IV -->
+    <section class="portrait-section" id="mark">
+      <div class="portrait-media reveal">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              assets/mark-portrait-768.webp 768w,
+              assets/mark-portrait-1280.webp 1280w,
+              assets/mark-portrait-1536.webp 1536w
+            "
+            sizes="(max-width: 900px) 100vw, 58vw"
+          >
+          <img
+            src="assets/mark-portrait.jpg"
+            alt="Mark Krizsan holding a camera outdoors"
+            width="1200"
+            height="1600"
+            loading="lazy"
+            decoding="async"
+          >
+        </picture>
+
+        <div class="portrait-caption">
+          <span>MARK KRIZSAN</span>
+          <span>Designer / Creative Director / Developer</span>
+        </div>
+      </div>
+
+      <div class="portrait-copy reveal">
+        <p class="section-kicker">04 / THE PERSON</p>
+        <h2>One point of view.<br><em>One pair of hands.</em></h2>
+        <p class="portrait-lead">
+          I work across strategy, visual direction, photography, design and code.
+          That range matters because a website is rarely suffering from just one thing.
+        </p>
+        <p class="portrait-body">
+          I am not interested in making every business look “premium” in the same way.
+          The work is to find what is already distinct, make it legible, and build a digital
+          experience that earns the perception the business deserves.
+        </p>
+
+        <div class="portrait-signature">
+          <span>MK</span>
+          <small>Independent practice</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACT V -->
+    <section class="offer" id="offer">
+      <div class="offer-head reveal">
+        <p class="section-kicker">05 / THE SPRINT</p>
+        <h2>A serious website.<br><em>Without the six-week theater.</em></h2>
+      </div>
+
+      <div class="offer-price reveal">
+        <span class="price-label">Custom Website Sprint</span>
+        <div class="price-main">
+          <strong>$1,500</strong>
+          <span>flat</span>
+        </div>
+        <p>
+          One focused 1–5 page marketing site. Strategy, copy refinement,
+          art direction, responsive design, development and launch.
+        </p>
+      </div>
+
+      <div class="offer-details reveal">
+        <div class="offer-column">
+          <span class="offer-label">Included</span>
+          <ul>
+            <li>Positioning + page strategy</li>
+            <li>Copy refinement</li>
+            <li>Custom responsive design</li>
+            <li>HTML / CSS / JavaScript build</li>
+            <li>Contact flow</li>
+            <li>Basic technical SEO</li>
+            <li>Domain + deployment setup</li>
+            <li>One focused revision</li>
+          </ul>
+        </div>
+
+        <div class="offer-column">
+          <span class="offer-label">Best fit</span>
+          <ul>
+            <li>Established service businesses</li>
+            <li>Builders + designers</li>
+            <li>Professional services</li>
+            <li>Visually driven businesses</li>
+            <li>Brochure + lead-generation sites</li>
+          </ul>
+        </div>
+
+        <div class="offer-column">
+          <span class="offer-label">Outside the sprint</span>
+          <ul>
+            <li>Ecommerce</li>
+            <li>Memberships + portals</li>
+            <li>Large content migrations</li>
+            <li>Custom applications</li>
+            <li>Complex integrations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="platform-note reveal">
+        <div>
+          <span>Already on Squarespace / Wix / WordPress?</span>
+          <p>
+            I do not migrate a site because I happen to prefer another tool.
+            We keep the platform when it serves the business. For simple marketing
+            sites, I may recommend a lean custom rebuild.
+          </p>
+        </div>
+        <div>
+          <span>Ownership</span>
+          <p>
+            Your domain stays yours. Custom builds can live in your repository
+            and deployment account. No artificial lock-in.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACT VI -->
+    <section class="process">
+      <p class="section-kicker reveal">06 / FROM YES TO LIVE</p>
+      <div class="process-track">
+        <article class="process-step reveal">
+          <span>01</span>
+          <h3>Fit call</h3>
+          <p>15 minutes to confirm scope, platform and whether the sprint is actually the right tool.</p>
+        </article>
+        <article class="process-step reveal">
+          <span>02</span>
+          <h3>Reserve</h3>
+          <p>Confirmed scope + invoice + short intake. Payment reserves the sprint window.</p>
+        </article>
+        <article class="process-step reveal">
+          <span>03</span>
+          <h3>Build</h3>
+          <p>I design and develop the site in one concentrated 3–5 day window.</p>
+        </article>
+        <article class="process-step reveal">
+          <span>04</span>
+          <h3>Ship</h3>
+          <p>One revision, launch QA, domain connection and clean handoff.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ACT VII -->
+    <section class="faq">
+      <div class="faq-head reveal">
+        <p class="section-kicker">07 / BEFORE YOU BOOK</p>
+        <h2>Only the questions<br>that change the decision.</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary><span>Do I need a completely new website?</span><i>+</i></summary>
+          <p>
+            Not necessarily. If the current platform and structure are sound, the right move may be
+            a focused redesign. The fit call determines whether to improve what exists or rebuild cleanly.
+          </p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><span>Can you work with my current platform?</span><i>+</i></summary>
+          <p>
+            Sometimes. Squarespace, Wix and WordPress can stay when the underlying functionality matters.
+            Simple marketing sites are often cleaner as custom builds. Platform follows the business requirement.
+          </p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><span>What happens after the fit call?</span><i>+</i></summary>
+          <p>
+            If the sprint fits, I send the confirmed scope and invoice the same day. Payment reserves the
+            build window, then you complete a short intake and provide the necessary assets and access.
+          </p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><span>What if my project is bigger than the sprint?</span><i>+</i></summary>
+          <p>
+            I will tell you. Complex projects should not be squeezed into a format designed for speed.
+            If the scope is materially larger, it is quoted separately or I decline it.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ACT VIII -->
+    <section class="final-cta" id="contact">
+      <div class="final-top reveal">
+        <p class="section-kicker section-kicker--light">08 / START HERE</p>
+        <span>15 MINUTES</span>
+      </div>
+
+      <a class="final-link reveal" href="https://calendly.com/markkrizsan/sprint" target="_blank" rel="noopener" data-track="final">
+        <span>Your work already deserves</span>
+        <em>the perception.</em>
+        <i>↗</i>
       </a>
 
-      <div class="nav-right">
-        <span class="availability">
-          <span class="availability-dot"></span>
-          Limited monthly capacity
-        </span>
-        <a class="nav-cta js-booking-link" data-cta="nav-fit-call" href="https://calendly.com/markkrizsan/sprint">
-          Book a 15-min call
-        </a>
+      <div class="final-meta reveal">
+        <p>Bring your current website. I’ll tell you what I would change and whether the sprint is the right format.</p>
+        <div>
+          <span>Fit call → Scope → Invoice → Intake → Sprint</span>
+          <span>© <span id="year"></span> Mark Krizsan</span>
+        </div>
       </div>
-    </header>
+    </section>
+  </main>
 
-    <main id="top">
-      <section class="hero">
-        <div class="hero-grid-line hero-grid-line--1"></div>
-        <div class="hero-grid-line hero-grid-line--2"></div>
-
-        <div class="hero-kicker reveal">
-          <span>Custom web design + development</span>
-          <span>Orange County / Worldwide</span>
-        </div>
-
-        <div class="hero-copy">
-          <h1 class="display reveal">
-            Your business should not
-            <span class="display-italic">look cheaper online</span>
-            than it does in real life.
-          </h1>
-
-          <div class="hero-bottom reveal">
-            <div class="hero-offer">
-              <p>
-                I design and build custom marketing sites for established service
-                businesses whose online presence no longer reflects the quality of their work.
-              </p>
-              <div class="hero-meta">
-                <span>$1,500 flat</span>
-                <span>1–5 pages</span>
-                <span>3–5 days</span>
-              </div>
-            </div>
-
-            <a class="hero-arrow js-booking-link" data-cta="hero-fit-call" href="https://calendly.com/markkrizsan/sprint" aria-label="Book a 15-minute fit call">
-              <span>Check fit<br>& availability</span>
-              <svg viewBox="0 0 48 48" aria-hidden="true">
-                <path d="M10 24h26M27 15l9 9-9 9"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-proof reveal">
-          <div class="proof-label">The sprint</div>
-          <div class="proof-card proof-card--dark">
-            <span class="proof-index">01</span>
-            <div>
-              <p class="proof-title">Custom, not templated.</p>
-              <p class="proof-text">Designed around the business instead of forcing the business into a theme.</p>
-            </div>
-          </div>
-          <div class="proof-card">
-            <span class="proof-index">02</span>
-            <div>
-              <p class="proof-title">Fast by design.</p>
-              <p class="proof-text">A narrow scope, direct decisions and one focused revision round.</p>
-            </div>
-          </div>
-          <div class="proof-card">
-            <span class="proof-index">03</span>
-            <div>
-              <p class="proof-title">Yours when it ships.</p>
-              <p class="proof-text">Your domain stays yours. Your code stays portable. No artificial lock-in.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="statement section-pad">
-        <div class="statement-aside reveal">
-          <span class="eyebrow">What I fix</span>
-          <span class="section-number">01</span>
-        </div>
-
-        <div class="statement-main reveal">
-          <p class="statement-lead">
-            Most businesses do not have a <em>website problem.</em>
-            They have a <em>perception problem.</em>
-          </p>
-
-          <div class="statement-support-grid">
-            <p>
-              The work is better than the presentation. The reputation is stronger
-              than the first impression. The business matured, but the website did not.
-            </p>
-            <p>
-              If someone lands on your site and feels less confidence than they would
-              after speaking with you, the site is costing trust before you even know their name.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="transformation section-pad">
-        <div class="transformation-head reveal">
-          <div>
-            <span class="eyebrow">Design proof / concept study</span>
-            <h2>From functional to <span>formidable.</span></h2>
-          </div>
-          <p>
-            A simple illustration of the difference between “technically online”
-            and a site that communicates value before the visitor reads every word.
-          </p>
-        </div>
-
-        <div class="comparison-grid">
-          <article class="browser-card browser-card--before reveal">
-            <div class="browser-top">
-              <div class="browser-dots"><i></i><i></i><i></i></div>
-              <span>typical service site</span>
-            </div>
-            <div class="browser-body before-body">
-              <div class="before-nav">
-                <span class="before-logo">LOGO</span>
-                <span>HOME&nbsp;&nbsp; ABOUT&nbsp;&nbsp; SERVICES&nbsp;&nbsp; CONTACT</span>
-              </div>
-              <div class="before-hero">
-                <h3>Quality Service You Can Trust</h3>
-                <p>Serving Orange County and surrounding areas for over 20 years.</p>
-                <button>LEARN MORE</button>
-              </div>
-              <div class="before-boxes">
-                <span></span><span></span><span></span>
-              </div>
-            </div>
-            <div class="study-caption">
-              <span>Before</span>
-              <p>Generic language. Weak hierarchy. Nothing signals why this business deserves a premium.</p>
-            </div>
-          </article>
-
-          <article class="browser-card browser-card--after reveal">
-            <div class="browser-top">
-              <div class="browser-dots"><i></i><i></i><i></i></div>
-              <span>concept direction</span>
-            </div>
-            <div class="browser-body after-body">
-              <div class="after-nav">
-                <span class="after-logo">NORTH / 27</span>
-                <span>PROJECTS&nbsp;&nbsp;&nbsp; STUDIO</span>
-              </div>
-              <div class="after-visual">
-                <div class="after-index">01 — 06</div>
-                <div class="after-copy">
-                  <span>Custom residential construction</span>
-                  <h3>Homes with<br>nothing accidental.</h3>
-                  <a href="#offer">View selected work ↗</a>
-                </div>
-                <div class="after-art">
-                  <div class="after-art-slab"></div>
-                  <div class="after-art-window"></div>
-                  <div class="after-art-shadow"></div>
-                </div>
-              </div>
-            </div>
-            <div class="study-caption study-caption--dark">
-              <span>After</span>
-              <p>Positioning, hierarchy and art direction work together to make the same category feel materially more valuable.</p>
-            </div>
-          </article>
-        </div>
-
-        <p class="concept-disclosure reveal">
-          Concept study shown for demonstration. It is not presented as a client result.
-        </p>
-      </section>
-
-      <section class="offer section-pad" id="offer">
-        <div class="offer-top reveal">
-          <div class="statement-aside">
-            <span class="eyebrow">The offer</span>
-            <span class="section-number">02</span>
-          </div>
-          <div class="offer-heading">
-            <h2>One focused sprint.<br><span>One materially better website.</span></h2>
-          </div>
-        </div>
-
-        <div class="offer-card reveal">
-          <div class="offer-card-top">
-            <div>
-              <span class="offer-label">Custom Website Sprint</span>
-              <p class="offer-duration">1–5 page marketing site / 3–5 day build</p>
-            </div>
-            <div class="offer-price">
-              <span>Fixed sprint fee</span>
-              <strong>$1,500</strong>
-            </div>
-          </div>
-
-          <div class="offer-grid">
-            <div class="offer-copy">
-              <div>
-                <p>
-                  Designed for established service businesses that need a website
-                  worthy of the work they already do.
-                </p>
-                <div class="scope-note">
-                  <strong>Best for:</strong>
-                  brochure sites, lead-generation sites, professional services,
-                  builders, designers and visually driven service businesses.
-                </div>
-              </div>
-
-              <a class="primary-button js-booking-link" data-cta="offer-fit-call" href="https://calendly.com/markkrizsan/sprint">
-                <span>Book a 15-min fit call</span>
-                <svg viewBox="0 0 48 48" aria-hidden="true">
-                  <path d="M10 24h26M27 15l9 9-9 9"/>
-                </svg>
-              </a>
-            </div>
-
-            <ul class="deliverables">
-              <li><span>01</span> Positioning + page strategy</li>
-              <li><span>02</span> Copy direction + refinement</li>
-              <li><span>03</span> Custom responsive design</li>
-              <li><span>04</span> HTML / CSS / JavaScript development</li>
-              <li><span>05</span> GitHub + Cloudflare deployment when appropriate</li>
-              <li><span>06</span> Contact flow + basic technical SEO</li>
-              <li><span>07</span> Domain connection + launch QA</li>
-              <li><span>08</span> One focused revision round</li>
-            </ul>
-          </div>
-
-          <div class="scope-boundary">
-            <span>Scope boundary</span>
-            <p>
-              Ecommerce, memberships, portals, large content migrations and complex
-              application functionality are outside the sprint and quoted separately.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="platform section-pad">
-        <div class="platform-head reveal">
-          <span class="eyebrow">Your existing platform</span>
-          <h2>I do not migrate your site <span>just because I prefer my tools.</span></h2>
-        </div>
-
-        <div class="platform-grid">
-          <article class="platform-card reveal">
-            <span class="platform-index">A</span>
-            <h3>Keep the current platform</h3>
-            <p>
-              If Squarespace, Wix, WordPress or another system is carrying functions
-              your business genuinely needs, I assess whether the sprint should stay there.
-            </p>
-          </article>
-
-          <article class="platform-card platform-card--dark reveal">
-            <span class="platform-index">B</span>
-            <h3>Rebuild lean</h3>
-            <p>
-              If the site is primarily a 1–5 page marketing site, a custom-coded rebuild
-              can remove unnecessary machinery and create a cleaner foundation.
-            </p>
-          </article>
-
-          <article class="platform-card reveal">
-            <span class="platform-index">C</span>
-            <h3>You retain ownership</h3>
-            <p>
-              Your domain remains in your account. For custom builds, the code and deployment
-              can be handed over cleanly rather than tying the business to me forever.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="process section-pad">
-        <div class="process-intro reveal">
-          <span class="eyebrow">Process</span>
-          <h2>Fast because the process is <span>deliberate.</span></h2>
-          <p>No bloated discovery phase. No committee theater. No disappearing into a design file for a month.</p>
-        </div>
-
-        <div class="process-list">
-          <article class="process-item reveal">
-            <div class="process-num">01</div>
-            <div>
-              <h3>Fit</h3>
-              <p>We use a 15-minute call to confirm the site, scope, platform and whether the sprint is actually the right tool.</p>
-            </div>
-            <span class="process-time">Before booking</span>
-          </article>
-
-          <article class="process-item reveal">
-            <div class="process-num">02</div>
-            <div>
-              <h3>Reserve</h3>
-              <p>If it fits, I send the scope, invoice and short intake. The sprint date is reserved when payment is complete.</p>
-            </div>
-            <span class="process-time">Same day</span>
-          </article>
-
-          <article class="process-item reveal">
-            <div class="process-num">03</div>
-            <div>
-              <h3>Design + build</h3>
-              <p>I diagnose the current site, establish the visual and messaging direction, then build the responsive site directly.</p>
-            </div>
-            <span class="process-time">Day 01–04</span>
-          </article>
-
-          <article class="process-item reveal">
-            <div class="process-num">04</div>
-            <div>
-              <h3>Ship</h3>
-              <p>One focused revision, final QA, domain connection, metadata and handoff. Then it is live and yours.</p>
-            </div>
-            <span class="process-time">Day 03–05</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="fit section-pad">
-        <div class="fit-panel reveal">
-          <div class="fit-left">
-            <span class="eyebrow eyebrow--light">Best fit</span>
-            <h2>This is for businesses that are already <span>good.</span></h2>
-          </div>
-
-          <div class="fit-right">
-            <div class="fit-row">
-              <span>01</span>
-              <p>Your work is strong, but the website visibly undersells it.</p>
-            </div>
-            <div class="fit-row">
-              <span>02</span>
-              <p>One new client is worth materially more than the cost of the sprint.</p>
-            </div>
-            <div class="fit-row">
-              <span>03</span>
-              <p>You value clarity, taste and speed over endless revision cycles.</p>
-            </div>
-            <div class="fit-row">
-              <span>04</span>
-              <p>You need a focused marketing site, not a giant software platform.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="capabilities section-pad">
-        <div class="capabilities-head reveal">
-          <span class="eyebrow">Built by one pair of hands</span>
-          <h2>Strategy, design and development without the handoffs.</h2>
-        </div>
-
-        <div class="capability-marquee" aria-hidden="true">
-          <div class="marquee-track">
-            <span>POSITIONING</span><i>✦</i>
-            <span>ART DIRECTION</span><i>✦</i>
-            <span>COPY</span><i>✦</i>
-            <span>WEB DESIGN</span><i>✦</i>
-            <span>DEVELOPMENT</span><i>✦</i>
-            <span>POSITIONING</span><i>✦</i>
-            <span>ART DIRECTION</span><i>✦</i>
-            <span>COPY</span><i>✦</i>
-            <span>WEB DESIGN</span><i>✦</i>
-            <span>DEVELOPMENT</span><i>✦</i>
-          </div>
-        </div>
-      </section>
-
-      <section class="faq section-pad">
-        <div class="faq-intro reveal">
-          <span class="eyebrow">Before you book</span>
-          <h2>The questions that actually matter.</h2>
-        </div>
-
-        <div class="faq-list">
-          <details class="faq-item reveal">
-            <summary>
-              <span>Do I have to leave Squarespace, Wix or WordPress?</span>
-              <i>+</i>
-            </summary>
-            <div class="faq-answer">
-              No. Platform is a business decision, not an aesthetic religion. If your current
-              system supports important workflows, we can keep it. If it is a simple marketing
-              site and a custom rebuild is cleaner, I will recommend that instead.
-            </div>
-          </details>
-
-          <details class="faq-item reveal">
-            <summary>
-              <span>What exactly does the $1,500 cover?</span>
-              <i>+</i>
-            </summary>
-            <div class="faq-answer">
-              A focused 1–5 page marketing site: strategy, copy refinement, custom design,
-              responsive development, contact flow, launch setup, basic technical SEO and one revision round.
-            </div>
-          </details>
-
-          <details class="faq-item reveal">
-            <summary>
-              <span>What happens after the 15-minute call?</span>
-              <i>+</i>
-            </summary>
-            <div class="faq-answer">
-              If the project fits the sprint, you receive the confirmed scope, invoice and short intake.
-              Payment reserves the build window. Once the required assets and access are in, the clock starts.
-            </div>
-          </details>
-
-          <details class="faq-item reveal">
-            <summary>
-              <span>Who owns the website and domain?</span>
-              <i>+</i>
-            </summary>
-            <div class="faq-answer">
-              You do. Your domain stays in your account. On custom-coded builds, the code can live in
-              your repository and deployment account so there is no artificial dependency on me.
-            </div>
-          </details>
-
-          <details class="faq-item reveal">
-            <summary>
-              <span>What if the site is more complex than a sprint?</span>
-              <i>+</i>
-            </summary>
-            <div class="faq-answer">
-              I will tell you on the fit call. I would rather decline the sprint or quote the real scope
-              than squeeze a complex project into a format that makes the work worse.
-            </div>
-          </details>
-        </div>
-      </section>
-
-      <section class="contact" id="contact">
-        <div class="contact-inner">
-          <div class="contact-copy reveal">
-            <span class="eyebrow eyebrow--light">Start here</span>
-            <h2>If the work is excellent,<br>the website should <span>prove it.</span></h2>
-            <p>
-              Book a 15-minute fit call. Bring the current site. I’ll tell you what I would change,
-              whether the sprint is the right format, and the cleanest path to shipping it.
-            </p>
-
-            <div class="contact-actions">
-              <a class="primary-button primary-button--light js-booking-link" data-cta="footer-fit-call" href="https://calendly.com/markkrizsan/sprint">
-                <span>Book the 15-minute call</span>
-                <svg viewBox="0 0 48 48" aria-hidden="true">
-                  <path d="M10 24h26M27 15l9 9-9 9"/>
-                </svg>
-              </a>
-              <a class="text-link" href="#process">See what happens next ↑</a>
-            </div>
-
-            <div class="booking-flow">
-              <div><span>01</span><p>Fit call</p></div>
-              <div><span>02</span><p>Scope + invoice</p></div>
-              <div><span>03</span><p>Intake</p></div>
-              <div><span>04</span><p>Sprint begins</p></div>
-            </div>
-          </div>
-
-          <div class="contact-mark reveal" aria-hidden="true">
-            <svg viewBox="0 0 560 560">
-              <circle cx="280" cy="280" r="225"/>
-              <circle cx="280" cy="280" r="155"/>
-              <path d="M165 155v250M395 155L165 405M395 155v250"/>
-              <path d="M280 55v50M280 455v50M55 280h50M455 280h50"/>
-            </svg>
-          </div>
-        </div>
-
-        <footer>
-          <div class="footer-wordmark">MARK KRIZSAN</div>
-          <div class="footer-meta">
-            <span>Custom website sprints</span>
-            <span>© <span id="year"></span></span>
-          </div>
-        </footer>
-      </section>
-    </main>
-  </div>
+  <aside class="guide-widget" id="guideWidget">
+    <a href="#lens" id="guideLink">
+      <span class="guide-small">NEXT</span>
+      <strong id="guideText">SEE IT</strong>
+      <i>↓</i>
+    </a>
+  </aside>
 
   <script src="script.js"></script>
 </body>
