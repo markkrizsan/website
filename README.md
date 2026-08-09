@@ -1,41 +1,29 @@
-# Mark Krizsan — Perception V5
+# Mark Krizsan — Perception V6
 
-This version is the subtraction pass.
+This is the final refinement pass.
 
-## Design system
-- Ferrari-adjacent signal red
-- black
-- white
-- Marcellus + Inter Tight
-- narrow 1180px editorial content frame
-- one signature interaction: the BEFORE / AFTER perception lens
-- one persistent conversion control: 15 MIN / BOOK
+## What changed
+- Rebuilt the layout so it feels less like a stacked landing-page template and more like an authored editorial portfolio.
+- Reduced the page to 6 sections.
+- Switched from repeated equal-width section formulas to alternating compositions.
+- Kept one signature interaction only: the before/after perception lens.
+- Tightened type, spacing and content width.
+- Preserved the red / black / white system.
+- Fully responsive with a mobile-first stack for key sections.
 
-## Page architecture
-1. Red hero
-2. Before / after
-3. Three design principles
-4. Mark portrait
-5. $1,500 sprint + process
-6. Red CTA
+## Architecture
+1. Hero
+2. Before / After proof
+3. Mark portrait + positioning
+4. Standard / principles
+5. Sprint offer
+6. Final CTA
 
-No standalone FAQ. No capability marquee. No redundant process section.
-
-## Funnel
-Website
-→ 15-minute fit call
-→ confirm scope
-→ invoice
-→ intake
-→ 3–5 day sprint
-→ live
-
-Calendly:
+## Calendly
 https://calendly.com/markkrizsan/sprint
 
-## Deploy
-Static HTML / CSS / JS.
-
+## Deployment
+Static HTML / CSS / JavaScript.
 Cloudflare Pages:
 - Framework preset: None
 - Build command: blank
