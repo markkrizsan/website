@@ -1,43 +1,19 @@
-/* =========================================================
-   EDIT THESE TWO VALUES BEFORE DEPLOYMENT.
-   That's it. Humanity survives another configuration file.
-   ========================================================= */
-
 const SITE_CONFIG = {
-  bookingUrl: "https://cal.com/YOUR-HANDLE/15min",
-  email: "YOUR-EMAIL@example.com"
+  bookingUrl: "https://calendly.com/markkrizsan/sprint"
 };
 
-/* Apply booking + email links */
+/* Booking links */
 document.querySelectorAll(".js-booking-link").forEach((link) => {
   link.setAttribute("href", SITE_CONFIG.bookingUrl);
+  link.setAttribute("target", "_blank");
+  link.setAttribute("rel", "noopener");
 
-  if (SITE_CONFIG.bookingUrl.includes("YOUR-HANDLE")) {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      alert("Add your real booking URL in SITE_CONFIG inside script.js before publishing.");
-    });
-  } else {
-    link.setAttribute("target", "_blank");
-    link.setAttribute("rel", "noopener");
-  }
-});
-
-document.querySelectorAll(".js-email-link").forEach((link) => {
-  link.setAttribute("href", `mailto:${SITE_CONFIG.email}?subject=Website%20Sprint`);
-
-  if (SITE_CONFIG.email.includes("YOUR-EMAIL")) {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      alert("Add your real email in SITE_CONFIG inside script.js before publishing.");
-    });
-  }
-});
-
-document.querySelectorAll(".js-email-text").forEach((element) => {
-  if (!SITE_CONFIG.email.includes("YOUR-EMAIL")) {
-    element.textContent = SITE_CONFIG.email;
-  }
+  link.addEventListener("click", () => {
+    const cta = link.dataset.cta || "fit-call";
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "booking_click", { cta_location: cta });
+    }
+  });
 });
 
 /* Current year */
@@ -59,7 +35,7 @@ const observer = new IntersectionObserver(
 );
 
 revealEls.forEach((el, index) => {
-  el.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+  el.style.transitionDelay = `${Math.min(index % 4, 3) * 65}ms`;
   observer.observe(el);
 });
 

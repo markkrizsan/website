@@ -1,48 +1,56 @@
-# Mark Krizsan — Custom Website Sprint
+# Mark Krizsan — Custom Website Sprint V2
 
-A one-page, conversion-focused personal sales site built in plain HTML/CSS/JS.
+Conversion-focused one-page site for `markkrizsan.com`.
 
-## Files
+## Funnel
 
-- `index.html`
-- `style.css`
-- `script.js`
+Every primary CTA goes to:
 
-## Before deployment
+`https://calendly.com/markkrizsan/sprint`
 
-Open `script.js` and replace:
+Recommended customer flow:
 
-```js
-const SITE_CONFIG = {
-  bookingUrl: "https://cal.com/YOUR-HANDLE/15min",
-  email: "YOUR-EMAIL@example.com"
-};
-```
+1. Visitor books a 15-minute fit call.
+2. Confirm scope, platform and fit on the call.
+3. Send confirmed scope + invoice/payment link the same day.
+4. Payment reserves the sprint date.
+5. Send short intake form.
+6. Build and ship.
 
-with your real booking URL and email.
+Do **not** send cold visitors directly to a payment page at this stage. The 15-minute call protects the narrow sprint scope and prevents accidental complex-platform projects.
 
-## Deploy
+## Offer
 
-### GitHub + Cloudflare Pages
+**Custom Website Sprint — $1,500 flat**
 
-1. Create a GitHub repository.
-2. Upload these files to the repository root.
-3. In Cloudflare Pages, create a new Pages project from Git.
-4. Select the repository.
-5. Framework preset: **None**
-6. Build command: leave blank
-7. Build output directory: `/`
-8. Deploy.
-9. Add `markkrizsan.com` as a custom domain when ready.
+- 1–5 page marketing site
+- 3–5 day build
+- strategy + copy refinement
+- custom responsive design
+- HTML/CSS/JS development
+- GitHub + Cloudflare deployment when appropriate
+- contact flow
+- basic technical SEO
+- domain connection
+- one revision round
 
-## Positioning
+Excluded from sprint:
+- ecommerce
+- memberships / portals
+- large content migrations
+- custom applications
+- complex integrations
 
-This page is deliberately narrow:
-- one offer
-- one price anchor
-- one primary CTA
-- no invented testimonials
-- no fake client logos
-- no generic agency language
+## Deploy to Cloudflare Pages
 
-The page itself is intended to function as proof of taste and implementation ability.
+1. Create/push this folder to a GitHub repository.
+2. Cloudflare Pages → Create project → Connect to Git.
+3. Framework preset: None.
+4. No build command.
+5. Output directory: `/`
+6. Deploy.
+7. Add `markkrizsan.com` when ready.
+
+## Next proof upgrade
+
+The concept before/after is explicitly labeled as a concept study. Replace it with the first real client before/after + testimonial as soon as you have one. That will be the single largest credibility upgrade.
