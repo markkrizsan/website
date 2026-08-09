@@ -48,57 +48,20 @@ if (range && lens) {
   });
 }
 
-/* Contextual guide widget:
-   one recurring UI object, changing only when the visitor's next action changes. */
+/* Persistent booking control */
 const guideLink = document.getElementById("guideLink");
 const guideText = document.getElementById("guideText");
 const guideSmall = document.querySelector(".guide-small");
-const sections = {
-  lens: document.getElementById("lens"),
-  mark: document.getElementById("mark"),
-  offer: document.getElementById("offer"),
-  contact: document.getElementById("contact")
-};
 
-function setGuide(labelSmall, labelMain, href, external = false, arrow = "↓") {
-  if (!guideLink || !guideText || !guideSmall) return;
-  guideSmall.textContent = labelSmall;
-  guideText.textContent = labelMain;
-  guideLink.href = href;
-  const icon = guideLink.querySelector("i");
-  if (icon) icon.textContent = arrow;
-
-  if (external) {
-    guideLink.target = "_blank";
-    guideLink.rel = "noopener";
-  } else {
-    guideLink.removeAttribute("target");
-    guideLink.removeAttribute("rel");
-  }
+if (guideLink) {
+  guideLink.href = BOOKING_URL;
+  guideLink.target = "_blank";
+  guideLink.rel = "noopener";
 }
-
-function updateGuide() {
-  const y = window.scrollY + window.innerHeight * 0.55;
-  const lensTop = sections.lens?.offsetTop ?? Infinity;
-  const markTop = sections.mark?.offsetTop ?? Infinity;
-  const offerTop = sections.offer?.offsetTop ?? Infinity;
-  const contactTop = sections.contact?.offsetTop ?? Infinity;
-
-  if (y < lensTop) {
-    setGuide("NEXT", "SEE IT", "#lens", false, "↓");
-  } else if (y < markTop) {
-    setGuide("NEXT", "MARK", "#mark", false, "↓");
-  } else if (y < offerTop) {
-    setGuide("NEXT", "SPRINT", "#offer", false, "↓");
-  } else if (y < contactTop - window.innerHeight * .25) {
-    setGuide("15 MIN", "BOOK", BOOKING_URL, true, "↗");
-  } else {
-    setGuide("15 MIN", "BOOK", BOOKING_URL, true, "↗");
-  }
-}
-
-updateGuide();
-window.addEventListener("scroll", updateGuide, { passive: true });
+if (guideText) guideText.textContent = "BOOK";
+if (guideSmall) guideSmall.textContent = "15 MIN";
+const guideIcon = guideLink?.querySelector("i");
+if (guideIcon) guideIcon.textContent = "↗";
 
 /* Lightweight portrait parallax */
 const portrait = document.querySelector(".portrait-media img");

@@ -66,3 +66,12 @@ This is static HTML/CSS/JS.
 
 Replace the concept study with a real before/after and one concise testimonial.
 Do not add a giant portfolio grid. Curate proof.
+
+
+## V4 changes
+- Red / black / white visual system
+- Narrower editorial content frame
+- BEFORE locked to left, AFTER to right in the slider
+- Persistent red 15-minute BOOK control
+- Reduced copy and fewer principles
+- Mobile-first spacing and stack corrections
