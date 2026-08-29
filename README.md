@@ -1,30 +1,15 @@
-# Mark Krizsan — Perception V6
+# markkrizsan.com
 
-This is the final refinement pass.
+Primary identity: photography / film / direction.
 
-## What changed
-- Rebuilt the layout so it feels less like a stacked landing-page template and more like an authored editorial portfolio.
-- Reduced the page to 6 sections.
-- Switched from repeated equal-width section formulas to alternating compositions.
-- Kept one signature interaction only: the before/after perception lens.
-- Tightened type, spacing and content width.
-- Preserved the red / black / white system.
-- Fully responsive with a mobile-first stack for key sections.
+## Routes
+- `/` — Creative
+- `/archive/` — Living Archive
+- `/projects/presence/`
+- `/projects/campaign/`
+- `/projects/story/`
+- `/web/` — Website design offer
 
-## Architecture
-1. Hero
-2. Before / After proof
-3. Mark portrait + positioning
-4. Standard / principles
-5. Sprint offer
-6. Final CTA
+Portfolio media remains under `/creative/assets/` so the existing uploaded WebP assets continue working without another rename/re-upload pass.
 
-## Calendly
-https://calendly.com/markkrizsan/sprint
-
-## Deployment
-Static HTML / CSS / JavaScript.
-Cloudflare Pages:
-- Framework preset: None
-- Build command: blank
-- Output directory: /
+See `RESTRUCTURE-NOTES.md` and `QA.md` before deployment.

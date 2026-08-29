@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://markkrizsan.com/</loc>
-  </url>
+  <url><loc>https://markkrizsan.com/</loc></url>
+  <url><loc>https://markkrizsan.com/archive/</loc></url>
+  <url><loc>https://markkrizsan.com/projects/presence/</loc></url>
+  <url><loc>https://markkrizsan.com/projects/campaign/</loc></url>
+  <url><loc>https://markkrizsan.com/projects/story/</loc></url>
+  <url><loc>https://markkrizsan.com/web/</loc></url>
 </urlset>
