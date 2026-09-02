@@ -1,310 +1,443 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#11100f">
-  <meta name="description" content="Photography, film, and direction by Mark Krizsan for people, brands, campaigns, and stories.">
-  <meta property="og:title" content="Mark Krizsan | Photographer & Filmmaker | Orange County + Los Angeles">
-  <meta property="og:description" content="Photography, film and creative direction for people, brands and stories. Portraits, campaigns and documentary work by Mark Krizsan.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://markkrizsan.com/">
-  <meta property="og:image" content="https://markkrizsan.com/assets/og-creative.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="canonical" href="https://markkrizsan.com/">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="creative/assets/css/site.css">
-  <title>Mark Krizsan | Photographer & Filmmaker | Orange County + Los Angeles</title>
-  <script defer src="creative/assets/js/config.js"></script><script defer src="creative/assets/js/site.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#11100f">
+<title>Mark Krizsan — Photographer, Filmmaker & Creative Director | Orange County + Los Angeles</title>
+<meta name="description" content="Photography, film and creative direction by Mark Krizsan for people, brands and stories. Based in Orange County + Los Angeles, available for California and travel commissions.">
+<meta property="og:title" content="Mark Krizsan | Photographer, Filmmaker & Creative Director | Orange County + Los Angeles">
+<meta property="og:description" content="Photography, film and creative direction for people, brands and stories that need to look as strong as they actually are.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://markkrizsan.com/">
+<meta property="og:image" content="https://markkrizsan.com/assets/og-creative.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://markkrizsan.com/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script defer src="creative/assets/js/config.js"></script>
+<style>
+:root{
+  --ink:#11100f;
+  --paper:#f3eee7;
+  --paper-2:#e6ded4;
+  --world:#c5261f;
+  --world-dark:#841c17;
+  --muted:#706a63;
+  --line:rgba(255,255,255,.18);
+  --dark-line:rgba(0,0,0,.22);
+  --display:"Instrument Serif",Georgia,serif;
+  --sans:"Inter Tight",Arial,Helvetica,sans-serif;
+  --mono:"Courier New",Courier,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+.skip{position:fixed;left:12px;top:12px;z-index:5000;background:var(--paper);color:var(--ink);padding:10px 13px;transform:translateY(-170%);transition:transform .2s var(--ease);font:700 12px/1 var(--sans)}.skip:focus{transform:none}
+html{background:var(--ink);scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:#fff;font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body.no-scroll{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+button{color:inherit}
+img,video{display:block;max-width:100%}
+::selection{background:var(--world);color:#000}
+.mono{font:10px/1.2 var(--mono);letter-spacing:.15em;text-transform:uppercase}
+.micro{font:9px/1.25 var(--mono);letter-spacing:.13em;text-transform:uppercase}
+.scene{position:relative}
+.wrap{width:min(1240px,calc(100% - 40px));margin:auto}
+.kicker{font:10px var(--mono);letter-spacing:.2em;text-transform:uppercase}
+.display{font-size:clamp(68px,12.5vw,230px);line-height:.66;letter-spacing:-.095em;text-transform:uppercase;font-weight:900;margin:0}
+.button{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-width:190px;border:1px solid currentColor;padding:13px 15px;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;transition:background .2s,color .2s,transform .2s;cursor:pointer;background:transparent}
+.button:hover{background:#fff;color:#000;transform:translateY(-1px)}
+.button.light{background:var(--paper);color:#000;border-color:var(--paper)}
+.button.light:hover{background:#fff}
+
+/* Persistent commercial nav */
+.nav{position:fixed;z-index:100;left:0;right:0;top:0;height:54px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,6,6,.82);backdrop-filter:blur(18px) saturate(160%);border-bottom:1px solid rgba(255,255,255,.08);transition:background .25s,color .25s}
+.nav-brand{display:flex;align-items:baseline;gap:11px;font-weight:900;letter-spacing:-.04em;font-size:13px}.nav-brand small{font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#999}
+.nav-links{display:flex;align-items:center;gap:18px}.nav-links a,.nav-links button{border:0;background:none;color:inherit;padding:5px 0;cursor:pointer;font:9px var(--mono);letter-spacing:.13em;text-transform:uppercase}.nav-links .nav-cta{border:1px solid #fff;padding:8px 10px;background:#fff;color:#000}.nav-links .nav-cta:hover{background:var(--world);border-color:var(--world)}
+
+/* HERO: clear commercial proposition inside a visual object */
+.hero{min-height:100svh;height:100svh;background:#000;overflow:hidden;padding-top:54px}
+.hero-media{position:absolute;inset:0;overflow:hidden}.hero-media img,.hero-media video{position:absolute;inset:-3%;width:106%;height:106%;object-fit:cover;object-position:center 40%}.hero-media video{opacity:.94}.hero-grade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.5) 38%,rgba(0,0,0,.12) 67%,rgba(0,0,0,.38) 100%),linear-gradient(0deg,rgba(0,0,0,.7),transparent 50%)}
+.hero-title{position:absolute;left:-1.2vw;bottom:1vh;font-size:clamp(88px,18vw,335px);font-weight:900;line-height:.62;letter-spacing:-.108em;text-transform:uppercase;white-space:nowrap;opacity:.93;pointer-events:none}.hero-title span{display:block}.hero-title span:nth-child(2){margin-left:17vw}
+.hero-copy{position:absolute;z-index:3;left:3vw;top:17vh;width:min(560px,50vw)}.hero-copy .kicker{color:var(--world);margin-bottom:16px}.hero-copy h1{font-size:clamp(33px,4.6vw,72px);line-height:.92;letter-spacing:-.055em;margin:0 0 18px}.hero-copy p{font-size:clamp(15px,1.4vw,20px);line-height:1.4;max-width:520px;margin:0 0 25px;color:#d0cec7}.hero-actions{display:flex;gap:7px;flex-wrap:wrap}
+.hero-proof{position:absolute;z-index:4;right:1.5vw;bottom:2vh;width:min(420px,36vw);border-top:1px solid rgba(255,255,255,.55)}.hero-proof .row{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid rgba(255,255,255,.2);padding:8px 0;font:9px var(--mono);letter-spacing:.11em;text-transform:uppercase}.hero-proof .row span:last-child{text-align:right;color:#b9b7b1}
+
+/* immediate proof */
+.selected{background:var(--paper);color:#050505;padding:8vh 0 12vh;overflow:hidden}
+.selected-head{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:5vh}.selected-head h2{font-size:clamp(62px,11vw,205px);line-height:.64;letter-spacing:-.095em;margin:0;text-transform:uppercase}.selected-head p{width:330px;max-width:45vw;font-size:14px;line-height:1.4}
+.work-stack{display:grid;gap:12vh}.work-piece{position:relative;min-height:82svh}.work-media{position:absolute;overflow:hidden;background:#ccc}.work-media img,.work-media video{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}.work-piece:hover .work-media img{transform:scale(1.015)}
+.work-piece:nth-child(1) .work-media{left:0;top:0;width:72%;height:78svh}.work-piece:nth-child(2) .work-media{right:0;top:0;width:66%;height:78svh}.work-piece:nth-child(3) .work-media{left:11%;top:0;width:78%;height:74svh}
+.work-label{position:absolute;z-index:3;display:flex;flex-direction:column;gap:8px}.work-piece:nth-child(1) .work-label{right:0;top:15vh;width:34%}.work-piece:nth-child(2) .work-label{left:0;top:13vh;width:39%}.work-piece:nth-child(3) .work-label{left:0;bottom:2vh;width:55%}
+.work-label .num{color:var(--world)}.work-label h3{font-size:clamp(54px,9vw,165px);line-height:.68;letter-spacing:-.085em;text-transform:uppercase;margin:0}.work-label .type{font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase}.work-label p{max-width:350px;font-size:14px;line-height:1.4;margin:8px 0 12px}.work-label a{width:max-content;border-bottom:1px solid #000;padding-bottom:3px;font:10px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+
+/* services */
+.services{background:#060606;padding:9vh 0 13vh;overflow:hidden}.services-head{padding-bottom:7vh}.services-head .kicker{color:var(--world)}.services-head h2{font-size:clamp(55px,9vw,165px);line-height:.76;letter-spacing:-.075em;margin:12px 0 0;text-transform:uppercase;max-width:1100px}.service-row{position:relative;min-height:52vh;border-top:1px solid #ffffff38;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;padding:4vh 0;overflow:hidden}.service-row:last-child{border-bottom:1px solid #ffffff38}.service-title{font-size:clamp(70px,12vw,220px);font-weight:900;line-height:.65;letter-spacing:-.1em;text-transform:uppercase;position:relative;z-index:2}.service-copy{position:relative;z-index:3;padding-right:2vw}.service-copy h3{font-size:19px;margin:0 0 11px;letter-spacing:-.03em}.service-copy p{color:#aaa;line-height:1.45;margin:0 0 16px;max-width:430px}.service-list{display:grid;grid-template-columns:1fr 1fr;gap:7px 18px;margin-top:18px}.service-list span{font:9px var(--mono);letter-spacing:.11em;text-transform:uppercase;border-top:1px solid #ffffff25;padding-top:7px;color:#d5d2ca}.service-preview{position:absolute;z-index:1;right:19%;top:8%;width:25vw;height:84%;opacity:0;transform:translateX(40px) rotate(2deg);transition:opacity .35s,transform .7s var(--ease);pointer-events:none}.service-preview img{width:100%;height:100%;object-fit:cover;filter:saturate(.8)}.service-row:hover .service-preview{opacity:.45;transform:translateX(0) rotate(-1deg)}
+
+/* positioning */
+.positioning{background:var(--world);color:#050505;min-height:115svh;padding:10vh 2vw 9vh;display:flex;flex-direction:column;justify-content:space-between}.positioning h2{font-size:clamp(60px,12.6vw,235px);line-height:.66;letter-spacing:-.1em;text-transform:uppercase;margin:0;max-width:1450px}.positioning-bottom{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:end}.positioning-bottom .big{font-size:clamp(24px,3.4vw,54px);line-height:1.03;letter-spacing:-.045em}.positioning-bottom .small{max-width:500px;font-size:15px;line-height:1.5}.positioning-bottom strong{font-weight:900}
+
+/* Signature Cut: condensed and clear */
+.cut{background:#050505;padding:9vh 0 13vh;overflow:hidden}.cut-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:4vh}.cut-head h2{font-size:clamp(65px,12vw,220px);line-height:.67;letter-spacing:-.095em;text-transform:uppercase;margin:0}.cut-head-copy{width:380px;max-width:42vw}.cut-head-copy strong{font-size:18px;display:block;margin-bottom:8px}.cut-head-copy p{font-size:13px;line-height:1.45;color:#aaa;margin:0}.cut-stage{position:relative;min-height:82svh}.cut-film{position:absolute;left:18%;top:4vh;width:64%;aspect-ratio:16/9;background:#111;z-index:3;cursor:pointer}.cut-film video{width:100%;height:100%;object-fit:cover}.cut-film.playing .play-disc{opacity:0}.play-disc{position:absolute;inset:0;margin:auto;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:var(--paper);color:#000;font-weight:900;font-size:10px;letter-spacing:.1em;transition:.2s}.film-top{position:absolute;left:9px;right:9px;top:8px;display:flex;justify-content:space-between;mix-blend-mode:difference}.film-bottom{position:absolute;left:9px;right:9px;bottom:8px;display:flex;justify-content:space-between;align-items:center}.seqs{position:absolute;left:0;top:8vh;width:15%;z-index:6}.seq{border-top:1px solid #ffffff35;padding:14px 0;display:grid;grid-template-columns:30px 1fr;gap:7px;color:#666;cursor:pointer;transition:.2s}.seq:last-child{border-bottom:1px solid #ffffff35}.seq:hover,.seq.active{color:#fff;transform:translateX(5px)}.seq .t{font:9px var(--mono);color:var(--world)}.seq .n{font-size:12px;text-transform:uppercase}.cut-still{position:absolute;overflow:hidden;z-index:1;opacity:0;transform:scale(.9);transition:opacity .35s,transform .65s var(--ease);cursor:zoom-in}.cut-still.live{opacity:1;transform:scale(1) rotate(var(--r))}.cut-still img{width:100%;height:100%;object-fit:cover}.cut-still.a{right:-1vw;top:0;width:20vw;height:35vh;--r:1.3deg}.cut-still.b{right:2vw;bottom:0;width:17vw;height:27vh;--r:-1.5deg}.cut-still.c{left:3vw;bottom:2vh;width:15vw;height:25vh;--r:.6deg}.cut-cta{position:absolute;left:18%;bottom:0;z-index:5}.cut-cta a{font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #fff;padding-bottom:4px}
+
+/* about */
+.about{background:var(--paper);color:#050505;padding:9vh 0 12vh;overflow:hidden}.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:5vw;align-items:start}.about-portrait{height:110svh;position:relative;overflow:hidden}.about-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 24%;filter:saturate(.98) contrast(1.01);transform:scale(1);transition:filter .55s var(--ease),transform .9s var(--ease)}.about-portrait::after{content:"THE PERSON > THE POSE";position:absolute;left:18px;bottom:18px;background:var(--world);color:var(--paper);padding:9px 11px;font:700 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;opacity:0;transform:translateY(8px) rotate(-1deg);transition:opacity .3s var(--ease),transform .45s var(--ease)}.about-portrait:hover img{filter:saturate(1.08) contrast(1.025);transform:scale(1.018)}.about-portrait:hover::after{opacity:1;transform:translateY(0) rotate(-1deg)}.about-copy{position:sticky;top:92px;padding-top:3vh}.about-copy h2{font-size:clamp(72px,11vw,205px);line-height:.66;letter-spacing:-.095em;text-transform:uppercase;margin:0 0 5vh}.about-copy .lead{font-size:clamp(22px,2.5vw,38px);line-height:1.08;letter-spacing:-.04em;max-width:600px}.about-copy .body{font-size:15px;line-height:1.52;max-width:520px;margin-top:26px}.meta-table{margin-top:35px;border-top:1px solid #000}.meta-row{display:grid;grid-template-columns:135px 1fr;border-bottom:1px solid #0003;padding:10px 0;font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase}.meta-row span:last-child{text-align:right}
+
+/* process */
+.working{background:#d8d2c7;color:#050505;padding:9vh 0 11vh}.working-head{display:grid;grid-template-columns:1fr .65fr;gap:4vw;align-items:end;margin-bottom:8vh}.working-head h2{font-size:clamp(66px,11vw,205px);line-height:.66;letter-spacing:-.095em;text-transform:uppercase;margin:0}.working-head p{font-size:15px;line-height:1.45;max-width:430px}.steps{border-top:2px solid #000}.step{display:grid;grid-template-columns:85px 1fr 1fr;gap:3vw;align-items:start;padding:24px 0;border-bottom:1px solid #0005}.step .num{font:10px var(--mono);color:var(--world-dark)}.step h3{font-size:clamp(35px,5vw,85px);line-height:.8;letter-spacing:-.06em;text-transform:uppercase;margin:0}.step p{font-size:14px;line-height:1.45;max-width:440px;margin:0}
+
+/* engagements/deliverables */
+.engagements{background:#050505;padding:9vh 0 12vh}.engagements-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:7vh}.engagements-head h2{font-size:clamp(60px,10vw,190px);line-height:.67;letter-spacing:-.09em;text-transform:uppercase;margin:0}.engagements-head p{max-width:360px;color:#aaa;line-height:1.45}.engagement{display:grid;grid-template-columns:1.1fr .75fr .75fr;gap:2vw;min-height:42vh;border-top:1px solid #ffffff45;padding:28px 0}.engagement:last-child{border-bottom:1px solid #ffffff45}.engagement h3{font-size:clamp(40px,7vw,115px);line-height:.73;letter-spacing:-.075em;text-transform:uppercase;margin:0}.engagement .desc{font-size:14px;line-height:1.5;color:#b7b4ad}.engagement .deliver{font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#d9d5cd}.engagement .deliver span{display:block;border-top:1px solid #ffffff22;padding:8px 0}.engagement .deliver span:last-child{border-bottom:1px solid #ffffff22}
+
+/* investment */
+.investment{background:var(--world);color:#050505;min-height:92svh;padding:9vh 2vw;display:flex;flex-direction:column;justify-content:space-between}.investment h2{font-size:clamp(68px,14vw,260px);line-height:.63;letter-spacing:-.105em;text-transform:uppercase;margin:0}.investment-grid{display:grid;grid-template-columns:1fr .75fr;gap:8vw;align-items:end}.investment .price{font-size:clamp(28px,4vw,70px);line-height:.97;letter-spacing:-.05em}.investment .detail{font-size:14px;line-height:1.5;max-width:480px}.investment .button{margin-top:22px;border-color:#000}.investment .button:hover{background:#000;color:#fff}
+
+/* FAQ */
+.faq{background:var(--paper);color:#050505;padding:9vh 0 12vh}.faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:7vw}.faq h2{font-size:clamp(72px,10vw,190px);line-height:.66;letter-spacing:-.095em;text-transform:uppercase;margin:0;position:sticky;top:90px;height:max-content}.faq-list{border-top:2px solid #000}.faq-item{border-bottom:1px solid #0004}.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;border:0;background:none;color:#000;padding:18px 0;text-align:left;cursor:pointer;font-size:18px;letter-spacing:-.02em}.faq-q span:last-child{font:12px var(--mono)}.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}.faq-a>div{overflow:hidden}.faq-a p{max-width:650px;margin:0;padding:0 0 20px;font-size:14px;line-height:1.55;color:#4d4b47}.faq-item.open .faq-a{grid-template-rows:1fr}.faq-item.open .faq-q span:last-child{transform:rotate(45deg)}
+
+/* Inquiry */
+.inquiry{background:#fff;color:#000;padding:7vh 2vw 5vh;min-height:115svh}.inquiry-top{display:grid;grid-template-columns:1.3fr .7fr;gap:5vw;align-items:end}.inquiry h2{font-size:clamp(76px,15vw,285px);line-height:.62;letter-spacing:-.108em;text-transform:uppercase;margin:0}.inquiry-intro{font-size:clamp(20px,2.3vw,36px);line-height:1.08;letter-spacing:-.04em;max-width:520px}.form{margin-top:9vh;border-top:2px solid #000}.field-row{display:grid;grid-template-columns:220px 1fr;gap:3vw;padding:15px 0;border-bottom:1px solid #0004;align-items:start}.field-row label{font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;padding-top:11px}.field-row input,.field-row textarea,.field-row select{width:100%;border:0;background:transparent;color:#000;padding:8px 0;font-size:clamp(18px,2vw,30px);outline:none;border-radius:0}.field-row textarea{min-height:120px;resize:vertical}.field-row select{-webkit-appearance:none;appearance:none}.form-bottom{display:flex;justify-content:space-between;align-items:end;gap:4vw;padding-top:24px}.form-note{max-width:460px;font-size:12px;line-height:1.45;color:#5b5954}.submit{border:0;background:#000;color:#fff;padding:19px 22px;min-width:min(440px,45vw);display:flex;justify-content:space-between;font:11px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.submit:hover{background:var(--world);color:#000}.form-status{height:18px;margin-top:11px;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--world-dark)}
+
+
+.footer{background:var(--paper);color:#000;padding:24px 18px;display:flex;justify-content:space-between;border-top:1px solid #0004}
+
+/* Freeze view */
+.freeze{position:fixed;z-index:500;inset:0;background:#000;display:none;place-items:center}.freeze.open{display:grid}.freeze img{max-width:100vw;max-height:100svh;width:auto;height:auto}.freeze button{position:absolute;right:10px;top:10px;background:#0008;border:1px solid #fff6;padding:9px 11px;cursor:pointer}.freeze .lab{position:absolute;left:10px;top:10px}
+
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}.hero-media video{display:none}.service-preview{display:none}}
+
+@media(max-width:900px){
+  .wrap{width:calc(100% - 28px)}
+  .nav{height:48px;padding:0 10px}.nav-brand small{display:none}.nav-links{gap:10px}.nav-links a:nth-child(2),.nav-links a:nth-child(3),.nav-links a:nth-child(4){display:none}
+  .hero{height:100svh;min-height:720px;padding-top:48px}.hero-copy{left:14px;top:14vh;width:calc(100% - 28px)}.hero-copy h1{font-size:11vw;max-width:92vw}.hero-copy p{max-width:82vw}.hero-title{font-size:29vw;bottom:16vh}.hero-title span:nth-child(2){margin-left:8vw}.hero-proof{left:14px;right:14px;bottom:12px;width:auto}  .selected{padding-top:7vh}.selected-head{display:block}.selected-head p{max-width:80vw;width:auto;margin-top:25px}.work-stack{gap:5vh}.work-piece{min-height:100svh}.work-piece:nth-child(n) .work-media{left:0;right:auto;top:0;width:100%;height:66svh}.work-piece:nth-child(n) .work-label{left:0;right:auto;top:auto;bottom:2vh;width:95%}.work-label h3{font-size:21vw}.work-label p{max-width:78vw}
+  .services-head h2{font-size:15vw}.service-row{grid-template-columns:1fr;min-height:auto;padding:7vh 0}.service-title{font-size:25vw}.service-copy{padding-top:3vh}.service-list{grid-template-columns:1fr}.service-preview{display:none}
+  .positioning{min-height:120svh;padding-left:14px;padding-right:14px}.positioning h2{font-size:18vw}.positioning-bottom{grid-template-columns:1fr;gap:4vh}.positioning-bottom .big{font-size:8vw}
+  .cut-head{display:block}.cut-head h2{font-size:24vw}.cut-head-copy{max-width:90vw;width:auto;margin-top:25px}.cut-stage{min-height:115svh}.seqs{left:0;right:0;top:0;width:auto;display:flex;overflow:auto;gap:14px}.seq{min-width:110px;grid-template-columns:1fr}.seq:hover,.seq.active{transform:none}.cut-film{left:0;top:15vh;width:100%;aspect-ratio:9/12}.cut-still.a{right:-9vw;top:78vh;width:42vw;height:31vh}.cut-still.b{right:32vw;bottom:0;width:36vw;height:25vh}.cut-still.c{left:-8vw;bottom:7vh;width:36vw;height:22vh}.cut-cta{left:14px;bottom:2vh}
+  .about-grid{grid-template-columns:1fr}.about-portrait{height:78svh}.about-copy{position:relative;top:auto;padding-top:7vh}.about-copy h2{font-size:23vw}.meta-row{grid-template-columns:110px 1fr}
+  .working-head{grid-template-columns:1fr}.working-head h2{font-size:21vw}.working-head p{margin-top:25px}.step{grid-template-columns:40px 1fr}.step p{grid-column:2;margin-top:15px}
+  .engagements-head{display:block}.engagements-head h2{font-size:20vw}.engagements-head p{margin-top:25px}.engagement{grid-template-columns:1fr;gap:24px}.engagement h3{font-size:18vw}
+  .investment{padding-left:14px;padding-right:14px}.investment h2{font-size:25vw}.investment-grid{grid-template-columns:1fr;gap:5vh}.investment .price{font-size:9vw}
+  .faq-grid{grid-template-columns:1fr}.faq h2{position:relative;top:auto;font-size:24vw;margin-bottom:7vh}
+  .inquiry{padding-left:14px;padding-right:14px}.inquiry-top{grid-template-columns:1fr}.inquiry h2{font-size:26vw}.inquiry-intro{margin-top:5vh}.field-row{grid-template-columns:1fr;gap:0}.field-row label{padding-top:0}.form-bottom{display:block}.submit{width:100%;min-width:0;margin-top:22px}.footer{font-size:8px}
+}
+
+
+/* ============================================================
+   FINAL DEPLOY PASS — 2026-09
+   Purpose: preserve the authored chaos while removing collisions
+   that do not earn their keep. Brand tokens match the live site.
+   ============================================================ */
+
+:root{
+  --ink:#11100f;
+  --paper:#f3eee7;
+  --paper-2:#e6ded4;
+  --world:#c5261f;
+  --world-dark:#841c17;
+  --muted:#706a63;
+  --display:"Instrument Serif",Georgia,serif;
+  --sans:"Inter Tight",Arial,Helvetica,sans-serif;
+}
+
+html{background:var(--ink)}
+body{background:var(--ink)}
+.wrap{width:min(1440px,calc(100% - clamp(40px,6vw,96px)))}
+.nav{height:64px;padding:0 clamp(18px,2.5vw,40px);background:rgba(17,16,15,.90)}
+.nav-brand{font-size:13px;letter-spacing:-.025em}.nav-brand small{font-family:var(--sans);font-size:8px}
+.nav-links{gap:clamp(14px,1.7vw,28px)}
+.nav-links a,.nav-links button{font-family:var(--sans);font-weight:700}
+.nav-links .nav-cta{background:var(--paper);border-color:var(--paper);color:var(--ink)}
+.nav-links .nav-cta:hover{background:var(--world);border-color:var(--world);color:var(--paper)}
+
+/* Hero: three clean zones — proposition / metadata / name. */
+.hero{padding-top:64px;min-height:860px}
+.hero-copy{left:clamp(24px,4vw,64px);top:clamp(135px,17vh,175px);width:min(520px,38vw)}
+.hero-copy .kicker{color:var(--world);font-family:var(--sans);font-weight:700}
+.hero-copy h1{font-size:clamp(36px,3.55vw,58px);line-height:.96;letter-spacing:-.052em;margin-bottom:22px;text-wrap:balance}
+.hero-copy p{font-size:clamp(15px,1.15vw,18px);line-height:1.5;max-width:470px;color:rgba(243,238,231,.78);margin-bottom:30px}
+.hero-title{left:-.5vw;bottom:clamp(20px,3.5vh,44px);font-size:clamp(90px,14.7vw,268px);line-height:.66;letter-spacing:-.095em;opacity:.96}
+.hero-title span:nth-child(2){margin-left:16vw}
+.hero-proof{right:clamp(24px,3vw,52px);top:clamp(155px,20vh,210px);bottom:auto;width:min(330px,27vw)}
+.hero-proof .row{padding:10px 0;font-family:var(--sans);font-size:9px}
+.button{font-family:var(--sans);font-weight:700;min-width:178px;padding:14px 16px}
+.button.light{background:var(--paper);border-color:var(--paper);color:var(--ink)}
+
+/* Selected work: asymmetric editorial layout, controlled overlap only. */
+.selected{background:var(--paper);color:var(--ink);padding:clamp(110px,13vh,160px) 0 clamp(130px,15vh,190px)}
+.selected-head{align-items:start;padding-bottom:clamp(80px,10vh,120px);gap:6vw}
+.selected-head h2{font-size:clamp(76px,9.5vw,164px);line-height:.76;letter-spacing:-.075em;max-width:820px}
+.selected-head p{width:360px;max-width:34vw;margin-top:12px;font-size:15px;line-height:1.55;color:var(--muted)}
+.work-stack{gap:clamp(120px,18vh,210px)}
+.work-piece{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(20px,2.5vw,44px);align-items:center;min-height:0;overflow:visible}
+.work-media{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:auto!important;height:auto!important;min-height:clamp(500px,66vh,760px);overflow:hidden;background:#cbc6bd}
+.work-piece:nth-child(1) .work-media{grid-column:1 / span 7;grid-row:1;aspect-ratio:4/5}
+.work-piece:nth-child(2) .work-media{grid-column:6 / span 7;grid-row:1;aspect-ratio:4/5}
+.work-piece:nth-child(3) .work-media{grid-column:2 / span 9;grid-row:1;aspect-ratio:16/10;min-height:clamp(430px,58vh,680px)}
+.work-label{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:auto!important;z-index:4;gap:12px}
+.work-piece:nth-child(1) .work-label{grid-column:8 / span 5;grid-row:1;transform:translateX(-1.7vw)}
+.work-piece:nth-child(2) .work-label{grid-column:1 / span 5;grid-row:1;transform:translateX(1.7vw)}
+.work-piece:nth-child(3) .work-label{grid-column:1 / span 6;grid-row:2;align-self:start;transform:translateY(-2.2vh);margin-top:0}
+.work-label h3{font-size:clamp(62px,7.1vw,122px);line-height:.78;letter-spacing:-.075em;max-width:100%;overflow:visible}
+.work-label .num{color:var(--world);font-weight:700}
+.work-label p{font-size:15px;line-height:1.48;color:#4f4a45;margin-top:10px;max-width:390px}
+.work-label a{font-family:var(--sans);font-weight:700}
+
+/* Services: give every lane its own air. */
+.services{background:var(--ink);padding:clamp(120px,14vh,170px) 0 clamp(145px,17vh,210px)}
+.services-head{padding-bottom:clamp(75px,9vh,110px)}
+.services-head h2{font-size:clamp(68px,8vw,136px);line-height:.82;letter-spacing:-.065em;max-width:1050px}
+.service-row{min-height:clamp(440px,58vh,620px);grid-template-columns:.95fr .7fr;gap:8vw;padding:clamp(55px,7vh,82px) 0;overflow:visible}
+.service-title{font-size:clamp(82px,9.5vw,164px);line-height:.72;letter-spacing:-.085em}
+.service-copy{padding-right:0;max-width:500px}
+.service-copy h3{font-size:22px;margin-bottom:14px}
+.service-copy p{font-size:15px;line-height:1.55;color:rgba(243,238,231,.64)}
+.service-list{gap:10px 24px;margin-top:24px}
+.service-list span{font-family:var(--sans);font-weight:600;padding-top:9px;color:rgba(243,238,231,.85)}
+.service-preview{right:24%;top:10%;width:22vw;height:80%;opacity:0}.service-row:hover .service-preview{opacity:.30}
+
+/* Thesis: restore the real Mark red and bone rather than the orange experiment. */
+.positioning{background:var(--world);color:var(--paper);min-height:100svh;padding:clamp(100px,12vh,150px) clamp(24px,4vw,64px)}
+.positioning h2{font-size:clamp(70px,10.6vw,188px);line-height:.75;letter-spacing:-.085em;max-width:1320px}
+.positioning-bottom{gap:10vw;padding-top:12vh}
+.positioning-bottom .big{font-size:clamp(27px,3vw,48px);line-height:1.08;max-width:720px}
+.positioning-bottom .small{font-size:16px;line-height:1.6;color:rgba(243,238,231,.86);max-width:540px}
+
+/* The Cut: still experimental, but the focal image gets a clean perimeter. */
+.cut{background:var(--ink);padding:clamp(120px,14vh,170px) 0 clamp(150px,17vh,220px)}
+.cut-head{margin-bottom:clamp(65px,8vh,100px);gap:5vw}
+.cut-head h2{font-size:clamp(78px,10vw,170px);line-height:.72}
+.cut-head-copy{width:420px}.cut-head-copy p{font-size:14px;line-height:1.55;color:rgba(243,238,231,.62)}
+.cut-stage{min-height:clamp(760px,94svh,980px)}
+.cut-film{left:20%;top:8vh;width:60%;box-shadow:0 0 0 1px rgba(243,238,231,.13)}
+.seqs{top:12vh;width:15%}.seq{padding:17px 0}.seq .n{font-size:13px}.seq .t{color:var(--world)}
+.cut-still.a{right:1vw;top:4vh;width:17vw;height:31vh}.cut-still.b{right:3vw;bottom:6vh;width:15vw;height:25vh}.cut-still.c{left:4vw;bottom:5vh;width:14vw;height:23vh}
+.cut-cta{left:20%;bottom:1vh}
+
+/* Human + process sections: less vertical strain, more readable rhythm. */
+.about{background:var(--paper);color:var(--ink);padding:clamp(120px,14vh,180px) 0}
+.about-grid{grid-template-columns:.9fr 1.1fr;gap:clamp(55px,7vw,110px)}
+.about-portrait{height:min(88svh,850px)}
+.about-copy{top:100px;padding-top:2vh}
+.about-copy h2{font-size:clamp(76px,9vw,158px);line-height:.73;margin-bottom:55px}
+.about-copy .lead{font-size:clamp(25px,2.35vw,38px);line-height:1.12}
+.about-copy .body{font-size:16px;line-height:1.62;color:#504b46}
+.meta-table{margin-top:42px}
+.meta-row{padding:12px 0;font-family:var(--sans);font-weight:600}
+
+.working{background:var(--paper-2);padding:clamp(120px,14vh,180px) 0}
+.working-head{margin-bottom:clamp(75px,9vh,110px)}
+.working-head h2{font-size:clamp(72px,9vw,155px);line-height:.73}
+.working-head p{font-size:16px;line-height:1.55;color:#514c47}
+.step{grid-template-columns:90px .8fr 1fr;gap:4vw;padding:clamp(34px,4vh,52px) 0}
+.step h3{font-size:clamp(48px,5vw,82px);line-height:.88}.step p{font-size:15px;line-height:1.55}
+
+.engagements{background:var(--ink);padding:clamp(125px,15vh,185px) 0}
+.engagements-head{margin-bottom:clamp(75px,9vh,115px);gap:5vw}
+.engagements-head h2{font-size:clamp(74px,8.5vw,150px);line-height:.74}
+.engagements-head p{font-size:15px;line-height:1.55;color:rgba(243,238,231,.62)}
+.engagement{grid-template-columns:1fr .8fr .65fr;gap:4vw;min-height:0;padding:clamp(52px,6vh,74px) 0;align-items:start}
+.engagement h3{font-size:clamp(55px,6.2vw,100px);line-height:.82}.engagement .desc{font-size:15px;line-height:1.58;color:rgba(243,238,231,.68)}
+.engagement .deliver{font-family:var(--sans);font-weight:600}
+
+.investment{background:var(--world);color:var(--paper);min-height:82svh;padding:clamp(100px,12vh,150px) clamp(24px,4vw,64px)}
+.investment h2{font-size:clamp(78px,11.5vw,205px);line-height:.7}
+.investment-grid{gap:10vw;padding-top:10vh}.investment .price{font-size:clamp(30px,3.5vw,56px);line-height:1.03}.investment .detail{font-size:15px;line-height:1.6;color:rgba(243,238,231,.88)}
+.investment .button{border-color:var(--paper)}.investment .button:hover{background:var(--paper);color:var(--world)}
+
+.faq{background:var(--paper);color:var(--ink);padding:clamp(120px,14vh,180px) 0}.faq-grid{gap:9vw}.faq h2{font-size:clamp(82px,8.8vw,155px);line-height:.75}.faq-q{padding:23px 0;font-size:19px}.faq-a p{font-size:15px;line-height:1.62;color:#504b46;padding-bottom:25px}
+
+.inquiry{background:#fff;color:var(--ink);padding:clamp(95px,11vh,140px) clamp(24px,4vw,64px) clamp(70px,8vh,110px)}
+.inquiry-top{gap:8vw}.inquiry h2{font-size:clamp(82px,12.5vw,225px);line-height:.69}.inquiry-intro{font-size:clamp(23px,2.1vw,34px);line-height:1.12}
+.form{margin-top:clamp(75px,9vh,110px)}.field-row{grid-template-columns:210px 1fr;padding:20px 0}.field-row input,.field-row textarea,.field-row select{font-size:clamp(20px,1.7vw,27px)}
+.submit:hover{background:var(--world);color:var(--paper)}
+
+
+/* PRODUCTION LOCK — readability + conversion floor */
+.hero-floor{display:none;margin-top:18px;font:700 13px/1.45 var(--sans);letter-spacing:.04em;color:rgba(243,238,231,.72)}
+.mono{font-size:12px;line-height:1.35;letter-spacing:.13em}
+.micro{font-size:12px;line-height:1.35;letter-spacing:.11em}
+.kicker{font-size:12px;line-height:1.35;letter-spacing:.16em;font-family:var(--sans);font-weight:700}
+.nav-brand{font-size:14px}.nav-brand small{font-size:11px}.nav-links a,.nav-links button{font-size:12px}
+.button{font-size:13px;line-height:1.2}
+.hero-copy p{font-size:clamp(17px,1.15vw,19px)}
+.hero-proof .row{font-size:12px;line-height:1.35}
+.selected-head p,.work-label p{font-size:17px;line-height:1.55}
+.work-label .type,.work-label a{font-size:12px;line-height:1.35}
+.service-copy h3{font-size:24px}.service-copy p{font-size:17px;line-height:1.6}.service-list span{font-size:12px;line-height:1.35}
+.positioning-bottom .small{font-size:17px}
+.cut-head-copy strong{font-size:20px}.cut-head-copy p{font-size:16px;line-height:1.6}.seq .t{font-size:12px}.seq .n{font-size:15px}.cut-cta a{font-size:13px;line-height:1.35}
+.about-copy .body{font-size:17px}.meta-row{font-size:12px;line-height:1.35}
+.working-head p,.step p{font-size:17px;line-height:1.6}.step .num{font-size:12px}
+.engagements-head p,.engagement .desc{font-size:17px;line-height:1.6}.engagement .deliver{font-size:12px;line-height:1.35}
+.investment .detail{font-size:17px;line-height:1.65}
+.faq-q{font-size:20px}.faq-a p{font-size:17px;line-height:1.65}
+.field-row label{font-size:12px;line-height:1.35}.form-note{font-size:14px;line-height:1.6}.form-status{font-size:12px}.footer{font-size:12px;line-height:1.35}
+@media(max-width:900px){
+  .hero-floor{display:block}
+  .mono,.micro,.kicker{font-size:12px}
+  .nav-links a{font-size:11px}.nav-brand{font-size:13px}
+  .hero-copy p,.selected-head p,.work-label p,.service-copy p,.positioning-bottom .small,.cut-head-copy p,.about-copy .body,.working-head p,.step p,.engagements-head p,.engagement .desc,.investment .detail,.faq-a p{font-size:17px}
+  .work-label .type,.work-label a,.service-list span,.meta-row,.engagement .deliver,.field-row label,.form-status{font-size:12px}
+  .form-note{font-size:14px}
+}
+
+</style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <a class="brand" href="/" aria-label="Mark Krizsan Creative home">MARK KRIZSAN <small>Photography / Film / Direction</small></a>
-  <div class="header-actions"><a class="header-cta" href="#inquire">Start a project</a><button class="menu-button" id="menuOpen" type="button" aria-expanded="false" aria-controls="menuPanel">Index</button></div>
-</header>
-<aside class="menu-panel" id="menuPanel" role="dialog" aria-modal="true" aria-label="Site index" aria-hidden="true">
-  <div class="menu-top"><a class="brand" href="/">MARK KRIZSAN <small>Creative</small></a><button class="menu-close" id="menuClose" type="button" aria-label="Close menu">×</button></div>
-  <div class="menu-body">
-    <div class="menu-note"><div class="kicker">Available for assignments</div><p style="margin-top:14px">Portraiture, commercial campaigns, documentary storytelling, and visual direction. Available wherever the assignment makes sense.</p></div>
-    <nav class="menu-links" aria-label="Primary"><a href="#work"><span class="kicker">01</span><b>Selected work</b><em>Work</em></a><a href="archive/"><span class="kicker">02</span><b>Living archive</b><em>Range</em></a><a href="#mark"><span class="kicker">03</span><b>Mark</b><em>About</em></a><a href="#inquire"><span class="kicker">04</span><b>Start a project</b><em>Inquiry</em></a></nav>
-  </div>
-</aside>
-<main id="main">
-  <section class="hero" aria-label="Opening">
-    <div class="hero-media" aria-hidden="true"><img class="hero-poster" src="creative/assets/img/hero.webp" alt=""><video id="heroVideo" autoplay muted loop playsinline preload="metadata"><source src="creative/assets/video/hero.mp4" type="video/mp4"></video><div class="hero-shade"></div></div>
-    <div class="hero-ui">
-      <h1 class="hero-title"><span>Your work deserves</span><span>to <em class="accent-red">look as good</em></span><span>as it is.</span></h1>
-      <div class="hero-bottom"><p class="hero-copy">Photography, film, and direction that make the value already there impossible to miss.</p><div class="hero-actions"><a class="text-link" href="#work">See selected work</a><a class="text-link hero-secondary" href="#inquire">Start a project</a></div></div>
+<a class="skip" href="#top">Skip to content</a>
+<nav class="nav commercial-only" aria-label="Primary">
+  <a class="nav-brand" href="#top"><span>MARK KRIZSAN</span><small>PHOTO / FILM / CREATIVE DIRECTION</small></a>
+  <div class="nav-links"><a href="#work">Work</a><a href="#services">Services</a><a href="#mark">Mark</a><a href="#faq">FAQ</a><a class="nav-cta" href="#inquire">Start a project</a></div>
+</nav>
+
+<main id="top">
+  <section class="hero scene">
+    <div class="hero-media" aria-hidden="true"><img src="creative/assets/img/hero.webp" alt=""><video id="ambient" autoplay muted loop playsinline preload="metadata"><source src="creative/assets/video/hero.mp4" type="video/mp4"></video><div class="hero-grade"></div></div>
+    <div class="hero-copy">
+      <div class="kicker">Photographer / Filmmaker / Creative Director</div>
+      <h1>Make people see the value before you have to explain it.</h1>
+      <p>Photography, film and creative direction for people, brands and stories that need to look as strong as they actually are — so the right audience notices, remembers and acts.</p>
+      <div class="hero-actions"><a class="button light" href="#inquire"><span>Tell me about your project</span><span>→</span></a><a class="button" href="#work"><span>See the work</span><span>↓</span></a></div><div class="hero-floor">Commissioned projects from $1,500 · Orange County + Los Angeles · California + travel</div>
+    </div>
+    <div class="hero-title" aria-hidden="true"><span>Mark</span><span>Krizsan</span></div>
+    <div class="hero-proof commercial-only">
+      <div class="row"><span>Based</span><span>Orange County + Los Angeles</span></div>
+      <div class="row"><span>Work</span><span>Portrait / Campaign / Documentary</span></div>
+      <div class="row"><span>Available</span><span>California + Travel</span></div>
     </div>
   </section>
 
-  <section class="thesis" id="perception-thesis"><div class="wrap thesis-grid"><div class="kicker">The thesis</div><h2 class="reveal">Perception is <span class="accent-light">part of the product.</span></h2><p class="thesis-copy reveal">People decide what something is worth before they read the explanation. Light, framing, movement, direction, and edit make the first impression carry the weight of the real thing.</p></div></section>
-
-  <section class="work-index" id="work"><div class="wrap">
-    <div class="index-intro reveal"><div class="kicker red">01 / Selected work</div><div><h2>Different assignments.<br><span class="accent-red">Same standard.</span></h2><p>Portraiture, campaign imagery, and story-driven film. Three different reasons to call, one standard: make the work feel as strong on screen as it does in real life.</p></div></div>
-    <div class="project-grid">
-      <article class="project-card reveal"><a class="teaser-media media-slot" href="projects/presence/" aria-label="Explore Presence"><img src="creative/assets/img/presence-cover.webp" alt="Selected portrait and presence work" loading="lazy"></a><div class="project-card-meta"><div class="kicker red">01 / Portraiture</div><h3>Presence</h3><p>Portraits for people whose image carries part of the message. Directed to feel recognizably you, only more legible.</p><a class="text-link" href="projects/presence/">Explore Presence</a></div></article>
-      <article class="project-card reveal"><a class="teaser-media media-slot" href="projects/campaign/" aria-label="Explore Campaign"><img src="creative/assets/img/campaign-cover.webp" alt="Selected commercial campaign work" loading="lazy"></a><div class="project-card-meta"><div class="kicker red">02 / Commercial</div><h3>Campaign</h3><p>Photography and film that give a launch, product, or brand one coherent visual world people can recognize.</p><a class="text-link" href="projects/campaign/">Explore Campaign</a></div></article>
-      <article class="project-card reveal"><a class="teaser-media media-slot" href="projects/story/" aria-label="Explore Story"><img src="creative/assets/img/story-cover.webp" alt="Selected documentary and story work" loading="lazy"></a><div class="project-card-meta"><div class="kicker red">03 / Documentary</div><h3>Story</h3><p>Interviews, profiles, and documentary films that make people care before anyone asks them to.</p><a class="text-link" href="projects/story/">Explore Story</a></div></article>
+  <section class="selected scene" id="work">
+    <div class="wrap">
+      <div class="selected-head"><h2>Selected<br>work.</h2><p>Three reasons clients hire me: make a person more magnetic, make a brand feel more valuable, or make a story impossible to ignore.</p></div>
+      <div class="work-stack">
+        <article class="work-piece"><div class="work-media"><img src="creative/assets/img/presence-cover.webp" alt="Presence portrait photography"></div><div class="work-label"><span class="num mono">WORLD 002</span><h3>Presence</h3><span class="type">Portraiture / Photography</span><p>Portraits that make the person feel credible, distinct and alive — not over-produced.</p><a href="projects/presence/">Enter project →</a></div></article>
+        <article class="work-piece"><div class="work-media"><img src="creative/assets/img/campaign-cover.webp" alt="Campaign commercial photography"></div><div class="work-label"><span class="num mono">WORLD 003</span><h3>Campaign</h3><span class="type">Commercial / Photo + Creative Direction</span><p>Commercial imagery built to raise perceived value before the audience reads a word.</p><a href="projects/campaign/">Enter project →</a></div></article>
+        <article class="work-piece"><div class="work-media"><img src="creative/assets/img/story-cover.webp" alt="Story documentary filmmaking"></div><div class="work-label"><span class="num mono">WORLD 004</span><h3>Story</h3><span class="type">Documentary / Film</span><p>Films designed to hold attention long enough for the story, feeling and message to actually land.</p><a href="projects/story/">Enter project →</a></div></article>
+      </div>
     </div>
-    <div class="work-cta reveal"><span>Have a specific assignment in mind?</span><a class="text-link" href="#inquire">Tell me about it</a></div>
-  </div></section>
+  </section>
 
-  <section class="archive-home" id="archive-preview"><div class="wrap archive-head reveal"><div><div class="kicker red">02 / Living archive</div><h2>Depth <span class="accent-red">of eye.</span></h2></div><p>A working archive of portraits, places, details, motion, and moments that do not need a case study to prove the eye. Most of the field is visible immediately; drag only if you want to wander.</p></div><div class="archive-window" id="archiveWindow" data-asset-prefix="creative/" aria-label="Collage-style draggable image archive"><div class="archive-canvas" id="archiveCanvas"></div></div><div class="wrap archive-actions"><span class="kicker">Scan the field / drag gently / click any frame</span><a class="text-link" href="archive/">Full archive</a></div></section>
-
-  <section class="about" id="mark"><div class="wrap about-grid"><div class="about-image reveal"><img src="creative/assets/img/mark.webp" alt="Mark Krizsan" loading="lazy"></div><div class="reveal"><div class="kicker red">03 / Mark</div><h2 class="about-quote">I care about the shot because I care about <span class="accent-red">what the shot makes people believe.</span></h2><p class="about-copy">I’m Mark Krizsan, a photographer and filmmaker working across portraiture, campaigns, and documentary storytelling. I care less about making something merely polished than making the right thing felt. Every assignment starts with the same question: what should someone feel, understand, or remember when they see this?</p><a class="text-link about-cta" href="#inquire">Start a project</a></div></div></section>
-<!--
-MARK KRIZSAN — FAQ V2
-PLACEMENT: Insert this entire <section> immediately AFTER </section> for #mark
-and immediately BEFORE <section class="inquiry" id="inquire">.
-
-IMPORTANT:
-- This section is intentionally UNNUMBERED.
-- 03 / Mark remains 03.
-- 04 / Start a project remains 04.
-- The styling below uses the site's existing CSS variables, typography, spacing,
-  red accent, borders, and responsive behavior.
--->
-
-<section class="preflight" id="faq" aria-labelledby="preflight-title">
-  <div class="wrap preflight-grid">
-    <div class="preflight-intro reveal">
-      <div class="kicker red">Before we shoot</div>
-      <h2 id="preflight-title">A few things<br><span class="accent-red">worth knowing.</span></h2>
-      <p>
-        You do not need a finished creative brief before reaching out.
-        Bring the objective. We can build the right production around it.
-      </p>
+  <section class="services scene" id="services">
+    <div class="wrap">
+      <div class="services-head"><div class="kicker">What you can hire me to do</div><h2>One eye.<br>Three ways to use it.</h2></div>
+      <div class="service-row"><div class="service-title">Photo</div><div class="service-preview"><img src="creative/assets/img/presence-02.webp" alt=""></div><div class="service-copy"><h3>Photography</h3><p>Portraiture, editorial, campaigns, lifestyle and documentary work for moments when one frame has to create the right impression immediately.</p><div class="service-list"><span>Portraits</span><span>Editorial</span><span>Campaigns</span><span>Lifestyle</span><span>Documentary</span><span>Selected events</span></div></div></div>
+      <div class="service-row"><div class="service-title">Film</div><div class="service-preview"><img src="creative/assets/img/story-03.webp" alt=""></div><div class="service-copy"><h3>Film / Cinematography</h3><p>Brand films, documentary storytelling, artist visuals and short-form pieces for ideas that need time, movement and atmosphere to persuade.</p><div class="service-list"><span>Brand films</span><span>Campaign films</span><span>Documentary</span><span>Artist visuals</span><span>Short form</span><span>Cinematography</span></div></div></div>
+      <div class="service-row"><div class="service-title">Direction</div><div class="service-preview"><img src="creative/assets/img/campaign-01.webp" alt=""></div><div class="service-copy"><h3>Creative Direction</h3><p>For projects that need the idea solved before the camera comes out: concept, references, visual language, shot priorities and one coherent photo + motion system.</p><div class="service-list"><span>Concept</span><span>References</span><span>Shot planning</span><span>Visual language</span><span>Photo + motion</span><span>Creative direction</span></div></div></div>
     </div>
+  </section>
 
-    <div class="preflight-list reveal">
-      <details class="preflight-item">
-        <summary>
-          <span>Do I need a fully developed concept?</span>
-          <span class="preflight-plus" aria-hidden="true">+</span>
-        </summary>
-        <div class="preflight-answer">
-          <p>
-            No. If you know what the work needs to accomplish, that is enough to start.
-            Creative direction, references, locations, shot structure, and the overall
-            visual approach can be developed as part of the project.
-          </p>
-        </div>
-      </details>
+  <section class="positioning scene">
+    <h2>Perception is part of the product.</h2>
+    <div class="positioning-bottom"><div class="big">If the work is premium but the image feels average, the market never gets to experience the difference.</div><div class="small"><strong>Photography and film close the gap between what something is and how valuable it feels.</strong><br><br>Light, framing, distance, movement, direction and edit shape the judgment people make before they read the explanation, hear the pitch or ask the price. That is why the image matters.</div></div>
+  </section>
 
-      <details class="preflight-item">
-        <summary>
-          <span>What do projects typically cost?</span>
-          <span class="preflight-plus" aria-hidden="true">+</span>
-        </summary>
-        <div class="preflight-answer">
-          <p>
-            Most commissioned projects begin around <strong>$1,000</strong> and are
-            scoped around the idea, production needs, location, usage, and deliverables.
-            Smaller, tightly scoped assignments that can be completed quickly may begin
-            around <strong>$500</strong>.
-          </p>
-        </div>
-      </details>
-
-      <details class="preflight-item">
-        <summary>
-          <span>Can you handle both photography and film?</span>
-          <span class="preflight-plus" aria-hidden="true">+</span>
-        </summary>
-        <div class="preflight-answer">
-          <p>
-            Yes. Some assignments need one medium; others are stronger when photography
-            and motion are designed together from the beginning. I’ll recommend the
-            simplest production that actually serves the idea.
-          </p>
-        </div>
-      </details>
-
-      <details class="preflight-item">
-        <summary>
-          <span>Do you travel?</span>
-          <span class="preflight-plus" aria-hidden="true">+</span>
-        </summary>
-        <div class="preflight-answer">
-          <p>
-            Yes. I take local and travel assignments. When a project requires travel,
-            crew, equipment, permits, or location costs, those are scoped clearly before
-            the project is booked.
-          </p>
-        </div>
-      </details>
+  <section class="cut scene" id="cut">
+    <div class="wrap"><div class="cut-head"><h2>The Cut.</h2><div class="cut-head-copy"><strong>Photography + film. One visual language.</strong><p>This is a condensed look at the deeper project experience. Move by idea, not by scrollbar. Hover a sequence and the image field changes with the film.</p></div></div></div>
+    <div class="cut-stage wrap">
+      <div class="seqs"><div class="seq active" data-pct="0" data-set="0"><span class="t">00</span><span class="n">Open</span></div><div class="seq" data-pct=".24" data-set="1"><span class="t">01</span><span class="n">Approach</span></div><div class="seq" data-pct=".52" data-set="2"><span class="t">02</span><span class="n">Contact</span></div><div class="seq" data-pct=".78" data-set="3"><span class="t">03</span><span class="n">Movement</span></div></div>
+      <div class="cut-film" id="cutFilm"><video id="mainFilm" muted playsinline preload="metadata" poster="creative/assets/img/hero.webp"><source src="creative/assets/video/hero.mp4" type="video/mp4"></video><div class="play-disc">PLAY</div><div class="film-top micro"><span>MK / FILM</span><span id="clock">00:00 / --:--</span></div><div class="film-bottom"><span class="micro">Film study</span><span class="micro">Click / Play</span></div></div>
+      <div class="cut-still a"><img src="creative/assets/img/archive-03.webp" alt="Film sequence still"></div><div class="cut-still b"><img src="creative/assets/img/archive-09.webp" alt="Film sequence still"></div><div class="cut-still c"><img src="creative/assets/img/archive-12.webp" alt="Film sequence still"></div>
+      <div class="cut-cta"><a href="#inquire">Want this level of direction on your project? Start here ↓</a></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!--
-APPEND THE CSS BELOW TO creative/assets/css/site.css
-Do not add another font import. It intentionally inherits the site's
-Instrument Serif + Inter Tight system through existing variables.
--->
+  <section class="about scene" id="mark">
+    <div class="wrap about-grid"><div class="about-portrait"><img src="creative/assets/img/mark.webp" alt="Mark Krizsan, photographer and filmmaker"></div><div class="about-copy"><div class="kicker">Mark</div><h2>The eye<br>behind it.</h2><div class="lead">My job is to make what is already compelling about you, your brand or your story impossible to overlook.</div><div class="body">I’m Mark Krizsan, a photographer, filmmaker and creative director working across portraiture, campaigns and documentary storytelling. I do not start with “what shot looks cool?” I start with the question that matters: <strong>what should the viewer believe, feel or do after they see this?</strong></div><div class="meta-table"><div class="meta-row"><span>Based</span><span>Orange County + Los Angeles</span></div><div class="meta-row"><span>Available</span><span>California + Travel</span></div><div class="meta-row"><span>Work</span><span>Photography / Film / Creative Direction</span></div><div class="meta-row"><span>Focus</span><span>People / Brands / Stories</span></div></div></div></div>
+  </section>
 
-<style>
-/* FAQ / preflight — deliberately treated as an extension of the About section */
-.preflight{
-  background:var(--bone);
-  color:var(--ink);
-  border-top:1px solid var(--line);
-  padding:clamp(82px,9vw,135px) 0 clamp(95px,10vw,155px);
-}
+  <section class="working scene">
+    <div class="wrap"><div class="working-head"><h2>Working<br>together.</h2><p>Bring the objective, not a finished treatment. I turn what the project needs to accomplish into a clear visual plan, production and finished set of assets.</p></div><div class="steps"><div class="step"><div class="num">01</div><h3>Talk.</h3><p>Tell me what you need to sell, launch, communicate, document or preserve — and who needs to care about it.</p></div><div class="step"><div class="num">02</div><h3>Direct.</h3><p>I turn the objective into the visual language, references, scope, locations, shot priorities and production plan.</p></div><div class="step"><div class="num">03</div><h3>Make.</h3><p>We make the photography, film or both. The shoot stays focused on the frames and sequences that actually carry the assignment.</p></div><div class="step"><div class="num">04</div><h3>Finish.</h3><p>Selects, edit, grade, retouching and delivery. You leave with finished assets built for the places they actually need to perform.</p></div></div></div>
+  </section>
 
-.preflight-grid{
-  display:grid;
-  grid-template-columns:.82fr 1.18fr;
-  gap:7vw;
-  align-items:start;
-}
+  <section class="engagements scene">
+    <div class="wrap"><div class="engagements-head"><h2>What you<br>actually get.</h2><p>You are buying finished, usable visual assets — not just a day with a camera. These are common scopes, not rigid packages.</p></div><div class="engagement"><h3>Photo<br>commission.</h3><div class="desc">A focused photography assignment for a person, brand, campaign or story that needs a finished body of images rather than a pile of files.</div><div class="deliver"><span>Visual direction</span><span>Photography</span><span>Curated selects</span><span>Retouched finals</span><span>Delivery gallery</span></div></div><div class="engagement"><h3>Photo +<br>film.</h3><div class="desc">One visual world expressed in stills and motion, designed together instead of treating video as something bolted onto the shoot afterward.</div><div class="deliver"><span>Concept / direction</span><span>Photography</span><span>Hero film</span><span>Selected cutdowns</span><span>Final image set</span></div></div><div class="engagement"><h3>Visual<br>campaign.</h3><div class="desc">For larger assignments that need an image system: pre-production, photo, motion, direction and multiple final formats working from one idea.</div><div class="deliver"><span>Pre-production</span><span>Shot architecture</span><span>Photo + motion</span><span>Edit / grade</span><span>Multi-format delivery</span></div></div></div>
+  </section>
 
-.preflight-intro h2{
-  margin:15px 0 0;
-  font-family:var(--display);
-  font-size:clamp(52px,6.8vw,106px);
-  line-height:.97;
-  font-weight:400;
-  letter-spacing:-.04em;
-  text-wrap:balance;
-}
+  <section class="investment scene">
+    <h2>Investment.</h2><div class="investment-grid"><div class="price">Commissioned projects start at <strong>$1,500.</strong></div><div class="detail">That is the floor for a properly planned and finished photography, film or creative-direction assignment. Larger photo + film and campaign scopes are quoted around the production, deliverables and usage required.<br><br><strong>Have a strong idea with a leaner budget?</strong> Send it anyway. If there is a smart way to simplify the scope without lowering the standard, I’ll tell you.<br><a class="button" href="#inquire"><span>Check availability</span><span>→</span></a></div></div>
+  </section>
 
-.preflight-intro p{
-  max-width:520px;
-  margin:28px 0 0;
-  font-size:clamp(15px,1.2vw,19px);
-  line-height:1.55;
-  color:var(--muted);
-}
+  <section class="faq scene" id="faq">
+    <div class="wrap faq-grid"><h2>FAQ.</h2><div class="faq-list">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Where are you based?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Orange County + Los Angeles, California. I’m available for work throughout Southern California and travel by project.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Do you shoot both photography and film?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Yes. Some assignments are photography-only or film-only; others are built as one visual system across both stills and motion.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>What types of projects are the best fit?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Portraiture, campaigns, brand storytelling, documentary work, artist visuals and assignments where the visual perception of the person, product or story materially matters.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>What does a project cost?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Commissioned projects start at $1,500. Larger photo + film and campaign work is quoted around the actual scope. If you have a smaller budget and a strong idea, you can still reach out; if the scope can be simplified intelligently without lowering the standard, I’ll tell you.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Can you handle creative direction too?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Yes. Creative direction can include concept development, references, visual language, shot priorities and building one coherent still + motion approach before production begins.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>How far ahead should we book?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Earlier is better for projects requiring locations, talent or deeper pre-production. Tightly scoped assignments may be possible on shorter timelines depending on availability.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>How are final files delivered?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Final delivery is matched to the project: curated retouched image sets, finished films, approved cutdowns and the output formats defined in the scope.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>How does licensing work?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Usage is defined with the project so both sides know where the work will live and how it will be used. Broader commercial usage can be scoped when needed.</p></div></div></div>
+    </div></div>
+  </section>
 
-.preflight-list{
-  border-top:1px solid var(--line);
-}
-
-.preflight-item{
-  border-bottom:1px solid var(--line);
-}
-
-.preflight-item summary{
-  list-style:none;
-  cursor:pointer;
-  display:grid;
-  grid-template-columns:minmax(0,1fr) auto;
-  gap:28px;
-  align-items:center;
-  padding:24px 0;
-  font-size:clamp(17px,1.35vw,21px);
-  line-height:1.35;
-  font-weight:500;
-}
-
-.preflight-item summary::-webkit-details-marker{
-  display:none;
-}
-
-.preflight-plus{
-  color:var(--red);
-  font-family:var(--sans);
-  font-size:26px;
-  font-weight:400;
-  line-height:1;
-  transition:transform .2s var(--ease);
-}
-
-.preflight-item[open] .preflight-plus{
-  transform:rotate(45deg);
-}
-
-.preflight-answer{
-  max-width:720px;
-  padding:0 48px 25px 0;
-}
-
-.preflight-answer p{
-  margin:0;
-  font-size:16px;
-  line-height:1.6;
-  color:var(--muted);
-}
-
-.preflight-answer strong{
-  color:var(--ink);
-  font-weight:600;
-}
-
-.preflight-item summary:hover,
-.preflight-item summary:focus-visible{
-  color:var(--red);
-}
-
-@media(max-width:980px){
-  .preflight-grid{
-    grid-template-columns:1fr;
-    gap:44px;
-  }
-
-  .preflight-intro p{
-    max-width:640px;
-  }
-}
-
-@media(max-width:640px){
-  .preflight{
-    padding:76px 0 86px;
-  }
-
-  .preflight-grid{
-    gap:38px;
-  }
-
-  .preflight-intro h2{
-    font-size:14.2vw;
-    line-height:.99;
-  }
-
-  .preflight-intro p{
-    font-size:16px;
-    line-height:1.58;
-    margin-top:22px;
-  }
-
-  .preflight-item summary{
-    padding:21px 0;
-    gap:18px;
-    font-size:17px;
-    line-height:1.35;
-  }
-
-  .preflight-answer{
-    padding:0 26px 22px 0;
-  }
-
-  .preflight-answer p{
-    font-size:15px;
-    line-height:1.58;
-  }
-}
-</style>
-  <section class="inquiry" id="inquire"><div class="wrap">
-    <div class="inquiry-intro reveal"><div><div class="kicker">04 / Start a project</div><h2>Tell me <span class="accent-light">what we're making.</span></h2></div><div><p>Every assignment is scoped around the idea, the use, the location, and the production it actually needs. Send me the essentials. I’ll reply with the right scope, timing, and quote.</p><p class="commission-note"><strong>Commissioned project-by-project.</strong> No package maze. No creative brief required.</p></div></div>
-    <form class="wizard reveal" id="projectForm" novalidate><div class="wizard-progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-      <section class="step active" data-step="0"><h3>What are we making?</h3><div class="choice-grid"><div class="choice"><input id="lanePresence" type="radio" name="projectType" value="Presence" required><label for="lanePresence"><b>Presence</b><small>Portrait / personal visual identity</small></label></div><div class="choice"><input id="laneCampaign" type="radio" name="projectType" value="Campaign"><label for="laneCampaign"><b>Campaign</b><small>Launch / commercial / promotion</small></label></div><div class="choice"><input id="laneStory" type="radio" name="projectType" value="Story"><label for="laneStory"><b>Story</b><small>Documentary / interview / film</small></label></div></div></section>
-      <section class="step" data-step="1"><h3>What should people feel, understand, or remember?</h3><div class="field"><label for="objective">Creative objective</label><textarea id="objective" name="objective" required placeholder="What is true about this person, brand, product, or story that the current visuals fail to communicate?"></textarea></div><div class="field"><label for="usage">Where will the work live?</label><input id="usage" name="usage" required placeholder="Website, launch, press, social, paid campaign, film, live event…"></div></section>
-      <section class="step" data-step="2"><h3>Where and when are we making it?</h3><div class="field-row"><div class="field"><label for="location">Location</label><input id="location" name="location" required placeholder="City / country / travel"></div><div class="field"><label for="timing">Timing</label><input id="timing" name="timing" required placeholder="Exact date or rough window"></div></div><div class="field"><label for="budget">Budget context <span style="opacity:.7">(optional)</span></label><input id="budget" name="budget" placeholder="If a range already exists, put it here."></div></section>
-      <section class="step" data-step="3"><h3>Where should I reach you?</h3><div class="field-row"><div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required placeholder="Your name"></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div></div><div class="field"><label for="company">Company / project <span style="opacity:.7">(optional)</span></label><input id="company" name="company" placeholder="Project, brand, artist, organization"></div></section>
-      <div class="wizard-actions"><button id="wizardBack" type="button">Back</button><button class="primary" id="wizardNext" type="button">Continue</button><button class="primary" id="wizardSubmit" type="submit" hidden>Send project</button></div><div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-    </form>
-    <div class="success" id="successCard" role="status"><div class="kicker">Received</div><h3>I’ve got it.</h3><p style="margin-top:20px;max-width:520px">I’ll read the brief and reply with the next useful step.</p></div>
-  </div></section>
+  <section class="inquiry scene" id="inquire">
+    <div class="inquiry-top"><h2>Start<br>the project.</h2><div class="inquiry-intro">Tell me what you’re trying to make happen. I’ll reply with the clearest next step — whether that means a focused shoot, a photo + film production, or a smarter smaller version of the idea.</div></div>
+    <form class="form" id="inquiryForm"><div class="field-row"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required placeholder="YOUR NAME"></div><div class="field-row"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="YOU@EMAIL.COM"></div><div class="field-row"><label for="company">Company / project</label><input id="company" name="company" placeholder="WHO / WHAT IS THIS FOR?"></div><div class="field-row"><label for="brief">What are we making?</label><textarea id="brief" name="brief" required placeholder="A PORTRAIT SERIES, BRAND FILM, CAMPAIGN, DOCUMENTARY, SOMETHING STRANGER..."></textarea></div><div class="field-row"><label for="budget">Approx. budget</label><select id="budget" name="budget"><option value="">SELECT A RANGE</option><option>Under $1,500 — smaller scope</option><option>$1,500–$2,500</option><option>$2,500–$5,000</option><option>$5,000–$10,000</option><option>$10,000+</option><option>Not sure yet</option></select></div><div class="field-row"><label for="date">Target date</label><input id="date" name="date" placeholder="WHEN DOES THIS NEED TO HAPPEN?"></div><div class="form-bottom"><div><div class="form-note">No finished brief required. Include the objective, timing and budget context you know. If I’m not the right fit — or the idea should be scoped smaller — I’ll tell you.</div><div class="form-status" id="formStatus"></div></div><button class="submit" type="submit"><span>Send inquiry</span><span>→</span></button></div></form>
+  </section>
 </main>
-<footer class="footer"><span>© <span id="year"></span> Mark Krizsan</span><nav><a data-contact-email href="#">Email</a><a href="web/">Web design</a><a href="privacy.html">Privacy</a><a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Top</a></nav></footer>
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Archive image" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image">×</button><img id="lightboxImage" alt="Selected archive frame"><div class="lightbox-label kicker" id="lightboxLabel"></div></div>
-<noscript><div style="padding:18px;background:#fff;color:#111">The portfolio remains readable without JavaScript. The archive interaction and progressive inquiry need JavaScript.</div></noscript>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Mark Krizsan Creative","url":"https://markkrizsan.com/","description":"Photography, film, and direction for people, brands, campaigns, and stories.","areaServed":"Worldwide"}</script>
-</body></html>
+<footer class="footer mono"><span>MARK KRIZSAN / 2026</span><span>PHOTOGRAPHY / FILM / CREATIVE DIRECTION</span></footer>
+
+<div class="freeze" id="freeze"><span class="lab micro">FRAME / HOLD</span><button class="micro" id="freezeClose">ESC / Return</button><img id="freezeImg" alt="Expanded film still"></div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const raw=n=>`creative/assets/img/archive-${String(n).padStart(2,'0')}.webp`;
+
+
+// Signature Cut
+const film=$('#mainFilm'), shell=$('#cutFilm'), clock=$('#clock'), disc=shell.querySelector('.play-disc');
+const seqs=$$('.seq'), stills=$$('.cut-still'), stillImgs=$$('.cut-still img');
+const sets=[[3,9,12],[4,10,17],[6,14,22],[5,16,24]];
+function fmt(s){if(!isFinite(s))return'--:--';s=Math.floor(s);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+function sync(){shell.classList.toggle('playing',!film.paused);disc.textContent=film.paused?'PLAY':'PAUSE'}
+function toggle(){film.paused?film.play():film.pause();sync()}
+shell.addEventListener('click',e=>{if(!e.target.closest('button'))toggle()});film.addEventListener('play',sync);film.addEventListener('pause',sync);
+film.muted=true;
+film.addEventListener('loadedmetadata',()=>clock.textContent=`00:00 / ${fmt(film.duration)}`);film.addEventListener('timeupdate',()=>clock.textContent=`${fmt(film.currentTime)} / ${fmt(film.duration)}`);
+function showSet(i){const set=sets[i];stills.forEach(x=>x.classList.remove('live'));stillImgs.forEach((img,k)=>img.src=raw(set[k]));stills.forEach((x,k)=>setTimeout(()=>x.classList.add('live'),k*75));seqs.forEach((x,k)=>x.classList.toggle('active',k===i));if(film.duration)film.currentTime=film.duration*parseFloat(seqs[i].dataset.pct)}
+seqs.forEach((s,i)=>{s.addEventListener('mouseenter',()=>showSet(i));s.addEventListener('click',()=>{showSet(i);film.play()})});showSet(0);
+
+// Freeze film stills
+const freeze=$('#freeze'),freezeImg=$('#freezeImg');stills.forEach(s=>s.addEventListener('click',()=>{film.pause();freezeImg.src=s.querySelector('img').src;freeze.classList.add('open');document.body.classList.add('no-scroll')}));function closeFreeze(){freeze.classList.remove('open');document.body.classList.remove('no-scroll')}$('#freezeClose').onclick=closeFreeze;freeze.addEventListener('click',e=>{if(e.target===freeze)closeFreeze()});
+
+// FAQ
+$$('.faq-item').forEach(item=>{const q=item.querySelector('.faq-q');q.addEventListener('click',()=>{const open=item.classList.toggle('open');q.setAttribute('aria-expanded',String(open))})});
+
+// Inquiry routing — reuses the live site's MK_CONFIG / Formspree endpoint.
+$('#inquiryForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const form=e.currentTarget, status=$('#formStatus'), submit=form.querySelector('.submit');
+  const endpoint=(window.MK_CONFIG?.formEndpoint||'').trim();
+  const email=(window.MK_CONFIG?.contactEmail||'').trim();
+  if(!form.reportValidity()) return;
+  submit.disabled=true; status.textContent='SENDING…';
+  const data=new FormData(form);
+  try{
+    if(endpoint){
+      const r=await fetch(endpoint,{method:'POST',headers:{Accept:'application/json'},body:data});
+      if(!r.ok) throw new Error('Submission failed');
+      status.textContent='INQUIRY SENT — THANK YOU.';
+      submit.querySelector('span:first-child').textContent='Inquiry sent';
+      form.reset();
+    }else if(email){
+      const subject=encodeURIComponent('Creative inquiry — '+(data.get('company')||'Project'));
+      const body=encodeURIComponent([...data.entries()].map(([k,v])=>`${k}: ${v}`).join('\n'));
+      location.href=`mailto:${email}?subject=${subject}&body=${body}`;
+      submit.disabled=false; status.textContent='OPENING EMAIL…';
+    }else throw new Error('No inquiry route configured');
+  }catch(err){
+    status.textContent=email?'COULD NOT SEND — USE CONTACT@MARKKRIZSAN.COM':'COULD NOT SEND — PLEASE TRY AGAIN.';
+    submit.disabled=false;
+  }
+});
+
+document.addEventListener('keydown',e=>{if(/input|textarea|select/i.test(document.activeElement.tagName))return;if(e.key==='Escape')closeFreeze();if(e.code==='Space'&&$('#cut').getBoundingClientRect().top<innerHeight&&$('#cut').getBoundingClientRect().bottom>0){e.preventDefault();toggle()}});
+</script>
+</body>
+</html>
