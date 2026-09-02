@@ -125,7 +125,16 @@ img,video{display:block;max-width:100%}
 /* Freeze view */
 .freeze{position:fixed;z-index:500;inset:0;background:#000;display:none;place-items:center}.freeze.open{display:grid}.freeze img{max-width:100vw;max-height:100svh;width:auto;height:auto}.freeze button{position:absolute;right:10px;top:10px;background:#0008;border:1px solid #fff6;padding:9px 11px;cursor:pointer}.freeze .lab{position:absolute;left:10px;top:10px}
 
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}.hero-media video{display:none}.service-preview{display:none}}
+@media(prefers-reduced-motion:reduce){
+  *{
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+
+  .service-preview{
+    display:none;
+  }
+}
 
 @media(max-width:900px){
   .wrap{width:calc(100% - 28px)}
@@ -908,7 +917,15 @@ body{background:var(--ink)}
 
 <main id="top">
   <section class="hero scene">
-    <div class="hero-media" aria-hidden="true"><video id="ambient" autoplay muted loop playsinline preload="auto"><source src="creative/assets/video/hero.mp4" type="video/mp4"></video><div class="hero-grade"></div></div>
+    <div class="hero-media" aria-hidden="true"><video
+  id="ambient"
+  autoplay
+  muted
+  loop
+  playsinline
+  webkit-playsinline
+  preload="auto">
+      <source src="creative/assets/video/hero.mp4" type="video/mp4"></video><div class="hero-grade"></div></div>
     <div class="hero-copy">
       <div class="kicker">Photographer / Filmmaker / Creative Director</div>
       <h1>Make people see the value before you have to explain it.</h1>
@@ -999,7 +1016,47 @@ body{background:var(--ink)}
 <script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const raw=n=>`creative/assets/img/archive-${String(n).padStart(2,'0')}.webp`;
+// Hero video autoplay recovery for iOS / mobile browsers
+const ambientVideo = $('#ambient');
 
+if (ambientVideo) {
+  ambientVideo.muted = true;
+  ambientVideo.defaultMuted = true;
+  ambientVideo.playsInline = true;
+
+  const playHeroVideo = () => {
+    const attempt = ambientVideo.play();
+
+    if (attempt !== undefined) {
+      attempt.catch(() => {
+        // Safari may require the first user interaction.
+      });
+    }
+  };
+
+  // Try immediately.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', playHeroVideo, { once:true });
+  } else {
+    playHeroVideo();
+  }
+
+  // Recover if iOS blocks initial autoplay.
+  window.addEventListener('touchstart', playHeroVideo, {
+    once:true,
+    passive:true
+  });
+
+  window.addEventListener('pointerdown', playHeroVideo, {
+    once:true,
+    passive:true
+  });
+
+  // Resume after switching apps/tabs.
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) playHeroVideo();
+  });
+}
 
 // Signature Cut
 const film=$('#mainFilm'), shell=$('#cutFilm'), clock=$('#clock'), disc=shell.querySelector('.play-disc');
