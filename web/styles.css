@@ -70,7 +70,8 @@ button,a{touch-action:manipulation}
 
 .hero-rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink)}
 .hero-rail>div{padding:14px 20px 0 0;border-right:1px solid var(--line);min-height:72px;min-width:0}
-.hero-rail>div:last-child{border-right:0;padding-left:20px}
+.hero-rail>div:not(:first-child){padding-left:20px;}
+.hero-rail>div:last-child{border-right:0}
 .hero-rail span,.micro,.section-index{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.13em;font-weight:650}
 .hero-rail strong{display:block;font-size:18px;letter-spacing:-.035em;margin-top:6px}
 
