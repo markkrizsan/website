@@ -1,1111 +1,335 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#11100f">
-<title>Mark Krizsan — Photographer, Filmmaker & Creative Director | Orange County + Los Angeles</title>
-<meta name="description" content="Photography, film and creative direction by Mark Krizsan for people, brands and stories. Based in Orange County + Los Angeles, available for California and travel commissions.">
-<meta property="og:title" content="Mark Krizsan | Photographer, Filmmaker & Creative Director | Orange County + Los Angeles">
-<meta property="og:description" content="Photography, film and creative direction for people, brands and stories that need to look as strong as they actually are.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://markkrizsan.com/">
-<meta property="og:image" content="https://markkrizsan.com/assets/og-creative.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://markkrizsan.com/">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script defer src="creative/assets/js/config.js"></script>
-<style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0a">
+  <title>Mark Krizsan — Photography, Film & Creative Direction</title>
+  <meta name="description" content="Photography, film and creative direction by Mark Krizsan for people, brands and ideas whose perception matters.">
+  <link rel="canonical" href="https://markkrizsan.com/">
+  <meta property="og:title" content="Mark Krizsan — Photography, Film & Creative Direction">
+  <meta property="og:description" content="Visual worlds for people, brands and ideas whose perception matters.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://markkrizsan.com/">
+  <meta property="og:image" content="https://markkrizsan.com/assets/og-creative.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
 :root{
-  --ink:#11100f;
-  --paper:#f3eee7;
-  --paper-2:#e6ded4;
-  --world:#c5261f;
-  --world-dark:#841c17;
-  --muted:#706a63;
-  --line:rgba(255,255,255,.18);
-  --dark-line:rgba(0,0,0,.22);
-  --display:"Instrument Serif",Georgia,serif;
-  --sans:"Inter Tight",Arial,Helvetica,sans-serif;
-  --mono:"Courier New",Courier,monospace;
-  --ease:cubic-bezier(.16,1,.3,1);
+  --paper:#f3f0e9;
+  --paper-2:#dfdbd2;
+  --ink:#0d0d0c;
+  --red:#f13720;
+  --white:#fff;
+  --muted:#6d6962;
+  --display:"Inter","Helvetica Neue",Arial,sans-serif;
+  --body:"DM Sans","Inter",Arial,sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
+  --ease:cubic-bezier(.2,.7,.18,1);
+  --gutter:clamp(22px,4.2vw,72px);
+  --shell:1280px;
 }
 *{box-sizing:border-box}
-.skip{position:fixed;left:12px;top:12px;z-index:5000;background:var(--paper);color:var(--ink);padding:10px 13px;transform:translateY(-170%);transition:transform .2s var(--ease);font:700 12px/1 var(--sans)}.skip:focus{transform:none}
-html{background:var(--ink);scroll-behavior:smooth}
-body{margin:0;background:var(--ink);color:#fff;font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-body.no-scroll{overflow:hidden}
+html{background:var(--ink);scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--ink);color:var(--white);font-family:var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+body::selection{background:var(--red);color:#fff}
 a{color:inherit;text-decoration:none}
-button,input,textarea,select{font:inherit}
-button{color:inherit}
-img,video{display:block;max-width:100%}
-::selection{background:var(--world);color:#000}
-.mono{font:10px/1.2 var(--mono);letter-spacing:.15em;text-transform:uppercase}
-.micro{font:9px/1.25 var(--mono);letter-spacing:.13em;text-transform:uppercase}
-.scene{position:relative}
-.wrap{width:min(1240px,calc(100% - 40px));margin:auto}
-.kicker{font:10px var(--mono);letter-spacing:.2em;text-transform:uppercase}
-.display{font-size:clamp(68px,12.5vw,230px);line-height:.66;letter-spacing:-.095em;text-transform:uppercase;font-weight:900;margin:0}
-.button{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-width:190px;border:1px solid currentColor;padding:13px 15px;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;transition:background .2s,color .2s,transform .2s;cursor:pointer;background:transparent}
-.button:hover{background:#fff;color:#000;transform:translateY(-1px)}
-.button.light{background:var(--paper);color:#000;border-color:var(--paper)}
-.button.light:hover{background:#fff}
-
-/* Persistent commercial nav */
-.nav{position:fixed;z-index:100;left:0;right:0;top:0;height:54px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,6,6,.82);backdrop-filter:blur(18px) saturate(160%);border-bottom:1px solid rgba(255,255,255,.08);transition:background .25s,color .25s}
-.nav-brand{display:flex;align-items:baseline;gap:11px;font-weight:900;letter-spacing:-.04em;font-size:13px}.nav-brand small{font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#999}
-.nav-links{display:flex;align-items:center;gap:18px}.nav-links a,.nav-links button{border:0;background:none;color:inherit;padding:5px 0;cursor:pointer;font:9px var(--mono);letter-spacing:.13em;text-transform:uppercase}.nav-links .nav-cta{border:1px solid #fff;padding:8px 10px;background:#fff;color:#000}.nav-links .nav-cta:hover{background:var(--world);border-color:var(--world)}
-
-/* HERO: clear commercial proposition inside a visual object */
-.hero{min-height:100svh;height:100svh;background:#000;overflow:hidden;padding-top:54px}
-.hero-media{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  overflow:hidden;
+button{font:inherit}
+img,video{display:block;width:100%;max-width:100%}
+.skip-link{position:fixed;z-index:9999;left:12px;top:12px;padding:10px 14px;background:var(--paper);color:var(--ink);transform:translateY(-180%);transition:transform .2s var(--ease)}
+.skip-link:focus{transform:none}
+.shell{width:min(calc(100% - (var(--gutter) * 2)),var(--shell));margin-inline:auto}
+.eyebrow{margin:0;font:700 10px/1.2 var(--display);letter-spacing:.13em;text-transform:uppercase}.eyebrow.dark{color:#302f2c}
+.signal{display:inline-block;width:7px;height:7px;background:var(--red);margin-right:8px}
+.site-header{position:fixed;z-index:100;left:0;right:0;top:0;min-height:66px;padding:0 var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:30px;color:#fff;border-bottom:1px solid rgba(255,255,255,.12);background:linear-gradient(to bottom,rgba(0,0,0,.58),rgba(0,0,0,.08));transition:background .25s,color .25s,border-color .25s,backdrop-filter .25s}
+.site-header.is-scrolled{background:rgba(243,240,233,.93);color:var(--ink);border-color:rgba(0,0,0,.14);backdrop-filter:blur(18px)}
+.brand{display:flex;align-items:baseline;gap:10px;font-family:var(--display)}
+.brand-mark{font-size:21px;font-weight:900;letter-spacing:-.075em}.brand-dot{color:var(--red)}
+.brand-name{font-size:9px;font-weight:800;letter-spacing:.13em}
+.primary-nav{display:flex;align-items:center;gap:22px;font:700 10px/1 var(--display);letter-spacing:.07em;text-transform:uppercase}
+.primary-nav>a:not(.nav-cta){padding:12px 0;position:relative}.primary-nav>a:not(.nav-cta)::after{content:"";position:absolute;left:0;bottom:7px;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}.primary-nav>a:not(.nav-cta):hover::after{transform:scaleX(1)}
+.nav-cta{display:inline-flex;align-items:center;gap:18px;border:1px solid currentColor;padding:11px 13px;transition:background .2s,color .2s,border-color .2s}.site-header:not(.is-scrolled) .nav-cta{background:#fff;color:#000;border-color:#fff}.nav-cta:hover{background:var(--red)!important;color:#fff!important;border-color:var(--red)!important}
+.hero{position:relative;height:100svh;min-height:700px;overflow:hidden;background:#000}
+.hero-media{position:absolute;inset:0}.hero-media img{height:100%;object-fit:cover;object-position:50% 47%;filter:contrast(1.05)}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.68) 0%,rgba(0,0,0,.24) 43%,rgba(0,0,0,.06) 68%),linear-gradient(0deg,rgba(0,0,0,.68) 0%,transparent 38%)}
+.hero-grain{position:absolute;inset:0;opacity:.13;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E")}
+.hero-copy{position:absolute;z-index:3;left:var(--gutter);bottom:clamp(105px,14vh,155px);max-width:min(850px,76vw)}
+.hero-copy .eyebrow{margin-bottom:22px}.hero-copy h1{font:900 clamp(64px,8.7vw,148px)/.77 var(--display);letter-spacing:-.08em;text-transform:uppercase;margin:0;max-width:900px}.hero-copy h1 em{font-family:var(--serif);font-weight:400;text-transform:none;letter-spacing:-.055em;color:var(--red)}
+.hero-deck{max-width:530px;margin:30px 0 0;font-size:clamp(17px,1.45vw,22px);line-height:1.35;color:#dedbd5}
+.hero-actions{display:flex;align-items:center;gap:24px;margin-top:30px}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-width:190px;padding:14px 16px;border:1px solid currentColor;font:800 10px/1 var(--display);letter-spacing:.09em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s,transform .2s}.button:hover{transform:translateY(-2px)}.button-light{background:var(--paper);color:var(--ink);border-color:var(--paper)}.button-light:hover{background:var(--red);color:#fff;border-color:var(--red)}.button-dark{background:var(--ink);color:#fff;border-color:var(--ink)}.button-dark:hover{background:var(--red);border-color:var(--red)}
+.text-link{font:800 10px/1 var(--display);letter-spacing:.09em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.7);padding-bottom:5px}.text-link:hover{color:var(--red);border-color:var(--red)}
+.hero-caption{position:absolute;z-index:3;right:var(--gutter);bottom:30px;width:min(320px,31vw);display:flex;justify-content:space-between;gap:18px;border-top:1px solid rgba(255,255,255,.6);padding-top:10px;font:700 9px/1.35 var(--display);letter-spacing:.08em;text-transform:uppercase;color:#d9d6cf}.hero-caption span:last-child{text-align:right;color:#aaa69f}
+.worlds{background:var(--paper);color:var(--ink);padding:clamp(105px,11vw,180px) 0 0}
+.worlds-intro{display:grid;grid-template-columns:.35fr 1.35fr .7fr;gap:3vw;align-items:end;padding-bottom:clamp(80px,9vw,140px)}
+.worlds-intro h2{font:900 clamp(58px,8vw,125px)/.82 var(--display);letter-spacing:-.075em;text-transform:uppercase;margin:0}.worlds-intro h2 em{font-family:var(--serif);font-weight:400;text-transform:none;color:var(--red);letter-spacing:-.045em}.worlds-lead{max-width:390px;margin:0;color:var(--muted);font-size:16px;line-height:1.5}
+.world{position:relative;min-height:100svh;overflow:hidden}.world-johnny{background:#d8d5cf;color:var(--ink)}
+.world-frame{position:absolute;overflow:hidden;background:#111}.world-frame img{height:100%;object-fit:cover;transition:transform .75s var(--ease)}
+.world-frame-primary{left:var(--gutter);top:7vh;width:52vw;max-width:830px;height:78vh}.world-frame-primary img{object-position:center 42%}
+.world-frame-secondary{right:var(--gutter);bottom:7vh;width:28vw;max-width:450px;height:49vh}.world-frame-secondary img{object-position:center 38%}
+.world-johnny:hover .world-frame-primary img{transform:scale(1.015)}
+.world-meta{position:absolute;z-index:3;display:grid;grid-template-columns:46px 1fr;gap:16px;width:min(510px,42vw);right:var(--gutter);top:13vh;color:var(--ink)}.world-index{font:800 11px/1 var(--display);color:var(--red)}.world-type{margin:0 0 11px;font:800 9px/1.2 var(--display);letter-spacing:.11em;text-transform:uppercase}.world-meta h3{font:900 clamp(48px,6.6vw,105px)/.78 var(--display);letter-spacing:-.075em;text-transform:uppercase;margin:0}.world-meta p:last-child{font-size:15px;line-height:1.48;max-width:330px;color:#4d4a45;margin:20px 0 0}
+.world-create,.world-moonwood{background:#080807;color:#fff;display:flex;align-items:center;justify-content:center}.world-moonwood{background:#e6ded4;color:var(--ink)}
+.world-video-stage{position:absolute;overflow:hidden;background:#000}.world-create .world-video-stage{left:8vw;top:10vh;width:73vw;height:72vh}.world-moonwood .world-video-stage{right:6vw;top:9vh;width:69vw;height:74vh}.world-video{height:100%;object-fit:cover}.world-create .world-video{filter:saturate(.96) contrast(1.02)}.world-moonwood .world-video{object-position:center}
+.video-toggle{position:absolute;right:16px;bottom:16px;z-index:4;border:1px solid rgba(255,255,255,.55);background:rgba(0,0,0,.55);color:#fff;padding:11px 13px;font:800 9px/1 var(--display);letter-spacing:.09em;text-transform:uppercase;backdrop-filter:blur(8px);cursor:pointer}.video-toggle:hover{background:var(--red);border-color:var(--red)}
+.world-create .world-meta{left:auto;right:3.6vw;top:auto;bottom:4vh;width:min(470px,35vw);color:#fff}.world-create .world-meta p:last-child{color:#c5c1b9}.world-moonwood .world-meta{left:3.6vw;right:auto;top:11vh;width:min(420px,31vw)}
+.world-meta-light .world-index{color:var(--red)}
+.directors-cut{background:#0a0a09;color:#fff;padding:clamp(110px,11vw,170px) 0 clamp(120px,13vw,200px)}
+.cut-intro{display:grid;grid-template-columns:.4fr 1.2fr .65fr;gap:3vw;align-items:end;margin-bottom:70px}.cut-intro h2{font:900 clamp(56px,8vw,125px)/.8 var(--display);letter-spacing:-.075em;text-transform:uppercase;margin:0}.cut-intro h2 em{font:400 1em/.8 var(--serif);letter-spacing:-.045em;text-transform:none;color:var(--red)}.cut-intro>p:last-child{font-size:15px;line-height:1.5;color:#aaa69e;margin:0;max-width:380px}
+.cut-layout{display:grid;grid-template-columns:230px 1fr;gap:clamp(28px,5vw,75px);align-items:start}.cut-nav{border-top:1px solid #54514b}.cut-tab{width:100%;display:grid;grid-template-columns:36px 1fr;gap:10px;text-align:left;padding:18px 0;border:0;border-bottom:1px solid #54514b;background:transparent;color:#77736d;cursor:pointer;transition:color .2s,transform .25s var(--ease)}.cut-tab span{font:800 9px/1 var(--display);color:var(--red)}.cut-tab strong{font:800 16px/1 var(--display);text-transform:uppercase;letter-spacing:-.02em}.cut-tab:hover,.cut-tab:focus-visible,.cut-tab.is-active{color:#fff;transform:translateX(6px)}
+.cut-panel{min-width:0;outline:none}.cut-media{margin:0}.cut-media[hidden]{display:none}.cut-media.is-entering{animation:cut-enter .38s var(--ease) both}@keyframes cut-enter{from{opacity:.28;transform:translateY(9px)}to{opacity:1;transform:none}}
+.cut-media>img,.cut-media>video{aspect-ratio:16/9;object-fit:cover;background:#171716}.cut-media-video video{cursor:pointer}.cut-media figcaption{display:grid;grid-template-columns:130px minmax(0,520px);gap:25px;border-top:1px solid #54514b;margin-top:16px;padding-top:15px}.cut-media figcaption span{font:800 10px/1 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--red)}.cut-media figcaption p{margin:0;color:#aaa69e;line-height:1.5;font-size:14px}
+.prototype-end{background:var(--red);color:var(--ink);padding:clamp(90px,10vw,150px) 0}.prototype-end .eyebrow{margin-bottom:28px}.prototype-end h2{font:900 clamp(58px,9vw,145px)/.8 var(--display);letter-spacing:-.08em;text-transform:uppercase;margin:0 0 44px;max-width:1100px}.prototype-end h2 em{font:400 1em/.8 var(--serif);text-transform:none;letter-spacing:-.045em}
+.site-footer{min-height:88px;padding:24px var(--gutter);background:var(--ink);color:#aaa69e;display:flex;justify-content:space-between;align-items:center;gap:30px;font:700 9px/1 var(--display);letter-spacing:.1em;text-transform:uppercase}.site-footer nav{display:flex;gap:24px}.site-footer a:hover{color:#fff}
+:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+@media(hover:hover) and (pointer:fine){.world-frame-secondary:hover img{transform:scale(1.02)}}
+@media(max-width:980px){
+  :root{--gutter:clamp(22px,4vw,42px)}
+  .hero-copy{max-width:78vw}.hero-copy h1{font-size:clamp(60px,10vw,102px)}
+  .worlds-intro,.cut-intro{grid-template-columns:1fr}.worlds-intro .eyebrow,.cut-intro .eyebrow{margin-bottom:20px}.worlds-lead,.cut-intro>p:last-child{max-width:650px;margin-top:22px}
+  .world{min-height:900px}.world-frame-primary{width:61vw;height:650px}.world-frame-secondary{width:34vw;height:380px}.world-meta{width:39vw}.world-create .world-video-stage,.world-moonwood .world-video-stage{width:78vw;height:62vh;min-height:480px}.world-create .world-meta{width:39vw}.world-moonwood .world-meta{width:34vw}
+  .cut-layout{grid-template-columns:170px 1fr}
 }
-
-.hero-media video{
-  position:absolute;
-  inset:0;
-  width:100%;
-  max-width:none;
-  height:100%;
-  object-fit:cover;
-  object-position:center 40%;
+@media(max-width:700px){
+  html{scroll-padding-top:64px}.site-header{min-height:62px;padding-inline:18px}.brand-name{display:none}.primary-nav{gap:12px}.primary-nav>a:not(.nav-cta){display:none}.nav-cta{padding:10px 11px;font-size:9px}
+  .hero{min-height:740px}.hero-media img{object-position:55% 42%}.hero-scrim{background:linear-gradient(0deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.22) 60%,rgba(0,0,0,.25) 100%)}.hero-copy{left:22px;right:22px;bottom:106px;max-width:none}.hero-copy .eyebrow{font-size:8px}.hero-copy h1{font-size:clamp(52px,15.5vw,74px);line-height:.8;max-width:100%}.hero-deck{font-size:16px;max-width:410px;margin-top:22px}.hero-actions{gap:15px;margin-top:24px;align-items:flex-start;flex-direction:column}.button{width:100%;min-height:48px}.text-link{min-height:36px;display:inline-flex;align-items:center}.hero-caption{left:22px;right:22px;bottom:24px;width:auto;font-size:8px}
+  .worlds{padding-top:86px}.worlds-intro{padding-bottom:76px}.worlds-intro h2,.cut-intro h2{font-size:clamp(48px,13.5vw,66px);line-height:.86}.worlds-lead{font-size:15px}
+  .world{min-height:0;padding:0 0 86px;display:block}.world-johnny{padding-top:0}.world-frame{position:relative}.world-frame-primary{left:auto;top:auto;width:100%;height:auto;aspect-ratio:4/5}.world-frame-secondary{right:auto;bottom:auto;width:62%;height:auto;aspect-ratio:4/5;margin:-19vw 22px 0 auto;border:8px solid #d8d5cf}.world-meta,.world-create .world-meta,.world-moonwood .world-meta{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:auto;margin:28px 22px 0;grid-template-columns:34px 1fr}.world-meta h3{font-size:clamp(45px,14vw,70px);line-height:.82}.world-meta p:last-child{font-size:14px;max-width:390px}
+  .world-create{padding-top:22px;background:#080807}.world-create .world-video-stage,.world-moonwood .world-video-stage{position:relative;left:auto;right:auto;top:auto;width:calc(100% - 44px);height:auto;min-height:0;aspect-ratio:4/5;margin:0 22px}.world-create .world-video{object-fit:cover}.world-create .world-meta{color:#fff;margin-top:27px}.world-moonwood{padding-top:70px}.world-moonwood .world-video-stage{aspect-ratio:4/5}.world-moonwood .world-video{object-fit:cover}.video-toggle{right:11px;bottom:11px}
+  .directors-cut{padding:92px 0 105px}.cut-intro{margin-bottom:47px}.cut-layout{display:block}.cut-nav{display:grid;grid-template-columns:repeat(4,1fr);margin-bottom:18px;border-top:1px solid #54514b}.cut-tab{display:flex;flex-direction:column;gap:8px;padding:12px 8px 13px;min-width:0;border-right:1px solid #3f3d39}.cut-tab:last-child{border-right:0}.cut-tab strong{font-size:10px}.cut-tab:hover,.cut-tab:focus-visible,.cut-tab.is-active{transform:none;background:#171716}.cut-media>img,.cut-media>video{aspect-ratio:4/5}.cut-media figcaption{grid-template-columns:1fr;gap:8px}.cut-media figcaption p{font-size:14px}
+  .prototype-end{padding:82px 0}.prototype-end h2{font-size:clamp(48px,13vw,68px);line-height:.84;margin-bottom:34px}.site-footer{min-height:110px;align-items:flex-start;padding:28px 22px}
 }
-.hero-title{position:absolute;left:-1.2vw;bottom:1vh;font-size:clamp(88px,18vw,335px);font-weight:900;line-height:.62;letter-spacing:-.108em;text-transform:uppercase;white-space:nowrap;opacity:.93;pointer-events:none}.hero-title span{display:block}.hero-title span:nth-child(2){margin-left:17vw}
-.hero-copy{position:absolute;z-index:3;left:3vw;top:17vh;width:min(560px,50vw)}.hero-copy .kicker{color:var(--world);margin-bottom:16px}.hero-copy h1{font-size:clamp(33px,4.6vw,72px);line-height:.92;letter-spacing:-.055em;margin:0 0 18px}.hero-copy p{font-size:clamp(15px,1.4vw,20px);line-height:1.4;max-width:520px;margin:0 0 25px;color:#d0cec7}.hero-actions{display:flex;gap:7px;flex-wrap:wrap}
-.hero-proof{position:absolute;z-index:4;right:1.5vw;bottom:2vh;width:min(420px,36vw);border-top:1px solid rgba(255,255,255,.55)}.hero-proof .row{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid rgba(255,255,255,.2);padding:8px 0;font:9px var(--mono);letter-spacing:.11em;text-transform:uppercase}.hero-proof .row span:last-child{text-align:right;color:#b9b7b1}
+@media(max-width:390px){.hero-copy h1{font-size:50px}.hero-deck{font-size:15px}.world-meta h3{font-size:46px}.cut-tab{padding-inline:5px}.cut-tab strong{font-size:9px}.prototype-end h2{font-size:46px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.world-frame img{transform:none!important}}
 
-/* immediate proof */
-.selected{background:var(--paper);color:#050505;padding:8vh 0 12vh;overflow:hidden}
-.selected-head{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:5vh}.selected-head h2{font-size:clamp(62px,11vw,205px);line-height:.64;letter-spacing:-.095em;margin:0;text-transform:uppercase}.selected-head p{width:330px;max-width:45vw;font-size:14px;line-height:1.4}
-.work-stack{display:grid;gap:12vh}.work-piece{position:relative;min-height:82svh}.work-media{position:absolute;overflow:hidden;background:#ccc}.work-media img,.work-media video{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}.work-piece:hover .work-media img{transform:scale(1.015)}
-.work-piece:nth-child(1) .work-media{left:0;top:0;width:72%;height:78svh}.work-piece:nth-child(2) .work-media{right:0;top:0;width:66%;height:78svh}.work-piece:nth-child(3) .work-media{left:11%;top:0;width:78%;height:74svh}
-.work-label{position:absolute;z-index:3;display:flex;flex-direction:column;gap:8px}.work-piece:nth-child(1) .work-label{right:0;top:15vh;width:34%}.work-piece:nth-child(2) .work-label{left:0;top:13vh;width:39%}.work-piece:nth-child(3) .work-label{left:0;bottom:2vh;width:55%}
-.work-label .num{color:var(--world)}.work-label h3{font-size:clamp(54px,9vw,165px);line-height:.68;letter-spacing:-.085em;text-transform:uppercase;margin:0}.work-label .type{font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase}.work-label p{max-width:350px;font-size:14px;line-height:1.4;margin:8px 0 12px}.work-label a{width:max-content;border-bottom:1px solid #000;padding-bottom:3px;font:10px var(--mono);letter-spacing:.1em;text-transform:uppercase}
-
-/* services */
-.services{background:#060606;padding:9vh 0 13vh;overflow:hidden}.services-head{padding-bottom:7vh}.services-head .kicker{color:var(--world)}.services-head h2{font-size:clamp(55px,9vw,165px);line-height:.76;letter-spacing:-.075em;margin:12px 0 0;text-transform:uppercase;max-width:1100px}.service-row{position:relative;min-height:52vh;border-top:1px solid #ffffff38;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;padding:4vh 0;overflow:hidden}.service-row:last-child{border-bottom:1px solid #ffffff38}.service-title{font-size:clamp(70px,12vw,220px);font-weight:900;line-height:.65;letter-spacing:-.1em;text-transform:uppercase;position:relative;z-index:2}.service-copy{position:relative;z-index:3;padding-right:2vw}.service-copy h3{font-size:19px;margin:0 0 11px;letter-spacing:-.03em}.service-copy p{color:#aaa;line-height:1.45;margin:0 0 16px;max-width:430px}.service-list{display:grid;grid-template-columns:1fr 1fr;gap:7px 18px;margin-top:18px}.service-list span{font:9px var(--mono);letter-spacing:.11em;text-transform:uppercase;border-top:1px solid #ffffff25;padding-top:7px;color:#d5d2ca}.service-preview{position:absolute;z-index:1;right:19%;top:8%;width:25vw;height:84%;opacity:0;transform:translateX(40px) rotate(2deg);transition:opacity .35s,transform .7s var(--ease);pointer-events:none}.service-preview img{width:100%;height:100%;object-fit:cover;filter:saturate(.8)}.service-row:hover .service-preview{opacity:.45;transform:translateX(0) rotate(-1deg)}
-
-/* positioning */
-.positioning{background:var(--world);color:#050505;min-height:115svh;padding:10vh 2vw 9vh;display:flex;flex-direction:column;justify-content:space-between}.positioning h2{font-size:clamp(60px,12.6vw,235px);line-height:.66;letter-spacing:-.1em;text-transform:uppercase;margin:0;max-width:1450px}.positioning-bottom{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:end}.positioning-bottom .big{font-size:clamp(24px,3.4vw,54px);line-height:1.03;letter-spacing:-.045em}.positioning-bottom .small{max-width:500px;font-size:15px;line-height:1.5}.positioning-bottom strong{font-weight:900}
-
-/* Signature Cut: condensed and clear */
-.cut{background:#050505;padding:9vh 0 13vh;overflow:hidden}.cut-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:4vh}.cut-head h2{font-size:clamp(65px,12vw,220px);line-height:.67;letter-spacing:-.095em;text-transform:uppercase;margin:0}.cut-head-copy{width:380px;max-width:42vw}.cut-head-copy strong{font-size:18px;display:block;margin-bottom:8px}.cut-head-copy p{font-size:13px;line-height:1.45;color:#aaa;margin:0}.cut-stage{position:relative;min-height:82svh}.cut-film{position:absolute;left:18%;top:4vh;width:64%;aspect-ratio:16/9;background:#111;z-index:3;cursor:pointer}.cut-film video{width:100%;height:100%;object-fit:cover}.cut-film.playing .play-disc{opacity:0}.play-disc{position:absolute;inset:0;margin:auto;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:var(--paper);color:#000;font-weight:900;font-size:10px;letter-spacing:.1em;transition:.2s}.film-top{position:absolute;left:9px;right:9px;top:8px;display:flex;justify-content:space-between;mix-blend-mode:difference}.film-bottom{position:absolute;left:9px;right:9px;bottom:8px;display:flex;justify-content:space-between;align-items:center}.seqs{position:absolute;left:0;top:8vh;width:15%;z-index:6}.seq{border-top:1px solid #ffffff35;padding:14px 0;display:grid;grid-template-columns:30px 1fr;gap:7px;color:#666;cursor:pointer;transition:.2s}.seq:last-child{border-bottom:1px solid #ffffff35}.seq:hover,.seq.active{color:#fff;transform:translateX(5px)}.seq .t{font:9px var(--mono);color:var(--world)}.seq .n{font-size:12px;text-transform:uppercase}.cut-still{position:absolute;overflow:hidden;z-index:1;opacity:0;transform:scale(.9);transition:opacity .35s,transform .65s var(--ease);cursor:zoom-in}.cut-still.live{opacity:1;transform:scale(1) rotate(var(--r))}.cut-still img{width:100%;height:100%;object-fit:cover}.cut-still.a{right:-1vw;top:0;width:20vw;height:35vh;--r:1.3deg}.cut-still.b{right:2vw;bottom:0;width:17vw;height:27vh;--r:-1.5deg}.cut-still.c{left:3vw;bottom:2vh;width:15vw;height:25vh;--r:.6deg}.cut-cta{position:absolute;left:18%;bottom:0;z-index:5}.cut-cta a{font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #fff;padding-bottom:4px}
-
-/* about */
-.about{background:var(--paper);color:#050505;padding:9vh 0 12vh;overflow:hidden}.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:5vw;align-items:start}.about-portrait{height:110svh;position:relative;overflow:hidden}.about-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 24%;filter:saturate(.98) contrast(1.01);transform:scale(1);transition:filter .55s var(--ease),transform .9s var(--ease)}.about-portrait::after{content:"THE PERSON > THE POSE";position:absolute;left:18px;bottom:18px;background:var(--world);color:var(--paper);padding:9px 11px;font:700 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;opacity:0;transform:translateY(8px) rotate(-1deg);transition:opacity .3s var(--ease),transform .45s var(--ease)}.about-portrait:hover img{filter:saturate(1.08) contrast(1.025);transform:scale(1.018)}.about-portrait:hover::after{opacity:1;transform:translateY(0) rotate(-1deg)}.about-copy{position:sticky;top:92px;padding-top:3vh}.about-copy h2{font-size:clamp(72px,11vw,205px);line-height:.66;letter-spacing:-.095em;text-transform:uppercase;margin:0 0 5vh}.about-copy .lead{font-size:clamp(22px,2.5vw,38px);line-height:1.08;letter-spacing:-.04em;max-width:600px}.about-copy .body{font-size:15px;line-height:1.52;max-width:520px;margin-top:26px}.meta-table{margin-top:35px;border-top:1px solid #000}.meta-row{display:grid;grid-template-columns:135px 1fr;border-bottom:1px solid #0003;padding:10px 0;font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase}.meta-row span:last-child{text-align:right}
-
-/* process */
-.working{background:#d8d2c7;color:#050505;padding:9vh 0 11vh}.working-head{display:grid;grid-template-columns:1fr .65fr;gap:4vw;align-items:end;margin-bottom:8vh}.working-head h2{font-size:clamp(66px,11vw,205px);line-height:.66;letter-spacing:-.095em;text-transform:uppercase;margin:0}.working-head p{font-size:15px;line-height:1.45;max-width:430px}.steps{border-top:2px solid #000}.step{display:grid;grid-template-columns:85px 1fr 1fr;gap:3vw;align-items:start;padding:24px 0;border-bottom:1px solid #0005}.step .num{font:10px var(--mono);color:var(--world-dark)}.step h3{font-size:clamp(35px,5vw,85px);line-height:.8;letter-spacing:-.06em;text-transform:uppercase;margin:0}.step p{font-size:14px;line-height:1.45;max-width:440px;margin:0}
-
-/* engagements/deliverables */
-.engagements{background:#050505;padding:9vh 0 12vh}.engagements-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:7vh}.engagements-head h2{font-size:clamp(60px,10vw,190px);line-height:.67;letter-spacing:-.09em;text-transform:uppercase;margin:0}.engagements-head p{max-width:360px;color:#aaa;line-height:1.45}.engagement{display:grid;grid-template-columns:1.1fr .75fr .75fr;gap:2vw;min-height:42vh;border-top:1px solid #ffffff45;padding:28px 0}.engagement:last-child{border-bottom:1px solid #ffffff45}.engagement h3{font-size:clamp(40px,7vw,115px);line-height:.73;letter-spacing:-.075em;text-transform:uppercase;margin:0}.engagement .desc{font-size:14px;line-height:1.5;color:#b7b4ad}.engagement .deliver{font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#d9d5cd}.engagement .deliver span{display:block;border-top:1px solid #ffffff22;padding:8px 0}.engagement .deliver span:last-child{border-bottom:1px solid #ffffff22}
-
-/* investment */
-.investment{background:var(--world);color:#050505;min-height:92svh;padding:9vh 2vw;display:flex;flex-direction:column;justify-content:space-between}.investment h2{font-size:clamp(68px,14vw,260px);line-height:.63;letter-spacing:-.105em;text-transform:uppercase;margin:0}.investment-grid{display:grid;grid-template-columns:1fr .75fr;gap:8vw;align-items:end}.investment .price{font-size:clamp(28px,4vw,70px);line-height:.97;letter-spacing:-.05em}.investment .detail{font-size:14px;line-height:1.5;max-width:480px}.investment .button{margin-top:22px;border-color:#000}.investment .button:hover{background:#000;color:#fff}
-
-/* FAQ */
-.faq{background:var(--paper);color:#050505;padding:9vh 0 12vh}.faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:7vw}.faq h2{font-size:clamp(72px,10vw,190px);line-height:.66;letter-spacing:-.095em;text-transform:uppercase;margin:0;position:sticky;top:90px;height:max-content}.faq-list{border-top:2px solid #000}.faq-item{border-bottom:1px solid #0004}.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;border:0;background:none;color:#000;padding:18px 0;text-align:left;cursor:pointer;font-size:18px;letter-spacing:-.02em}.faq-q span:last-child{font:12px var(--mono)}.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}.faq-a>div{overflow:hidden}.faq-a p{max-width:650px;margin:0;padding:0 0 20px;font-size:14px;line-height:1.55;color:#4d4b47}.faq-item.open .faq-a{grid-template-rows:1fr}.faq-item.open .faq-q span:last-child{transform:rotate(45deg)}
-
-/* Inquiry */
-.inquiry{background:#fff;color:#000;padding:7vh 2vw 5vh;min-height:115svh}.inquiry-top{display:grid;grid-template-columns:1.3fr .7fr;gap:5vw;align-items:end}.inquiry h2{font-size:clamp(76px,15vw,285px);line-height:.62;letter-spacing:-.108em;text-transform:uppercase;margin:0}.inquiry-intro{font-size:clamp(20px,2.3vw,36px);line-height:1.08;letter-spacing:-.04em;max-width:520px}.form{margin-top:9vh;border-top:2px solid #000}.field-row{display:grid;grid-template-columns:220px 1fr;gap:3vw;padding:15px 0;border-bottom:1px solid #0004;align-items:start}.field-row label{font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;padding-top:11px}.field-row input,.field-row textarea,.field-row select{width:100%;border:0;background:transparent;color:#000;padding:8px 0;font-size:clamp(18px,2vw,30px);outline:none;border-radius:0}.field-row textarea{min-height:120px;resize:vertical}.field-row select{-webkit-appearance:none;appearance:none}.form-bottom{display:flex;justify-content:space-between;align-items:end;gap:4vw;padding-top:24px}.form-note{max-width:460px;font-size:12px;line-height:1.45;color:#5b5954}.submit{border:0;background:#000;color:#fff;padding:19px 22px;min-width:min(440px,45vw);display:flex;justify-content:space-between;font:11px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.submit:hover{background:var(--world);color:#000}.form-status{height:18px;margin-top:11px;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--world-dark)}
-
-
-.footer{background:var(--paper);color:#000;padding:24px 18px;display:flex;justify-content:space-between;border-top:1px solid #0004}
-
-/* Freeze view */
-.freeze{position:fixed;z-index:500;inset:0;background:#000;display:none;place-items:center}.freeze.open{display:grid}.freeze img{max-width:100vw;max-height:100svh;width:auto;height:auto}.freeze button{position:absolute;right:10px;top:10px;background:#0008;border:1px solid #fff6;padding:9px 11px;cursor:pointer}.freeze .lab{position:absolute;left:10px;top:10px}
-
-@media(prefers-reduced-motion:reduce){
-  *{
-    scroll-behavior:auto!important;
-    transition-duration:.01ms!important;
-  }
-
-  .service-preview{
-    display:none;
-  }
-}
-
-@media(max-width:900px){
-  .wrap{width:calc(100% - 28px)}
-  .nav{height:48px;padding:0 10px}.nav-brand small{display:none}.nav-links{gap:10px}.nav-links a:nth-child(2),.nav-links a:nth-child(3),.nav-links a:nth-child(4){display:none}
-  .hero{height:100svh;min-height:720px;padding-top:48px}.hero-copy{left:14px;top:14vh;width:calc(100% - 28px)}.hero-copy h1{font-size:11vw;max-width:92vw}.hero-copy p{max-width:82vw}.hero-title{font-size:29vw;bottom:16vh}.hero-title span:nth-child(2){margin-left:8vw}.hero-proof{left:14px;right:14px;bottom:12px;width:auto}  .selected{padding-top:7vh}.selected-head{display:block}.selected-head p{max-width:80vw;width:auto;margin-top:25px}.work-stack{gap:5vh}.work-piece{min-height:100svh}.work-piece:nth-child(n) .work-media{left:0;right:auto;top:0;width:100%;height:66svh}.work-piece:nth-child(n) .work-label{left:0;right:auto;top:auto;bottom:2vh;width:95%}.work-label h3{font-size:21vw}.work-label p{max-width:78vw}
-  .services-head h2{font-size:15vw}.service-row{grid-template-columns:1fr;min-height:auto;padding:7vh 0}.service-title{font-size:25vw}.service-copy{padding-top:3vh}.service-list{grid-template-columns:1fr}.service-preview{display:none}
-  .positioning{min-height:120svh;padding-left:14px;padding-right:14px}.positioning h2{font-size:18vw}.positioning-bottom{grid-template-columns:1fr;gap:4vh}.positioning-bottom .big{font-size:8vw}
-  .cut-head{display:block}.cut-head h2{font-size:24vw}.cut-head-copy{max-width:90vw;width:auto;margin-top:25px}.cut-stage{min-height:115svh}.seqs{left:0;right:0;top:0;width:auto;display:flex;overflow:auto;gap:14px}.seq{min-width:110px;grid-template-columns:1fr}.seq:hover,.seq.active{transform:none}.cut-film{left:0;top:15vh;width:100%;aspect-ratio:9/12}.cut-still.a{right:-9vw;top:78vh;width:42vw;height:31vh}.cut-still.b{right:32vw;bottom:0;width:36vw;height:25vh}.cut-still.c{left:-8vw;bottom:7vh;width:36vw;height:22vh}.cut-cta{left:14px;bottom:2vh}
-  .about-grid{grid-template-columns:1fr}.about-portrait{height:78svh}.about-copy{position:relative;top:auto;padding-top:7vh}.about-copy h2{font-size:23vw}.meta-row{grid-template-columns:110px 1fr}
-  .working-head{grid-template-columns:1fr}.working-head h2{font-size:21vw}.working-head p{margin-top:25px}.step{grid-template-columns:40px 1fr}.step p{grid-column:2;margin-top:15px}
-  .engagements-head{display:block}.engagements-head h2{font-size:20vw}.engagements-head p{margin-top:25px}.engagement{grid-template-columns:1fr;gap:24px}.engagement h3{font-size:18vw}
-  .investment{padding-left:14px;padding-right:14px}.investment h2{font-size:25vw}.investment-grid{grid-template-columns:1fr;gap:5vh}.investment .price{font-size:9vw}
-  .faq-grid{grid-template-columns:1fr}.faq h2{position:relative;top:auto;font-size:24vw;margin-bottom:7vh}
-  .inquiry{padding-left:14px;padding-right:14px}.inquiry-top{grid-template-columns:1fr}.inquiry h2{font-size:26vw}.inquiry-intro{margin-top:5vh}.field-row{grid-template-columns:1fr;gap:0}.field-row label{padding-top:0}.form-bottom{display:block}.submit{width:100%;min-width:0;margin-top:22px}.footer{font-size:8px}
-}
-
-
-/* ============================================================
-   FINAL DEPLOY PASS — 2026-09
-   Purpose: preserve the authored chaos while removing collisions
-   that do not earn their keep. Brand tokens match the live site.
-   ============================================================ */
-
-:root{
-  --ink:#11100f;
-  --paper:#f3eee7;
-  --paper-2:#e6ded4;
-  --world:#c5261f;
-  --world-dark:#841c17;
-  --muted:#706a63;
-  --display:"Instrument Serif",Georgia,serif;
-  --sans:"Inter Tight",Arial,Helvetica,sans-serif;
-}
-
-html{background:var(--ink)}
-body{background:var(--ink)}
-.wrap{width:min(1440px,calc(100% - clamp(40px,6vw,96px)))}
-.nav{height:64px;padding:0 clamp(18px,2.5vw,40px);background:rgba(17,16,15,.90)}
-.nav-brand{font-size:13px;letter-spacing:-.025em}.nav-brand small{font-family:var(--sans);font-size:8px}
-.nav-links{gap:clamp(14px,1.7vw,28px)}
-.nav-links a,.nav-links button{font-family:var(--sans);font-weight:700}
-.nav-links .nav-cta{background:var(--paper);border-color:var(--paper);color:var(--ink)}
-.nav-links .nav-cta:hover{background:var(--world);border-color:var(--world);color:var(--paper)}
-
-/* Hero: three clean zones — proposition / metadata / name. */
-.hero{padding-top:64px;min-height:860px}
-.hero-copy{left:clamp(24px,4vw,64px);top:clamp(135px,17vh,175px);width:min(520px,38vw)}
-.hero-copy .kicker{color:var(--world);font-family:var(--sans);font-weight:700}
-.hero-copy h1{font-size:clamp(36px,3.55vw,58px);line-height:.96;letter-spacing:-.052em;margin-bottom:22px;text-wrap:balance}
-.hero-copy p{font-size:clamp(15px,1.15vw,18px);line-height:1.5;max-width:470px;color:rgba(243,238,231,.78);margin-bottom:30px}
-.hero-title{left:-.5vw;bottom:clamp(20px,3.5vh,44px);font-size:clamp(90px,14.7vw,268px);line-height:.66;letter-spacing:-.095em;opacity:.96}
-.hero-title span:nth-child(2){margin-left:16vw}
-.hero-proof{right:clamp(24px,3vw,52px);top:clamp(155px,20vh,210px);bottom:auto;width:min(330px,27vw)}
-.hero-proof .row{padding:10px 0;font-family:var(--sans);font-size:9px}
-.button{font-family:var(--sans);font-weight:700;min-width:178px;padding:14px 16px}
-.button.light{background:var(--paper);border-color:var(--paper);color:var(--ink)}
-
-/* Selected work: asymmetric editorial layout, controlled overlap only. */
-.selected{background:var(--paper);color:var(--ink);padding:clamp(110px,13vh,160px) 0 clamp(130px,15vh,190px)}
-.selected-head{align-items:start;padding-bottom:clamp(80px,10vh,120px);gap:6vw}
-.selected-head h2{font-size:clamp(76px,9.5vw,164px);line-height:.76;letter-spacing:-.075em;max-width:820px}
-.selected-head p{width:360px;max-width:34vw;margin-top:12px;font-size:15px;line-height:1.55;color:var(--muted)}
-.work-stack{gap:clamp(120px,18vh,210px)}
-.work-piece{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(20px,2.5vw,44px);align-items:center;min-height:0;overflow:visible}
-.work-media{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:auto!important;height:auto!important;min-height:clamp(500px,66vh,760px);overflow:hidden;background:#cbc6bd}
-.work-piece:nth-child(1) .work-media{grid-column:1 / span 7;grid-row:1;aspect-ratio:4/5}
-.work-piece:nth-child(2) .work-media{grid-column:6 / span 7;grid-row:1;aspect-ratio:4/5}
-.work-piece:nth-child(3) .work-media{grid-column:2 / span 9;grid-row:1;aspect-ratio:16/10;min-height:clamp(430px,58vh,680px)}
-.work-label{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:auto!important;z-index:4;gap:12px}
-.work-piece:nth-child(1) .work-label{grid-column:8 / span 5;grid-row:1;transform:translateX(-1.7vw)}
-.work-piece:nth-child(2) .work-label{grid-column:1 / span 5;grid-row:1;transform:translateX(1.7vw)}
-.work-piece:nth-child(3) .work-label{grid-column:1 / span 6;grid-row:2;align-self:start;transform:translateY(-2.2vh);margin-top:0}
-.work-label h3{font-size:clamp(62px,7.1vw,122px);line-height:.78;letter-spacing:-.075em;max-width:100%;overflow:visible}
-.work-label .num{color:var(--world);font-weight:700}
-.work-label p{font-size:15px;line-height:1.48;color:#4f4a45;margin-top:10px;max-width:390px}
-.work-label a{font-family:var(--sans);font-weight:700}
-
-/* Services: give every lane its own air. */
-.services{background:var(--ink);padding:clamp(120px,14vh,170px) 0 clamp(145px,17vh,210px)}
-.services-head{padding-bottom:clamp(75px,9vh,110px)}
-.services-head h2{font-size:clamp(68px,8vw,136px);line-height:.82;letter-spacing:-.065em;max-width:1050px}
-.service-row{min-height:clamp(440px,58vh,620px);grid-template-columns:.95fr .7fr;gap:8vw;padding:clamp(55px,7vh,82px) 0;overflow:visible}
-.service-title{font-size:clamp(82px,9.5vw,164px);line-height:.72;letter-spacing:-.085em}
-.service-copy{padding-right:0;max-width:500px}
-.service-copy h3{font-size:22px;margin-bottom:14px}
-.service-copy p{font-size:15px;line-height:1.55;color:rgba(243,238,231,.64)}
-.service-list{gap:10px 24px;margin-top:24px}
-.service-list span{font-family:var(--sans);font-weight:600;padding-top:9px;color:rgba(243,238,231,.85)}
-.service-preview{right:24%;top:10%;width:22vw;height:80%;opacity:0}.service-row:hover .service-preview{opacity:.30}
-
-/* Thesis: restore the real Mark red and bone rather than the orange experiment. */
-.positioning{background:var(--world);color:var(--paper);min-height:100svh;padding:clamp(100px,12vh,150px) clamp(24px,4vw,64px)}
-.positioning h2{font-size:clamp(70px,10.6vw,188px);line-height:.75;letter-spacing:-.085em;max-width:1320px}
-.positioning-bottom{gap:10vw;padding-top:12vh}
-.positioning-bottom .big{font-size:clamp(27px,3vw,48px);line-height:1.08;max-width:720px}
-.positioning-bottom .small{font-size:16px;line-height:1.6;color:rgba(243,238,231,.86);max-width:540px}
-
-/* The Cut: still experimental, but the focal image gets a clean perimeter. */
-.cut{background:var(--ink);padding:clamp(120px,14vh,170px) 0 clamp(150px,17vh,220px)}
-.cut-head{margin-bottom:clamp(65px,8vh,100px);gap:5vw}
-.cut-head h2{font-size:clamp(78px,10vw,170px);line-height:.72}
-.cut-head-copy{width:420px}.cut-head-copy p{font-size:14px;line-height:1.55;color:rgba(243,238,231,.62)}
-.cut-stage{min-height:clamp(760px,94svh,980px)}
-.cut-film{left:20%;top:8vh;width:60%;box-shadow:0 0 0 1px rgba(243,238,231,.13)}
-.seqs{top:12vh;width:15%}.seq{padding:17px 0}.seq .n{font-size:13px}.seq .t{color:var(--world)}
-.cut-still.a{right:1vw;top:4vh;width:17vw;height:31vh}.cut-still.b{right:3vw;bottom:6vh;width:15vw;height:25vh}.cut-still.c{left:4vw;bottom:5vh;width:14vw;height:23vh}
-.cut-cta{left:20%;bottom:1vh}
-
-/* Human + process sections: less vertical strain, more readable rhythm. */
-.about{background:var(--paper);color:var(--ink);padding:clamp(120px,14vh,180px) 0}
-.about-grid{grid-template-columns:.9fr 1.1fr;gap:clamp(55px,7vw,110px)}
-.about-portrait{height:min(88svh,850px)}
-.about-copy{top:100px;padding-top:2vh}
-.about-copy h2{font-size:clamp(76px,9vw,158px);line-height:.73;margin-bottom:55px}
-.about-copy .lead{font-size:clamp(25px,2.35vw,38px);line-height:1.12}
-.about-copy .body{font-size:16px;line-height:1.62;color:#504b46}
-.meta-table{margin-top:42px}
-.meta-row{padding:12px 0;font-family:var(--sans);font-weight:600}
-
-.working{background:var(--paper-2);padding:clamp(120px,14vh,180px) 0}
-.working-head{margin-bottom:clamp(75px,9vh,110px)}
-.working-head h2{font-size:clamp(72px,9vw,155px);line-height:.73}
-.working-head p{font-size:16px;line-height:1.55;color:#514c47}
-.step{grid-template-columns:90px .8fr 1fr;gap:4vw;padding:clamp(34px,4vh,52px) 0}
-.step h3{font-size:clamp(48px,5vw,82px);line-height:.88}.step p{font-size:15px;line-height:1.55}
-
-.engagements{background:var(--ink);padding:clamp(125px,15vh,185px) 0}
-.engagements-head{margin-bottom:clamp(75px,9vh,115px);gap:5vw}
-.engagements-head h2{font-size:clamp(74px,8.5vw,150px);line-height:.74}
-.engagements-head p{font-size:15px;line-height:1.55;color:rgba(243,238,231,.62)}
-.engagement{grid-template-columns:1fr .8fr .65fr;gap:4vw;min-height:0;padding:clamp(52px,6vh,74px) 0;align-items:start}
-.engagement h3{font-size:clamp(55px,6.2vw,100px);line-height:.82}.engagement .desc{font-size:15px;line-height:1.58;color:rgba(243,238,231,.68)}
-.engagement .deliver{font-family:var(--sans);font-weight:600}
-
-.investment{background:var(--world);color:var(--paper);min-height:82svh;padding:clamp(100px,12vh,150px) clamp(24px,4vw,64px)}
-.investment h2{font-size:clamp(78px,11.5vw,205px);line-height:.7}
-.investment-grid{gap:10vw;padding-top:10vh}.investment .price{font-size:clamp(30px,3.5vw,56px);line-height:1.03}.investment .detail{font-size:15px;line-height:1.6;color:rgba(243,238,231,.88)}
-.investment .button{border-color:var(--paper)}.investment .button:hover{background:var(--paper);color:var(--world)}
-
-.faq{background:var(--paper);color:var(--ink);padding:clamp(120px,14vh,180px) 0}.faq-grid{gap:9vw}.faq h2{font-size:clamp(82px,8.8vw,155px);line-height:.75}.faq-q{padding:23px 0;font-size:19px}.faq-a p{font-size:15px;line-height:1.62;color:#504b46;padding-bottom:25px}
-
-.inquiry{background:#fff;color:var(--ink);padding:clamp(95px,11vh,140px) clamp(24px,4vw,64px) clamp(70px,8vh,110px)}
-.inquiry-top{gap:8vw}.inquiry h2{font-size:clamp(82px,12.5vw,225px);line-height:.69}.inquiry-intro{font-size:clamp(23px,2.1vw,34px);line-height:1.12}
-.form{margin-top:clamp(75px,9vh,110px)}.field-row{grid-template-columns:210px 1fr;padding:20px 0}.field-row input,.field-row textarea,.field-row select{font-size:clamp(20px,1.7vw,27px)}
-.submit:hover{background:var(--world);color:var(--paper)}
-
-
-/* PRODUCTION LOCK — readability + conversion floor */
-.hero-floor{display:none;margin-top:18px;font:700 13px/1.45 var(--sans);letter-spacing:.04em;color:rgba(243,238,231,.72)}
-.mono{font-size:12px;line-height:1.35;letter-spacing:.13em}
-.micro{font-size:12px;line-height:1.35;letter-spacing:.11em}
-.kicker{font-size:12px;line-height:1.35;letter-spacing:.16em;font-family:var(--sans);font-weight:700}
-.nav-brand{font-size:14px}.nav-brand small{font-size:11px}.nav-links a,.nav-links button{font-size:12px}
-.button{font-size:13px;line-height:1.2}
-.hero-copy p{font-size:clamp(17px,1.15vw,19px)}
-.hero-proof .row{font-size:12px;line-height:1.35}
-.selected-head p,.work-label p{font-size:17px;line-height:1.55}
-.work-label .type,.work-label a{font-size:12px;line-height:1.35}
-.service-copy h3{font-size:24px}.service-copy p{font-size:17px;line-height:1.6}.service-list span{font-size:12px;line-height:1.35}
-.positioning-bottom .small{font-size:17px}
-.cut-head-copy strong{font-size:20px}.cut-head-copy p{font-size:16px;line-height:1.6}.seq .t{font-size:12px}.seq .n{font-size:15px}.cut-cta a{font-size:13px;line-height:1.35}
-.about-copy .body{font-size:17px}.meta-row{font-size:12px;line-height:1.35}
-.working-head p,.step p{font-size:17px;line-height:1.6}.step .num{font-size:12px}
-.engagements-head p,.engagement .desc{font-size:17px;line-height:1.6}.engagement .deliver{font-size:12px;line-height:1.35}
-.investment .detail{font-size:17px;line-height:1.65}
-.faq-q{font-size:20px}.faq-a p{font-size:17px;line-height:1.65}
-.field-row label{font-size:12px;line-height:1.35}.form-note{font-size:14px;line-height:1.6}.form-status{font-size:12px}.footer{font-size:12px;line-height:1.35}
-@media(max-width:900px){
-  .hero-floor{display:block}
-  .mono,.micro,.kicker{font-size:12px}
-  .nav-links a{font-size:11px}.nav-brand{font-size:13px}
-  .hero-copy p,.selected-head p,.work-label p,.service-copy p,.positioning-bottom .small,.cut-head-copy p,.about-copy .body,.working-head p,.step p,.engagements-head p,.engagement .desc,.investment .detail,.faq-a p{font-size:17px}
-  .work-label .type,.work-label a,.service-list span,.meta-row,.engagement .deliver,.field-row label,.form-status{font-size:12px}
-  .form-note{font-size:14px}
-}
-/* ============================================================
-   MOBILE PRODUCTION FIX — 2026-09
-   Desktop rules above remain untouched. This layer is intentionally
-   last so mobile cannot be overwritten by later desktop declarations.
-   ============================================================ */
-@media (max-width:900px){
-  html,body{overflow-x:clip}
-  body{font-size:16px}
-  .wrap{width:calc(100% - 36px);max-width:none}
-  .scene{overflow:hidden}
-
-  /* NAV — only the two decisions that matter on a phone */
-  .nav{
-    height:58px;
-    padding:0 14px;
-    gap:10px;
-    background:rgba(17,16,15,.95);
-    backdrop-filter:blur(14px) saturate(150%);
-  }
-  .nav-brand{font-size:12px;white-space:nowrap}
-  .nav-brand small{display:none}
-  .nav-links{gap:12px;min-width:0}
-  .nav-links a{font-size:10px;white-space:nowrap}
-  .nav-links a:nth-child(2),
-  .nav-links a:nth-child(3),
-  .nav-links a:nth-child(4){display:none}
-  .nav-links .nav-cta{
-    display:inline-flex;
-    align-items:center;
-    min-height:36px;
-    padding:8px 10px;
-    font-size:10px;
-  }
-
-  /* HERO — mobile is a composed sales page, not a compressed desktop poster */
-  .hero{
-    height:auto;
-    min-height:100svh;
-    padding:0;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    isolation:isolate;
-  }
-  .hero-media{position:absolute;inset:0;z-index:0}
-  .hero-media video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:58% center;
-  }
-  .hero-grade{
-    position:absolute;
-    inset:0;
-    background:
-      linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.28) 34%,rgba(0,0,0,.42) 60%,rgba(0,0,0,.92) 100%),
-      linear-gradient(90deg,rgba(0,0,0,.52),rgba(0,0,0,.05) 80%);
-  }
-  .hero-copy{
-    position:relative;
-    z-index:3;
-    left:auto;
-    top:auto;
-    width:auto;
-    max-width:none;
-    padding:118px 18px 0;
-  }
-  .hero-copy .kicker{
-    margin:0 0 14px;
-    max-width:270px;
-    font-size:11px;
-    line-height:1.35;
-    letter-spacing:.12em;
-  }
-  .hero-copy h1{
-    max-width:365px;
-    margin:0 0 20px;
-    font-size:clamp(42px,11.3vw,54px);
-    line-height:.91;
-    letter-spacing:-.058em;
-    text-wrap:balance;
-  }
-  .hero-copy p{
-    width:auto;
-    max-width:350px;
-    margin:0 0 24px;
-    font-size:16px;
-    line-height:1.48;
-    color:rgba(243,238,231,.9);
-  }
-  .hero-actions{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:8px;
-    width:min(100%,360px);
-  }
-  .hero-actions .button{
-    width:100%;
-    min-width:0;
-    min-height:48px;
-    padding:13px 14px;
-    font-size:12px;
-  }
-  .hero-floor{
-    display:block;
-    max-width:340px;
-    margin-top:18px;
-    font-size:12px;
-    line-height:1.5;
-    letter-spacing:.02em;
-  }
-  .hero-proof{display:none!important}
-  .hero-title{
-    position:relative;
-    z-index:2;
-    left:auto;
-    bottom:auto;
-    width:100%;
-    margin:clamp(76px,11vh,110px) 0 0;
-    padding:0 18px 28px;
-    font-size:clamp(72px,22vw,104px);
-    line-height:.68;
-    letter-spacing:-.09em;
-    white-space:normal;
-    overflow:hidden;
-  }
-  .hero-title span{display:block}
-  .hero-title span:nth-child(2){margin-left:10vw}
-
-  /* SELECTED WORK — image, then information. No collisions on touch. */
-  .selected{
-    padding:92px 0 120px;
-  }
-  .selected-head{
-    display:block;
-    padding-bottom:72px;
-  }
-  .selected-head h2{
-    max-width:100%;
-    font-size:clamp(64px,18vw,84px);
-    line-height:.78;
-    letter-spacing:-.075em;
-  }
-  .selected-head p{
-    width:auto;
-    max-width:345px;
-    margin:28px 0 0;
-    font-size:17px;
-    line-height:1.55;
-  }
-  .work-stack{display:block}
-  .work-piece{
-    display:block;
-    min-height:0;
-    margin:0 0 104px;
-    overflow:visible;
-  }
-  .work-piece:last-child{margin-bottom:0}
-  .work-media,
-  .work-piece:nth-child(n) .work-media{
-    position:relative!important;
-    left:auto!important;
-    right:auto!important;
-    top:auto!important;
-    bottom:auto!important;
-    width:100%!important;
-    height:auto!important;
-    min-height:0!important;
-    aspect-ratio:4/5;
-  }
-  .work-piece:nth-child(3) .work-media{aspect-ratio:16/11}
-  .work-media img,.work-media video{width:100%;height:100%;object-fit:cover}
-  .work-label,
-  .work-piece:nth-child(n) .work-label{
-    position:relative!important;
-    left:auto!important;
-    right:auto!important;
-    top:auto!important;
-    bottom:auto!important;
-    width:100%!important;
-    transform:none!important;
-    margin:0;
-    padding:22px 0 0;
-    gap:7px;
-  }
-  .work-label h3{
-    max-width:100%;
-    font-size:clamp(58px,15.5vw,76px);
-    line-height:.82;
-    letter-spacing:-.07em;
-    overflow-wrap:anywhere;
-  }
-  .work-label .num{font-size:11px}
-  .work-label .type,.work-label a{font-size:12px}
-  .work-label p{
-    max-width:345px;
-    margin:12px 0 16px;
-    font-size:17px;
-    line-height:1.55;
-  }
-
-  /* SERVICES — one lane at a time */
-  .services{padding:100px 0 122px}
-  .services-head{padding-bottom:58px}
-  .services-head h2{
-    max-width:360px;
-    font-size:clamp(60px,15.5vw,78px);
-    line-height:.82;
-  }
-  .service-row{
-    display:block;
-    min-height:0;
-    padding:58px 0 64px;
-    overflow:visible;
-  }
-  .service-title{
-    font-size:clamp(68px,18vw,88px);
-    line-height:.76;
-    letter-spacing:-.085em;
-  }
-  .service-copy{
-    max-width:none;
-    padding:30px 0 0;
-  }
-  .service-copy h3{font-size:23px}
-  .service-copy p{
-    max-width:345px;
-    font-size:17px;
-    line-height:1.6;
-  }
-  .service-list{
-    grid-template-columns:1fr 1fr;
-    gap:10px 18px;
-    margin-top:24px;
-  }
-  .service-list span{font-size:11px}
-  .service-preview{display:none!important}
-
-  /* THESIS */
-  .positioning{
-    min-height:0;
-    padding:96px 18px 106px;
-    display:block;
-  }
-  .positioning h2{
-    max-width:390px;
-    font-size:clamp(62px,16.5vw,82px);
-    line-height:.79;
-    letter-spacing:-.08em;
-  }
-  .positioning-bottom{
-    display:block;
-    padding-top:86px;
-  }
-  .positioning-bottom .big{
-    max-width:370px;
-    font-size:clamp(28px,7.3vw,36px);
-    line-height:1.08;
-  }
-  .positioning-bottom .small{
-    max-width:360px;
-    margin-top:46px;
-    font-size:17px;
-    line-height:1.62;
-  }
-
-  /* THE CUT — linear on touch, experimental in behavior */
-  .cut{padding:100px 0 120px}
-  .cut-head{
-    display:block;
-    margin-bottom:48px;
-  }
-  .cut-head h2{
-    font-size:clamp(72px,19vw,94px);
-    line-height:.76;
-  }
-  .cut-head-copy{
-    width:auto;
-    max-width:355px;
-    margin-top:24px;
-  }
-  .cut-head-copy strong{font-size:20px}
-  .cut-head-copy p{font-size:16px;line-height:1.6}
-  .cut-stage{
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:8px;
-    min-height:0;
-  }
-  .seqs{
-    position:relative;
-    grid-column:1/-1;
-    left:auto;
-    right:auto;
-    top:auto;
-    width:auto;
-    display:flex;
-    gap:14px;
-    overflow-x:auto;
-    padding:0 0 10px;
-    scrollbar-width:none;
-  }
-  .seqs::-webkit-scrollbar{display:none}
-  .seq{
-    flex:1 1 0;
-    min-width:74px;
-    grid-template-columns:1fr;
-    padding:12px 0;
-  }
-  .seq .t{font-size:10px}
-  .seq .n{font-size:11px;line-height:1.2}
-  .seq:hover,.seq.active{transform:none}
-  .cut-film{
-    position:relative;
-    grid-column:1/-1;
-    left:auto;
-    top:auto;
-    width:100%;
-    margin:14px 0 0;
-    aspect-ratio:4/5;
-  }
-  .cut-still,
-  .cut-still.a,.cut-still.b,.cut-still.c{
-    position:relative;
-    left:auto;
-    right:auto;
-    top:auto;
-    bottom:auto;
-    width:100%;
-    height:150px;
-    margin-top:8px;
-    transform:none;
-  }
-  .cut-still.live{transform:none}
-  .cut-cta{
-    position:relative;
-    grid-column:1/-1;
-    left:auto;
-    bottom:auto;
-    margin-top:24px;
-  }
-  .cut-cta a{font-size:12px}
-
-  /* ABOUT */
-  .about{padding:96px 0 116px}
-  .about-grid{
-    display:block;
-  }
-  .about-portrait{
-    width:100%;
-    height:auto;
-    aspect-ratio:4/5;
-  }
-  .about-portrait::after{display:none}
-  .about-copy{
-    position:relative;
-    top:auto;
-    padding:62px 0 0;
-  }
-  .about-copy h2{
-    margin-bottom:38px;
-    font-size:clamp(68px,18vw,90px);
-    line-height:.77;
-  }
-  .about-copy .lead{
-    max-width:360px;
-    font-size:clamp(27px,7vw,35px);
-    line-height:1.12;
-  }
-  .about-copy .body{
-    max-width:355px;
-    margin-top:24px;
-    font-size:17px;
-    line-height:1.62;
-  }
-  .meta-table{margin-top:34px}
-  .meta-row{
-    grid-template-columns:90px minmax(0,1fr);
-    gap:14px;
-    padding:12px 0;
-    font-size:11px;
-  }
-  .meta-row span:last-child{text-align:right}
-
-  /* WORKING TOGETHER */
-  .working{padding:96px 0 116px}
-  .working-head{
-    display:block;
-    margin-bottom:54px;
-  }
-  .working-head h2{
-    font-size:clamp(66px,17vw,86px);
-    line-height:.78;
-  }
-  .working-head p{
-    max-width:350px;
-    margin:28px 0 0;
-    font-size:17px;
-    line-height:1.6;
-  }
-  .step{
-    grid-template-columns:42px minmax(0,1fr);
-    gap:10px 16px;
-    padding:30px 0 34px;
-  }
-  .step .num{font-size:11px;padding-top:5px}
-  .step h3{
-    font-size:clamp(46px,12vw,60px);
-    line-height:.86;
-  }
-  .step p{
-    grid-column:2;
-    max-width:340px;
-    margin:8px 0 0;
-    font-size:17px;
-    line-height:1.6;
-  }
-
-  /* DELIVERABLES */
-  .engagements{padding:100px 0 122px}
-  .engagements-head{
-    display:block;
-    margin-bottom:54px;
-  }
-  .engagements-head h2{
-    font-size:clamp(64px,16.5vw,84px);
-    line-height:.78;
-  }
-  .engagements-head p{
-    max-width:350px;
-    margin:26px 0 0;
-    font-size:17px;
-    line-height:1.6;
-  }
-  .engagement{
-    display:block;
-    min-height:0;
-    padding:48px 0 54px;
-  }
-  .engagement h3{
-    max-width:100%;
-    font-size:clamp(52px,14vw,70px);
-    line-height:.82;
-  }
-  .engagement .desc{
-    max-width:350px;
-    margin-top:22px;
-    font-size:17px;
-    line-height:1.6;
-  }
-  .engagement .deliver{
-    margin-top:30px;
-    max-width:100%;
-    font-size:11px;
-  }
-  .engagement .deliver span{padding:10px 0}
-
-  /* INVESTMENT */
-  .investment{
-    min-height:0;
-    padding:96px 18px 108px;
-    display:block;
-  }
-  .investment h2{
-    max-width:100%;
-    font-size:clamp(56px,14.8vw,68px);
-    line-height:.8;
-    letter-spacing:-.075em;
-  }
-  .investment-grid{
-    display:block;
-    padding-top:72px;
-  }
-  .investment .price{
-    max-width:380px;
-    font-size:clamp(30px,8vw,40px);
-    line-height:1.05;
-  }
-  .investment .detail{
-    max-width:355px;
-    margin-top:42px;
-    font-size:17px;
-    line-height:1.65;
-  }
-  .investment .button{
-    width:100%;
-    max-width:360px;
-  }
-
-  /* FAQ */
-  .faq{padding:96px 0 116px}
-  .faq-grid{
-    display:block;
-  }
-  .faq h2{
-    position:relative;
-    top:auto;
-    margin:0 0 50px;
-    font-size:clamp(68px,18vw,88px);
-    line-height:.78;
-  }
-  .faq-q{
-    min-height:64px;
-    padding:20px 0;
-    font-size:18px;
-    line-height:1.3;
-  }
-  .faq-a p{
-    max-width:350px;
-    font-size:16px;
-    line-height:1.62;
-    padding-bottom:24px;
-  }
-
-  /* INQUIRY — no horizontal form architecture on a phone */
-  .inquiry{
-    min-height:0;
-    padding:92px 18px 80px;
-  }
-  .inquiry-top{
-    display:block;
-  }
-  .inquiry h2{
-    max-width:100%;
-    font-size:clamp(70px,18.5vw,92px);
-    line-height:.75;
-  }
-  .inquiry-intro{
-    max-width:355px;
-    margin-top:38px;
-    font-size:clamp(24px,6.4vw,31px);
-    line-height:1.12;
-  }
-  .form{
-    margin-top:62px;
-  }
-  .field-row{
-    display:block;
-    padding:18px 0 20px;
-  }
-  .field-row label{
-    display:block;
-    padding:0 0 8px;
-    font-size:11px;
-  }
-  .field-row input,
-  .field-row textarea,
-  .field-row select{
-    display:block;
-    width:100%;
-    min-width:0;
-    padding:5px 0;
-    font-size:18px;
-    line-height:1.35;
-  }
-  .field-row textarea{min-height:140px}
-  .form-bottom{
-    display:block;
-    padding-top:24px;
-  }
-  .form-note{
-    max-width:350px;
-    font-size:14px;
-    line-height:1.6;
-  }
-  .submit{
-    width:100%;
-    min-width:0;
-    min-height:58px;
-    margin-top:28px;
-    padding:18px 16px;
-    font-size:12px;
-  }
-
-  /* FOOTER */
-  .footer{
-    display:grid;
-    gap:8px;
-    padding:24px 18px 28px;
-    font-size:10px;
-    line-height:1.45;
-  }
-}
-
-@media (max-width:480px){
-  .wrap{width:calc(100% - 28px)}
-  .nav{padding:0 10px}
-  .nav-links{gap:8px}
-  .nav-links .nav-cta{font-size:9px;padding:8px 9px}
-  .hero-copy{padding-left:14px;padding-right:14px}
-  .hero-title{padding-left:14px;padding-right:14px}
-  .selected,.services,.cut,.about,.working,.engagements,.faq{overflow:hidden}
-  .service-list{grid-template-columns:1fr}
-  .cut-still,.cut-still.a,.cut-still.b,.cut-still.c{height:128px}
-}
-
-</style>
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Mark Krizsan",
+    "url":"https://markkrizsan.com/",
+    "jobTitle":"Photographer, Filmmaker and Creative Director"
+  }
+  </script>
 </head>
 <body>
-<a class="skip" href="#top">Skip to content</a>
-<nav class="nav commercial-only" aria-label="Primary">
-  <a class="nav-brand" href="#top"><span>MARK KRIZSAN</span><small>PHOTO / FILM / CREATIVE DIRECTION</small></a>
-  <div class="nav-links"><a href="#work">Work</a><a href="#services">Services</a><a href="#mark">Mark</a><a href="#faq">FAQ</a><a class="nav-cta" href="#inquire">Start a project</a></div>
-</nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<main id="top">
-  <section class="hero scene">
-    <div class="hero-media" aria-hidden="true"><video
-  id="ambient"
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  preload="auto">
-      <source src="creative/assets/video/hero.mp4" type="video/mp4"></video><div class="hero-grade"></div></div>
-    <div class="hero-copy">
-      <div class="kicker">Photographer / Filmmaker / Creative Director</div>
-      <h1>Make people see the value before you have to explain it.</h1>
-      <p>Photography, film and creative direction for people, brands and stories that need to look as strong as they actually are — so the right audience notices, remembers and acts.</p>
-      <div class="hero-actions"><a class="button light" href="#inquire"><span>Tell me about your project</span><span>→</span></a><a class="button" href="#work"><span>See the work</span><span>↓</span></a></div><div class="hero-floor">Commissioned projects from $1,500 · Orange County + Los Angeles · California + travel</div>
-    </div>
-    <div class="hero-title" aria-hidden="true"><span>Mark</span><span>Krizsan</span></div>
-    <div class="hero-proof commercial-only">
-      <div class="row"><span>Based</span><span>Orange County + Los Angeles</span></div>
-      <div class="row"><span>Work</span><span>Portrait / Campaign / Documentary</span></div>
-      <div class="row"><span>Available</span><span>California + Travel</span></div>
-    </div>
-  </section>
+  <header class="site-header" data-header>
+    <a class="brand" href="/" aria-label="Mark Krizsan, home">
+      <span class="brand-mark">MK<span class="brand-dot">.</span></span>
+      <span class="brand-name">MARK KRIZSAN</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="/web/">Web</a>
+      <a class="nav-cta" href="mailto:contact@markkrizsan.com?subject=Project%20inquiry">Start a project <span aria-hidden="true">→</span></a>
+    </nav>
+  </header>
 
-  <section class="selected scene" id="work">
-    <div class="wrap">
-      <div class="selected-head"><h2>Selected<br>work.</h2><p>Three reasons clients hire me: make a person more magnetic, make a brand feel more valuable, or make a story impossible to ignore.</p></div>
-      <div class="work-stack">
-        <article class="work-piece"><div class="work-media"><img src="creative/assets/img/presence-cover.webp" alt="Presence portrait photography"></div><div class="work-label"><span class="num mono">WORLD 002</span><h3>Presence</h3><span class="type">Portraiture / Photography</span><p>Portraits that make the person feel credible, distinct and alive — not over-produced.</p><a href="projects/presence/">Enter project →</a></div></article>
-        <article class="work-piece"><div class="work-media"><img src="creative/assets/img/campaign-cover.webp" alt="Campaign commercial photography"></div><div class="work-label"><span class="num mono">WORLD 003</span><h3>Campaign</h3><span class="type">Commercial / Photo + Creative Direction</span><p>Commercial imagery built to raise perceived value before the audience reads a word.</p><a href="projects/campaign/">Enter project →</a></div></article>
-        <article class="work-piece"><div class="work-media"><img src="creative/assets/img/story-cover.webp" alt="Story documentary filmmaking"></div><div class="work-label"><span class="num mono">WORLD 004</span><h3>Story</h3><span class="type">Documentary / Film</span><p>Films designed to hold attention long enough for the story, feeling and message to actually land.</p><a href="projects/story/">Enter project →</a></div></article>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img src="https://drive.google.com/thumbnail?id=1oMX52ZJi6bIC5yX8BEKkOM9aRJu6cRok&sz=w2000" alt="" width="1350" height="1800" fetchpriority="high">
       </div>
-    </div>
-  </section>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-grain" aria-hidden="true"></div>
 
-  <section class="services scene" id="services">
-    <div class="wrap">
-      <div class="services-head"><div class="kicker">What you can hire me to do</div><h2>One eye.<br>Three ways to use it.</h2></div>
-      <div class="service-row"><div class="service-title">Photo</div><div class="service-preview"><img src="creative/assets/img/presence-02.webp" alt=""></div><div class="service-copy"><h3>Photography</h3><p>Portraiture, editorial, campaigns, lifestyle and documentary work for moments when one frame has to create the right impression immediately.</p><div class="service-list"><span>Portraits</span><span>Editorial</span><span>Campaigns</span><span>Lifestyle</span><span>Documentary</span><span>Selected events</span></div></div></div>
-      <div class="service-row"><div class="service-title">Film</div><div class="service-preview"><img src="creative/assets/img/story-03.webp" alt=""></div><div class="service-copy"><h3>Film / Cinematography</h3><p>Brand films, documentary storytelling, artist visuals and short-form pieces for ideas that need time, movement and atmosphere to persuade.</p><div class="service-list"><span>Brand films</span><span>Campaign films</span><span>Documentary</span><span>Artist visuals</span><span>Short form</span><span>Cinematography</span></div></div></div>
-      <div class="service-row"><div class="service-title">Direction</div><div class="service-preview"><img src="creative/assets/img/campaign-01.webp" alt=""></div><div class="service-copy"><h3>Creative Direction</h3><p>For projects that need the idea solved before the camera comes out: concept, references, visual language, shot priorities and one coherent photo + motion system.</p><div class="service-list"><span>Concept</span><span>References</span><span>Shot planning</span><span>Visual language</span><span>Photo + motion</span><span>Creative direction</span></div></div></div>
-    </div>
-  </section>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="signal" aria-hidden="true"></span> Photography / Film / Creative Direction</p>
+        <h1 id="hero-title">How it’s seen <em>matters.</em></h1>
+        <p class="hero-deck">Visual worlds for people, brands and ideas whose perception matters.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#work">View the work <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="mailto:contact@markkrizsan.com?subject=Project%20inquiry">Start a project <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
 
-  <section class="positioning scene">
-    <h2>Perception is part of the product.</h2>
-    <div class="positioning-bottom"><div class="big">If the work is premium but the image feels average, the market never gets to experience the difference.</div><div class="small"><strong>Photography and film close the gap between what something is and how valuable it feels.</strong><br><br>Light, framing, distance, movement, direction and edit shape the judgment people make before they read the explanation, hear the pitch or ask the price. That is why the image matters.</div></div>
-  </section>
+      <div class="hero-caption" aria-label="Featured work details">
+        <span>Johnny Palmer / Studio</span>
+        <span>Photography / 2026</span>
+      </div>
+    </section>
 
-  <section class="cut scene" id="cut">
-    <div class="wrap"><div class="cut-head"><h2>The Cut.</h2><div class="cut-head-copy"><strong>Photography + film. One visual language.</strong><p>This is a condensed look at the deeper project experience. Move by idea, not by scrollbar. Hover a sequence and the image field changes with the film.</p></div></div></div>
-    <div class="cut-stage wrap">
-      <div class="seqs"><div class="seq active" data-pct="0" data-set="0"><span class="t">00</span><span class="n">Open</span></div><div class="seq" data-pct=".24" data-set="1"><span class="t">01</span><span class="n">Approach</span></div><div class="seq" data-pct=".52" data-set="2"><span class="t">02</span><span class="n">Contact</span></div><div class="seq" data-pct=".78" data-set="3"><span class="t">03</span><span class="n">Movement</span></div></div>
-      <div class="cut-film" id="cutFilm"><video id="mainFilm" muted playsinline preload="metadata" poster="creative/assets/img/hero.webp"><source src="creative/assets/video/hero.mp4" type="video/mp4"></video><div class="play-disc">PLAY</div><div class="film-top micro"><span>MK / FILM</span><span id="clock">00:00 / --:--</span></div><div class="film-bottom"><span class="micro">Film study</span><span class="micro">Click / Play</span></div></div>
-      <div class="cut-still a"><img src="creative/assets/img/archive-03.webp" alt="Film sequence still"></div><div class="cut-still b"><img src="creative/assets/img/archive-09.webp" alt="Film sequence still"></div><div class="cut-still c"><img src="creative/assets/img/archive-12.webp" alt="Film sequence still"></div>
-      <div class="cut-cta"><a href="#inquire">Want this level of direction on your project? Start here ↓</a></div>
-    </div>
-  </section>
+    <section class="worlds" id="work" aria-labelledby="worlds-title">
+      <div class="worlds-intro shell">
+        <p class="eyebrow dark">Selected worlds</p>
+        <h2 id="worlds-title">Different assignments.<br><em>One eye.</em></h2>
+        <p class="worlds-lead">The visual language should change with the subject. The judgment behind it should not.</p>
+      </div>
 
-  <section class="about scene" id="mark">
-    <div class="wrap about-grid"><div class="about-portrait"><img src="creative/assets/img/mark.webp" alt="Mark Krizsan, photographer and filmmaker"></div><div class="about-copy"><div class="kicker">Mark</div><h2>The eye<br>behind it.</h2><div class="lead">My job is to make what is already compelling about you, your brand or your story impossible to overlook.</div><div class="body">I’m Mark Krizsan, a photographer, filmmaker and creative director working across portraiture, campaigns and documentary storytelling. I do not start with “what shot looks cool?” I start with the question that matters: <strong>what should the viewer believe, feel or do after they see this?</strong></div><div class="meta-table"><div class="meta-row"><span>Based</span><span>Orange County + Los Angeles</span></div><div class="meta-row"><span>Available</span><span>California + Travel</span></div><div class="meta-row"><span>Work</span><span>Photography / Film / Creative Direction</span></div><div class="meta-row"><span>Focus</span><span>People / Brands / Stories</span></div></div></div></div>
-  </section>
+      <article class="world world-johnny">
+        <div class="world-frame world-frame-primary">
+          <img src="https://drive.google.com/thumbnail?id=1e50DMQrKOb_XF_0CHzizBi-33MVQUk0N&sz=w1800" alt="A recording session in progress with performers gathered around a studio microphone and workstation." width="1350" height="1800" loading="lazy">
+        </div>
+        <div class="world-frame world-frame-secondary">
+          <img src="https://drive.google.com/thumbnail?id=1EmKZRB_nmT09EvJcIdER8aNQOM5YBNRa&sz=w1800" alt="Three people together inside a warm recording studio." width="1350" height="1800" loading="lazy">
+        </div>
+        <div class="world-meta">
+          <span class="world-index">01</span>
+          <div>
+            <p class="world-type">Studio / People / 2026</p>
+            <h3>Johnny Palmer</h3>
+            <p>In-room photography that keeps the performance, relationships and environment intact.</p>
+          </div>
+        </div>
+      </article>
 
-  <section class="working scene">
-    <div class="wrap"><div class="working-head"><h2>Working<br>together.</h2><p>Bring the objective, not a finished treatment. I turn what the project needs to accomplish into a clear visual plan, production and finished set of assets.</p></div><div class="steps"><div class="step"><div class="num">01</div><h3>Talk.</h3><p>Tell me what you need to sell, launch, communicate, document or preserve — and who needs to care about it.</p></div><div class="step"><div class="num">02</div><h3>Direct.</h3><p>I turn the objective into the visual language, references, scope, locations, shot priorities and production plan.</p></div><div class="step"><div class="num">03</div><h3>Make.</h3><p>We make the photography, film or both. The shoot stays focused on the frames and sequences that actually carry the assignment.</p></div><div class="step"><div class="num">04</div><h3>Finish.</h3><p>Selects, edit, grade, retouching and delivery. You leave with finished assets built for the places they actually need to perform.</p></div></div></div>
-  </section>
+      <article class="world world-create" data-video-world>
+        <div class="world-video-stage">
+          <img class="world-video" src="https://drive.google.com/thumbnail?id=1o1qjHfSZQ35V5T3wUP1-nkmklSkluujN&sz=w1800" alt="Create Church film poster frame." loading="lazy">
+        </div>
+        <div class="world-meta world-meta-light">
+          <span class="world-index">02</span>
+          <div>
+            <p class="world-type">Film / 2025</p>
+            <h3>Create Church</h3>
+            <p>A visual film language built around human presence, open space, movement and worship.</p>
+          </div>
+        </div>
+      </article>
 
-  <section class="engagements scene">
-    <div class="wrap"><div class="engagements-head"><h2>What you<br>actually get.</h2><p>You are buying finished, usable visual assets — not just a day with a camera. These are common scopes, not rigid packages.</p></div><div class="engagement"><h3>Photo<br>commission.</h3><div class="desc">A focused photography assignment for a person, brand, campaign or story that needs a finished body of images rather than a pile of files.</div><div class="deliver"><span>Visual direction</span><span>Photography</span><span>Curated selects</span><span>Retouched finals</span><span>Delivery gallery</span></div></div><div class="engagement"><h3>Photo +<br>film.</h3><div class="desc">One visual world expressed in stills and motion, designed together instead of treating video as something bolted onto the shoot afterward.</div><div class="deliver"><span>Concept / direction</span><span>Photography</span><span>Hero film</span><span>Selected cutdowns</span><span>Final image set</span></div></div><div class="engagement"><h3>Visual<br>campaign.</h3><div class="desc">For larger assignments that need an image system: pre-production, photo, motion, direction and multiple final formats working from one idea.</div><div class="deliver"><span>Pre-production</span><span>Shot architecture</span><span>Photo + motion</span><span>Edit / grade</span><span>Multi-format delivery</span></div></div></div>
-  </section>
+      <article class="world world-moonwood" data-video-world>
+        <div class="world-video-stage">
+          <img class="world-video" src="https://drive.google.com/thumbnail?id=191EOyfJV2U9vinE24T8pWcHS7R43Qkpt&sz=w1800" alt="Moonwood Coffee Co. commercial film poster frame." loading="lazy">
+        </div>
+        <div class="world-meta">
+          <span class="world-index">03</span>
+          <div>
+            <p class="world-type">Commercial film / 2024</p>
+            <h3>Moonwood Coffee Co.</h3>
+            <p>Product, place and human detail shaped into one compact commercial world.</p>
+          </div>
+        </div>
+      </article>
+    </section>
 
-  <section class="investment scene">
-    <h2>Investment.</h2><div class="investment-grid"><div class="price">Commissioned projects start at <strong>$1,500.</strong></div><div class="detail">That is the floor for a properly planned and finished photography, film or creative-direction assignment. Larger photo + film and campaign scopes are quoted around the production, deliverables and usage required.<br><br><strong>Have a strong idea with a leaner budget?</strong> Send it anyway. If there is a smart way to simplify the scope without lowering the standard, I’ll tell you.<br><a class="button" href="#inquire"><span>Check availability</span><span>→</span></a></div></div>
-  </section>
+    <section class="directors-cut" id="directors-cut" aria-labelledby="cut-title">
+      <div class="cut-intro shell">
+        <p class="eyebrow">Director’s Cut / Johnny Palmer</p>
+        <h2 id="cut-title">One room.<br><em>One visual language.</em></h2>
+        <p>The same session seen through distance, energy, environment and performance.</p>
+      </div>
 
-  <section class="faq scene" id="faq">
-    <div class="wrap faq-grid"><h2>FAQ.</h2><div class="faq-list">
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Where are you based?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Orange County + Los Angeles, California. I’m available for work throughout Southern California and travel by project.</p></div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Do you shoot both photography and film?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Yes. Some assignments are photography-only or film-only; others are built as one visual system across both stills and motion.</p></div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>What types of projects are the best fit?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Portraiture, campaigns, brand storytelling, documentary work, artist visuals and assignments where the visual perception of the person, product or story materially matters.</p></div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>What does a project cost?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Commissioned projects start at $1,500. Larger photo + film and campaign work is quoted around the actual scope. If you have a smaller budget and a strong idea, you can still reach out; if the scope can be simplified intelligently without lowering the standard, I’ll tell you.</p></div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Can you handle creative direction too?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Yes. Creative direction can include concept development, references, visual language, shot priorities and building one coherent still + motion approach before production begins.</p></div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>How far ahead should we book?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Earlier is better for projects requiring locations, talent or deeper pre-production. Tightly scoped assignments may be possible on shorter timelines depending on availability.</p></div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>How are final files delivered?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Final delivery is matched to the project: curated retouched image sets, finished films, approved cutdowns and the output formats defined in the scope.</p></div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>How does licensing work?</span><span aria-hidden="true">+</span></button><div class="faq-a"><div><p>Usage is defined with the project so both sides know where the work will live and how it will be used. Broader commercial usage can be scoped when needed.</p></div></div></div>
-    </div></div>
-  </section>
+      <div class="cut-layout shell" data-cut>
+        <div class="cut-nav" role="tablist" aria-label="Johnny Palmer studio sequence">
+          <button type="button" class="cut-tab is-active" id="cut-tab-1" role="tab" aria-selected="true" aria-controls="cut-panel" data-cut-index="0">
+            <span>01</span><strong>Presence</strong>
+          </button>
+          <button type="button" class="cut-tab" id="cut-tab-2" role="tab" aria-selected="false" aria-controls="cut-panel" data-cut-index="1" tabindex="-1">
+            <span>02</span><strong>Room</strong>
+          </button>
+          <button type="button" class="cut-tab" id="cut-tab-3" role="tab" aria-selected="false" aria-controls="cut-panel" data-cut-index="2" tabindex="-1">
+            <span>03</span><strong>Energy</strong>
+          </button>
+          <button type="button" class="cut-tab" id="cut-tab-4" role="tab" aria-selected="false" aria-controls="cut-panel" data-cut-index="3" tabindex="-1">
+            <span>04</span><strong>Performance</strong>
+          </button>
+        </div>
 
-  <section class="inquiry scene" id="inquire">
-    <div class="inquiry-top"><h2>Start<br>the project.</h2><div class="inquiry-intro">Tell me what you’re trying to make happen. I’ll reply with the clearest next step — whether that means a focused shoot, a photo + film production, or a smarter smaller version of the idea.</div></div>
-    <form class="form" id="inquiryForm"><div class="field-row"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required placeholder="YOUR NAME"></div><div class="field-row"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="YOU@EMAIL.COM"></div><div class="field-row"><label for="company">Company / project</label><input id="company" name="company" placeholder="WHO / WHAT IS THIS FOR?"></div><div class="field-row"><label for="brief">What are we making?</label><textarea id="brief" name="brief" required placeholder="A PORTRAIT SERIES, BRAND FILM, CAMPAIGN, DOCUMENTARY, SOMETHING STRANGER..."></textarea></div><div class="field-row"><label for="budget">Approx. budget</label><select id="budget" name="budget"><option value="">SELECT A RANGE</option><option>Under $1,500 — smaller scope</option><option>$1,500–$2,500</option><option>$2,500–$5,000</option><option>$5,000–$10,000</option><option>$10,000+</option><option>Not sure yet</option></select></div><div class="field-row"><label for="date">Target date</label><input id="date" name="date" placeholder="WHEN DOES THIS NEED TO HAPPEN?"></div><div class="form-bottom"><div><div class="form-note">No finished brief required. Include the objective, timing and budget context you know. If I’m not the right fit — or the idea should be scoped smaller — I’ll tell you.</div><div class="form-status" id="formStatus"></div></div><button class="submit" type="submit"><span>Send inquiry</span><span>→</span></button></div></form>
-  </section>
-</main>
-<footer class="footer mono"><span>MARK KRIZSAN / 2026</span><span>PHOTOGRAPHY / FILM / CREATIVE DIRECTION</span></footer>
+        <div class="cut-panel" id="cut-panel" role="tabpanel" aria-labelledby="cut-tab-1" tabindex="0">
+          <figure class="cut-media is-active" data-cut-media="0">
+            <img src="https://drive.google.com/thumbnail?id=1vlYizKdueuGJWltUzfymX90dlWFkVYa-&sz=w1800" alt="Johnny Palmer studio session, candid group frame." width="1600" height="900" loading="lazy">
+            <figcaption><span>Human</span><p>Stay close enough for the frame to feel lived-in rather than arranged.</p></figcaption>
+          </figure>
+          <figure class="cut-media" data-cut-media="1" hidden>
+            <img src="https://drive.google.com/thumbnail?id=1e50DMQrKOb_XF_0CHzizBi-33MVQUk0N&sz=w1800" alt="Johnny Palmer studio session, performance and recording environment." width="1600" height="900" loading="lazy">
+            <figcaption><span>Space</span><p>Let the room explain the work instead of stripping the subject from context.</p></figcaption>
+          </figure>
+          <figure class="cut-media" data-cut-media="2" hidden>
+            <img src="https://drive.google.com/thumbnail?id=1EmKZRB_nmT09EvJcIdER8aNQOM5YBNRa&sz=w1800" alt="Johnny Palmer studio session, group portrait inside the recording room." width="1600" height="900" loading="lazy">
+            <figcaption><span>Scale</span><p>Change distance and energy so the sequence reveals relationships, not repetitions.</p></figcaption>
+          </figure>
+          <figure class="cut-media cut-media-video" data-cut-media="3" hidden>
+            <img src="https://drive.google.com/thumbnail?id=1oMX52ZJi6bIC5yX8BEKkOM9aRJu6cRok&sz=w1800" alt="Johnny Palmer performing at the microphone in the studio." loading="lazy">
+            <figcaption><span>Performance</span><p>End on the moment that makes the rest of the sequence feel inevitable.</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-<div class="freeze" id="freeze"><span class="lab micro">FRAME / HOLD</span><button class="micro" id="freezeClose">ESC / Return</button><img id="freezeImg" alt="Expanded film still"></div>
+    <section class="prototype-end" aria-labelledby="end-title">
+      <div class="shell">
+        <p class="eyebrow dark">Photography / Film / Direction</p>
+        <h2 id="end-title">Bring the objective.<br><em>The visual answer can come next.</em></h2>
+        <a class="button button-dark" href="mailto:contact@markkrizsan.com?subject=Project%20inquiry">Start a project <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
 
-<script>
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const raw=n=>`creative/assets/img/archive-${String(n).padStart(2,'0')}.webp`;
-// Hero video autoplay recovery for iOS / mobile browsers
-const ambientVideo = $('#ambient');
+  <footer class="site-footer">
+    <span>© <span id="year">2026</span> Mark Krizsan</span>
+    <nav aria-label="Footer navigation"><a href="/web/">Web</a><a href="mailto:contact@markkrizsan.com">Email</a></nav>
+  </footer>
+  <script>
+(() => {
+  'use strict';
 
-if (ambientVideo) {
-  ambientVideo.muted = true;
-  ambientVideo.defaultMuted = true;
-  ambientVideo.playsInline = true;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const header = document.querySelector('[data-header]');
+  const year = document.getElementById('year');
+  if (year) year.textContent = String(new Date().getFullYear());
 
-  const playHeroVideo = () => {
-    const attempt = ambientVideo.play();
-
-    if (attempt !== undefined) {
-      attempt.catch(() => {
-        // Safari may require the first user interaction.
-      });
-    }
+  const syncHeader = () => {
+    if (header) header.classList.toggle('is-scrolled', window.scrollY > 48);
   };
+  syncHeader();
+  window.addEventListener('scroll', syncHeader, { passive: true });
 
-  // Try immediately.
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', playHeroVideo, { once:true });
-  } else {
-    playHeroVideo();
+  const cut = document.querySelector('[data-cut]');
+  if (cut) {
+    const tabs = [...cut.querySelectorAll('[role="tab"][data-cut-index]')];
+    const media = [...cut.querySelectorAll('[data-cut-media]')];
+    const panel = cut.querySelector('[role="tabpanel"]');
+
+    const activate = (index, focus = false) => {
+      tabs.forEach((tab, i) => {
+        const active = i === index;
+        tab.classList.toggle('is-active', active);
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
+        if (active && focus) tab.focus();
+      });
+      media.forEach((item, i) => {
+        const active = i === index;
+        item.hidden = !active;
+        item.classList.toggle('is-active', active);
+        if (active) {
+          item.classList.remove('is-entering');
+          if (!reducedMotion.matches) {
+            requestAnimationFrame(() => item.classList.add('is-entering'));
+          }
+          const video = item.querySelector('video');
+          if (video && !reducedMotion.matches) video.play().catch(() => {});
+        } else {
+          const video = item.querySelector('video');
+          if (video) video.pause();
+        }
+      });
+      if (panel) panel.setAttribute('aria-labelledby', tabs[index].id);
+    };
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => activate(i));
+      tab.addEventListener('keydown', event => {
+        let next = i;
+        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (i + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (i - 1 + tabs.length) % tabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        activate(next, true);
+      });
+    });
   }
+})();
 
-  // Recover if iOS blocks initial autoplay.
-  window.addEventListener('touchstart', playHeroVideo, {
-    once:true,
-    passive:true
-  });
-
-  window.addEventListener('pointerdown', playHeroVideo, {
-    once:true,
-    passive:true
-  });
-
-  // Resume after switching apps/tabs.
-  document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) playHeroVideo();
-  });
-}
-
-// Signature Cut
-const film=$('#mainFilm'), shell=$('#cutFilm'), clock=$('#clock'), disc=shell.querySelector('.play-disc');
-const seqs=$$('.seq'), stills=$$('.cut-still'), stillImgs=$$('.cut-still img');
-const sets=[[3,9,12],[4,10,17],[6,14,22],[5,16,24]];
-function fmt(s){if(!isFinite(s))return'--:--';s=Math.floor(s);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
-function sync(){shell.classList.toggle('playing',!film.paused);disc.textContent=film.paused?'PLAY':'PAUSE'}
-function toggle(){film.paused?film.play():film.pause();sync()}
-shell.addEventListener('click',e=>{if(!e.target.closest('button'))toggle()});film.addEventListener('play',sync);film.addEventListener('pause',sync);
-film.muted=true;
-film.addEventListener('loadedmetadata',()=>clock.textContent=`00:00 / ${fmt(film.duration)}`);film.addEventListener('timeupdate',()=>clock.textContent=`${fmt(film.currentTime)} / ${fmt(film.duration)}`);
-function showSet(i){const set=sets[i];stills.forEach(x=>x.classList.remove('live'));stillImgs.forEach((img,k)=>img.src=raw(set[k]));stills.forEach((x,k)=>setTimeout(()=>x.classList.add('live'),k*75));seqs.forEach((x,k)=>x.classList.toggle('active',k===i));if(film.duration)film.currentTime=film.duration*parseFloat(seqs[i].dataset.pct)}
-seqs.forEach((s,i)=>{s.addEventListener('mouseenter',()=>showSet(i));s.addEventListener('click',()=>{showSet(i);film.play()})});showSet(0);
-
-// Freeze film stills
-const freeze=$('#freeze'),freezeImg=$('#freezeImg');stills.forEach(s=>s.addEventListener('click',()=>{film.pause();freezeImg.src=s.querySelector('img').src;freeze.classList.add('open');document.body.classList.add('no-scroll')}));function closeFreeze(){freeze.classList.remove('open');document.body.classList.remove('no-scroll')}$('#freezeClose').onclick=closeFreeze;freeze.addEventListener('click',e=>{if(e.target===freeze)closeFreeze()});
-
-// FAQ
-$$('.faq-item').forEach(item=>{const q=item.querySelector('.faq-q');q.addEventListener('click',()=>{const open=item.classList.toggle('open');q.setAttribute('aria-expanded',String(open))})});
-
-// Inquiry routing — reuses the live site's MK_CONFIG / Formspree endpoint.
-$('#inquiryForm').addEventListener('submit',async e=>{
-  e.preventDefault();
-  const form=e.currentTarget, status=$('#formStatus'), submit=form.querySelector('.submit');
-  const endpoint=(window.MK_CONFIG?.formEndpoint||'').trim();
-  const email=(window.MK_CONFIG?.contactEmail||'').trim();
-  if(!form.reportValidity()) return;
-  submit.disabled=true; status.textContent='SENDING…';
-  const data=new FormData(form);
-  try{
-    if(endpoint){
-      const r=await fetch(endpoint,{method:'POST',headers:{Accept:'application/json'},body:data});
-      if(!r.ok) throw new Error('Submission failed');
-      status.textContent='INQUIRY SENT — THANK YOU.';
-      submit.querySelector('span:first-child').textContent='Inquiry sent';
-      form.reset();
-    }else if(email){
-      const subject=encodeURIComponent('Creative inquiry — '+(data.get('company')||'Project'));
-      const body=encodeURIComponent([...data.entries()].map(([k,v])=>`${k}: ${v}`).join('\n'));
-      location.href=`mailto:${email}?subject=${subject}&body=${body}`;
-      submit.disabled=false; status.textContent='OPENING EMAIL…';
-    }else throw new Error('No inquiry route configured');
-  }catch(err){
-    status.textContent=email?'COULD NOT SEND — USE CONTACT@MARKKRIZSAN.COM':'COULD NOT SEND — PLEASE TRY AGAIN.';
-    submit.disabled=false;
-  }
-});
-
-document.addEventListener('keydown',e=>{if(/input|textarea|select/i.test(document.activeElement.tagName))return;if(e.key==='Escape')closeFreeze();if(e.code==='Space'&&$('#cut').getBoundingClientRect().top<innerHeight&&$('#cut').getBoundingClientRect().bottom>0){e.preventDefault();toggle()}});
-</script>
+  </script>
 </body>
 </html>
