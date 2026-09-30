@@ -21,10 +21,17 @@ Headless Chromium using a self-contained, in-memory HTML/CSS/JS render. The exte
 | 1920 | None | Pass | Pass | Pass | None |
 
 ## Media integrity
-The uploaded file named `ATJ Website Full Scrollthrough.gif` is physically a 1280×720 single-frame PNG, not an animation. A derivative optimized WebP is committed at `/web/assets/atj-hero-2026.webp`. The visible stage explicitly labels it `PREVIEW · STILL IMAGE` and links to the real client website. No fake scrollthrough or playback button is shipped.
+A real site-scroll recording provided by the user is committed as `/web/assets/atj-scroll-current.mp4`, paired with a current poster at `/web/assets/atj-hero-current.webp`. The ATJ project stage now presents the current site in motion, autoplays muted while the ATJ tab is active, pauses when the Dana tab is selected, and respects reduced-motion preferences. The older provisional still-only treatment is retired.
 
 ## Manual release gates (not yet claimed as passed)
 - Review the actual GitHub/hosting preview with repository-managed Dana and founder imagery loading.
 - Perform cold-visitor 10-second comprehension check with a human.
 - Test real-world 75th-percentile Core Web Vitals after deployment.
 - Obtain final visual approval before merging branch to `main`.
+
+
+## Dana current-site media upgrade
+- Added a real site-scroll recording provided by the user as `/web/assets/dana-scroll-current.mp4`.
+- Added a current poster frame as `/web/assets/dana-hero-current.webp`.
+- Replaced older single-capture Dana imagery across the showcase, decision cards, and range panel with the current asset set.
+- Dana now matches ATJ in behavior: motion plays only when its project tab is active, pauses when another project is selected, and respects reduced-motion preferences.

@@ -15,9 +15,56 @@
   }
   window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(updateScroll); } }, {passive: true});
   updateScroll();
+
   const tabs = Array.from(document.querySelectorAll('[role="tab"][data-project]'));
-  if (!tabs.length) return;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const videos = new Map(Array.from(document.querySelectorAll('.project-video')).map(video => [video.id, video]));
+  const videoToggles = Array.from(document.querySelectorAll('[data-video-toggle]'));
+
+  function syncVideoChip(videoId) {
+    const video = videos.get(videoId);
+    const toggle = document.querySelector(`[data-video-toggle][aria-controls="${videoId}"]`);
+    if (!video || !toggle) return;
+    const paused = video.paused;
+    toggle.classList.toggle('is-paused', paused);
+    toggle.setAttribute('aria-pressed', String(paused));
+    const label = toggle.querySelector('.video-chip-label');
+    if (label) label.textContent = paused ? 'Play motion' : 'Pause motion';
+  }
+
+  function playVideo(videoId) {
+    const video = videos.get(videoId);
+    if (!video) return;
+    if (reducedMotion.matches) { video.pause(); syncVideoChip(videoId); return; }
+    const playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(() => {});
+    syncVideoChip(videoId);
+  }
+
+  function pauseVideo(videoId) {
+    const video = videos.get(videoId);
+    if (!video) return;
+    video.pause();
+    syncVideoChip(videoId);
+  }
+
+  function pauseAllVideos() {
+    videos.forEach((_video, id) => pauseVideo(id));
+  }
+
+  videoToggles.forEach(toggle => {
+    const videoId = toggle.getAttribute('aria-controls');
+    const video = videos.get(videoId);
+    if (!video) return;
+    toggle.addEventListener('click', () => {
+      if (video.paused) playVideo(videoId);
+      else pauseVideo(videoId);
+    });
+    video.addEventListener('play', () => syncVideoChip(videoId));
+    video.addEventListener('pause', () => syncVideoChip(videoId));
+    syncVideoChip(videoId);
+  });
+
   function activate(tab, moveFocus = false) {
     tabs.forEach(item => {
       const active = item === tab;
@@ -34,9 +81,22 @@
           panel.classList.add('stage-enter');
         }
       }
+      const projectId = item.dataset.project;
+      const videoId = `${projectId}-video`;
+      if (videos.has(videoId)) {
+        if (active) playVideo(videoId);
+        else pauseVideo(videoId);
+      }
     });
     if (moveFocus) tab.focus();
   }
+
+  if (!tabs.length) {
+    const firstVideo = videos.keys().next().value;
+    if (firstVideo) playVideo(firstVideo);
+    return;
+  }
+
   tabs.forEach((tab, index) => {
     tab.addEventListener('click', () => activate(tab));
     tab.addEventListener('keydown', event => {
@@ -50,4 +110,8 @@
       activate(tabs[next], true);
     });
   });
+
+  const active = tabs.find(tab => tab.classList.contains('is-active')) || tabs[0];
+  pauseAllVideos();
+  if (active) activate(active);
 })();
