@@ -1,0 +1,65 @@
+name: Import Creative V6 Preview
+
+on:
+  push:
+    branches: [creative-v6-final]
+    paths:
+      - .github/workflows/import-creative-v6.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout preview branch
+        uses: actions/checkout@v4
+        with:
+          ref: creative-v6-final
+
+      - name: Download verified final bundle
+        run: |
+          curl -fsSL 'https://cdn.creativeclaw.co/u/5e70b2a0/zips/c604ca74-35d6-4bd5-943b-0052743430f4.zip' -o /tmp/creative-v6.zip
+          echo '0056364de6d2e27c95e2f257ec3f5cd3d7cde9366bf9876428f9041f215ee7a8  /tmp/creative-v6.zip' | sha256sum -c -
+          rm -rf /tmp/creative-v6
+          mkdir -p /tmp/creative-v6
+          unzip -q /tmp/creative-v6.zip -d /tmp/creative-v6
+          test -f /tmp/creative-v6/index.html
+          test -f /tmp/creative-v6/assets/creative-v6/site.css
+          test -f /tmp/creative-v6/web/index.html && exit 42 || true
+
+      - name: Install V6 creative root only
+        run: |
+          rm -rf work about contact assets/creative-v6
+          cp /tmp/creative-v6/index.html ./index.html
+          cp /tmp/creative-v6/404.html ./404.html
+          cp /tmp/creative-v6/robots.txt ./robots.txt
+          cp /tmp/creative-v6/sitemap.xml ./sitemap.xml
+          cp -R /tmp/creative-v6/work ./work
+          cp -R /tmp/creative-v6/about ./about
+          cp -R /tmp/creative-v6/contact ./contact
+          mkdir -p assets
+          cp -R /tmp/creative-v6/assets/creative-v6 ./assets/creative-v6
+
+      - name: Verify protected routes unchanged
+        run: |
+          git diff --exit-code HEAD -- web launch-os || {
+            echo 'Protected route changed; aborting.'
+            git checkout -- web launch-os
+            exit 1
+          }
+
+      - name: Commit imported build
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html 404.html robots.txt sitemap.xml work about contact assets/creative-v6
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Import QA-approved Creative V6 build'
+          git push origin HEAD:creative-v6-final
