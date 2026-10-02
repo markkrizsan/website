@@ -6,7 +6,7 @@ export const webService = Object.freeze({
   name: 'Web design and development',
   provider: 'Mark Krizsan',
   canonicalUrl: 'https://markkrizsan.com/web/',
-  description: 'Independent website strategy, design, development, and launch for businesses that have outgrown the way they look online.',
+  description: 'Premium web design and development for established businesses ready for a website that reflects the quality of what they’ve built.',
   idealClients: ['Businesses whose current website no longer reflects the quality of their work', 'Businesses seeking a focused custom marketing site or one-page build'],
   problemsSolved: ['Unclear positioning and value on the current site', 'A visual and verbal standard that weakens buyer confidence', 'Unclear paths to inquiry or purchase'],
   outcomes: ['A website that makes the business easier to understand, trust, and choose', 'A coherent site with a clear next step for visitors'],
